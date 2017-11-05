@@ -339,12 +339,12 @@ input[type=range]:focus::-ms-fill-upper {
   margin: 25px 0 0 0;
 }
 .video-container .controls-wrapper .video-controls.video-controls-prev-button {
-  background: white url(../images/Icons/Arrow.svg) center center no-repeat;
+  background: white url(../images/icons/arrow.svg) center center no-repeat;
   background-size: auto;
   transform: scaleX(-1);
 }
 .video-container .controls-wrapper .video-controls.video-controls-next-button {
-  background: white url(../images/Icons/Arrow.svg) center center no-repeat;
+  background: white url(../images/icons/arrow.svg) center center no-repeat;
   background-size: auto;
 }
 .video-container .controls-wrapper .video-controls.video-controls-play-button {
