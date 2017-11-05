@@ -1,26 +1,23 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<svg width="112px" height="63px" viewBox="0 0 112 63" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
-    <!-- Generator: Sketch 47.1 (45422) - http://www.bohemiancoding.com/sketch -->
-    <title>Parts / Titles / Add Button</title>
-    <desc>Created with Sketch.</desc>
-    <defs>
-        <filter x="-4.0%" y="-7.1%" width="108.0%" height="114.3%" filterUnits="objectBoundingBox" id="filter-1">
-            <feOffset dx="0" dy="0" in="SourceAlpha" result="shadowOffsetOuter1"></feOffset>
-            <feGaussianBlur stdDeviation="1.5" in="shadowOffsetOuter1" result="shadowBlurOuter1"></feGaussianBlur>
-            <feColorMatrix values="0 0 0 0 0   0 0 0 0 0   0 0 0 0 0  0 0 0 0.15 0" type="matrix" in="shadowBlurOuter1" result="shadowMatrixOuter1"></feColorMatrix>
-            <feMerge>
-                <feMergeNode in="shadowMatrixOuter1"></feMergeNode>
-                <feMergeNode in="SourceGraphic"></feMergeNode>
-            </feMerge>
-        </filter>
-    </defs>
-    <g id="Symbols" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
-        <g id="Parts-/-Titles-/-Add-Button">
-            <g id="Line" filter="url(#filter-1)">
-                <rect id="Frame" fill-opacity="0" fill="#D8D8D8" x="0" y="0" width="112" height="63"></rect>
-                <circle id="Oval" fill="#FFFFFF" cx="56" cy="32" r="20"></circle>
-                <path d="M55,31 L49,31 L49,33 L55,33 L55,39 L57,39 L57,33 L63,33 L63,31 L57,31 L57,25 L55,25 L55,31 Z" id="Combined-Shape" fill="#8F3DB8" fill-rule="nonzero"></path>
+    <svg width="112px" height="63px" viewBox="0 0 112 63" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+        <defs>
+            <filter x="-4.0%" y="-7.1%" width="108.0%" height="114.3%" filterUnits="objectBoundingBox" id="filter-1">
+                <feOffset dx="0" dy="0" in="SourceAlpha" result="shadowOffsetOuter1"></feOffset>
+                <feGaussianBlur stdDeviation="1.5" in="shadowOffsetOuter1" result="shadowBlurOuter1"></feGaussianBlur>
+                <feColorMatrix values="0 0 0 0 0   0 0 0 0 0   0 0 0 0 0  0 0 0 0.15 0" type="matrix" in="shadowBlurOuter1" result="shadowMatrixOuter1"></feColorMatrix>
+                <feMerge>
+                    <feMergeNode in="shadowMatrixOuter1"></feMergeNode>
+                    <feMergeNode in="SourceGraphic"></feMergeNode>
+                </feMerge>
+            </filter>
+        </defs>
+        <g id="Symbols" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+            <g id="Parts-/-Titles-/-Add-Button">
+                <g id="Line" filter="url(#filter-1)">
+                    <rect id="Frame" fill-opacity="0" fill="#D8D8D8" x="0" y="0" width="112" height="63"></rect>
+                    <circle id="Oval" fill="#FFFFFF" cx="56" cy="32" r="20"></circle>
+                    <path d="M55,31 L49,31 L49,33 L55,33 L55,39 L57,39 L57,33 L63,33 L63,31 L57,31 L57,25 L55,25 L55,31 Z" id="Combined-Shape" fill="#8F3DB8" fill-rule="nonzero"></path>
+                </g>
             </g>
         </g>
-    </g>
-</svg>
+    </svg>
