@@ -1,0 +1,121 @@
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Video Sandbox</title>
+
+    <link rel="stylesheet" href="css/normalize.css">
+    <link rel="stylesheet" href="css/style.css">
+
+
+</head>
+
+<body>
+
+    <div class="container">
+        <div class="header">
+            <div class="brand"><img src="images/Logo.svg" alt="Video Sandbox Logo"></div>
+            <div class="render">Render</div>
+        </div>
+        <div class="sidebar-container">
+            <div class="direction-ltr">
+                <div class="sidebar-panel-heading">
+                    <div class="panel-icon panel-icon-title"></div>
+                    <div class="panel-heading">Titles</div>
+                </div>
+                <div class="sidebar-panel-content">
+                    <div class="sidebar-text-field">
+                        <div class="label small">First line</div>
+                        <div class="input-wrapper">
+                            <input type="text" maxlength="25" placeholder="First name, Headline, etc." class="text-input text-input-super">
+                            <div class="input-char-counter">25</div>
+                        </div>
+                    </div>
+                    <div class="sidebar-text-field">
+                        <div class="label small">Second line</div>
+                        <div class="input-wrapper">
+                            <input type="text" maxlength="25" placeholder="Last name, Desctiption, etc." class="text-input text-input-super">
+                            <div class="input-char-counter">25</div>
+                        </div>
+                    </div>
+                    <!--<div class="sidebar-text-field">
+    <div class="label small">Second line</div>
+    <div class="input-wrapper">
+        <input type="text" maxlength="25" placeholder="Last name, Desctiption, etc." class="text-input text-input-super">
+        <div class="input-char-counter">25</div>
+    </div>
+</div>
+<div class="sidebar-text-field">
+    <div class="label small">Second line</div>
+    <div class="input-wrapper">
+        <input type="text" maxlength="25" placeholder="Last name, Desctiption, etc." class="text-input text-input-super">
+        <div class="input-char-counter">25</div>
+    </div>
+</div>
+<div class="sidebar-text-field">
+    <div class="label small">Second line</div>
+    <div class="input-wrapper">
+        <input type="text" maxlength="25" placeholder="Last name, Desctiption, etc." class="text-input text-input-super">
+        <div class="input-char-counter">25</div>
+    </div>
+</div>-->
+
+                </div>
+                <div class="sidebar-panel-heading">
+                    <div class="panel-icon panel-icon-style"></div>
+                    <div class="panel-heading">Styles</div>
+                </div>
+                <div class="sidebar-panel-content">
+                    <div class="sidebar-style-item"></div>
+                    <div class="sidebar-style-item"></div>
+                    <div class="sidebar-style-item"></div>
+                    <div class="sidebar-style-item"></div>
+                </div>
+                <div class="sidebar-panel-heading">
+                    <div class="panel-icon panel-icon-duration"></div>
+                    <div class="panel-heading">Duration</div>
+                </div>
+                <div class="sidebar-panel-content">
+                    <input type="range" min="3" max="10" step="0.5">
+                </div>
+            </div>
+        </div>
+        <div class="timeline-container">
+            <div class="flex-center-hor-ver">
+                <div class="timeline-wrapper">
+                    <div class="panel-heading">Timeline</div>
+                    <div class="timeline">
+                        <div class="title-wrapper title-opener"></div>
+                        <div class="title-wrapper title-super"></div>
+
+                        <div class="title-wrapper title-list"></div>
+                        <div class="title-wrapper title-super"></div>
+                        <div class="title-wrapper title-add"></div>
+                        <div class="title-wrapper title-closer"></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="video-container">
+            <div class="headline-row">
+                <div class="panel-heading">Video Preview</div>
+            </div>
+            <div class="video-wrapper">
+
+                <video src="images/stars.mov">
+                </video>
+            </div>
+            <div class="controls-wrapper">
+                <div class="video-controls video-controls-play-button">Start</div>
+                <div class="video-controls video-controls-prev-button"></div>
+                <div class="video-controls video-controls-next-button"></div>
+            </div>
+        </div>
+    </div>
+
+
+</body>
+
+</html>
