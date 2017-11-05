@@ -274,24 +274,24 @@ input[type=range]:focus::-ms-fill-upper {
   margin-right: 0;
 }
 .timeline-container .timeline .title-opener {
-  background: url('../images/titles/opener.svg') center center no-repeat;
+  background: url('../images/opener.svg') center center no-repeat;
   background-size: contain;
 }
 .timeline-container .timeline .title-super {
-  background: url('../images/titles/super.svg') center center no-repeat;
+  background: url('../images/super.svg') center center no-repeat;
   background-size: contain;
 }
 .timeline-container .timeline .title-list {
-  background: url('../images/titles/list.svg') center center no-repeat;
+  background: url('../images/list.svg') center center no-repeat;
   background-size: contain;
 }
 .timeline-container .timeline .title-add {
-  background: url('../images/titles/add.svg') center center no-repeat;
+  background: url('../images/add.svg') center center no-repeat;
   background-size: contain;
   box-shadow: 0 0 4px rgba(0, 0, 0, 0);
 }
 .timeline-container .timeline .title-closer {
-  background: url('../images/titles/closer.svg') center center no-repeat;
+  background: url('../images/closer.svg') center center no-repeat;
   background-size: contain;
 }
 /*Video Container*/
