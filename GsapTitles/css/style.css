@@ -274,7 +274,7 @@ input[type=range]:focus::-ms-fill-upper {
   margin-right: 0;
 }
 .timeline-container .timeline .title-opener {
-  background: url('images/opener.svg') center center no-repeat;
+  background: url('../images/opener.svg') center center no-repeat;
   background-size: contain;
 }
 .timeline-container .timeline .title-super {
