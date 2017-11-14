@@ -1,3 +1,5 @@
+/*Setting vars and initial values for rows and cols*/
+
 var grid = $('.grid-container'),
     rows = 10,
     cols = 10,
@@ -18,21 +20,22 @@ function hexToRgb(hex) {
     throw new Error('Bad Hex');
 }
 
-/* funciton that append divs*/
+/* funciton that appends divs into grid*/
 
-var appendDiv = function () {
-    grid.append('<div class="cell"></div>');
+var appendDiv = function (r, c) {
+
+    for (var i = 0; i < (r * c); i++) {
+        grid.append('<div class="cell"></div>');
+    }
 };
 
-/*Sets initial state of grid*/
+/*Sets initial state of grid and resets on calling*/
 var resetGrid = function () {
     $('select').val('10');
     grid.empty();
     grid.css('grid-template-rows', 'repeat(10, 1fr)');
     grid.css('grid-template-columns', 'repeat(10, 1fr)');
-    for (var i = 0; i < 100; i++) {
-        appendDiv();
-    }
+    appendDiv(10, 10);
 };
 
 resetGrid();
@@ -45,11 +48,8 @@ $('#reset-grid').on('click', function () {
 function createGrid(r, c) {
     grid.css('grid-template-rows', 'repeat(' + r + ', 1fr)');
     grid.css('grid-template-columns', 'repeat(' + c + ', 1fr)');
-
     grid.empty();
-    for (var i = 0; i < (r * c); i++) {
-        appendDiv();
-    }
+    appendDiv(r, c);
 }
 
 /*Sets number of rows*/
