@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pixel Art Maker</title>
+    <link rel="stylesheet" href="css/normalize.css">
+    <link rel="stylesheet" href="farbtastic/farbtastic.css" type="text/css" />
+    <link rel="stylesheet" href="css/styles.css">
+
+
+</head>
+
+<body>
+    <div class="container">
+        <div class="header">
+            <h1>Pixel Art Maker</h1>
+        </div>
+
+        <div class="controls">
+            <div>
+                <p>Set grid:</p>
+            </div>
+            <div class="rows-cols">
+                <select class="input input-row-cell" id="set-rows" name="rows" placeholder="Rows">
+                    <option disabled selected value="10">Rows</option>
+                    <option value="10">10</option>
+                    <option value="15">15</option>
+                    <option value="20">20</option>
+                    <option value="25">25</option>
+                    <option value="30">30</option>
+                    <option value="35">35</option>
+                    <option value="40">40</option>
+                    <option value="45">45</option>
+                    <option value="50">50</option>
+                </select>
+                <select class="input input-row-cell" id="set-cols" name="cols" placeholder="Columns">
+                    <option disabled selected value="10">Columns</option>
+                    <option value="10">10</option>
+                    <option value="15">15</option>
+                    <option value="20">20</option>
+                    <option value="25">25</option>
+                    <option value="30">30</option>
+                    <option value="35">35</option>
+                    <option value="40">40</option>
+                    <option value="45">45</option>
+                    <option value="50">50</option>
+                </select>
+            </div>
+            <div>
+                <p>Choose color:</p>
+            </div>
+            <div class="input" id="colorpicker"></div>
+            <div>
+                <form>
+                    <input type="text" id="color" name="color" value="#f8b812" />
+                </form>
+            </div>
+            <div id="reset-grid">Reset Grid</div>
+        </div>
+        <div class="grid-container">
+
+        </div>
+    </div>
+    <!--scripts-->
+    <script src="https://code.jquery.com/jquery-3.2.1.min.js" integrity="sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4=" crossorigin="anonymous"></script>
+    <script type="text/javascript" src="farbtastic/farbtastic.js"></script>
+
+    <script src="script.js"></script>
+    <script type="text/javascript">
+        $(document).ready(function() {
+
+            $('#colorpicker').farbtastic('#color');
+
+        });
+
+    </script>
+</body>
+
+</html>
