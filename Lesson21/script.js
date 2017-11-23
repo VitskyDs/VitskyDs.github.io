@@ -109,3 +109,8 @@ $(grid).on('mousemove', '.cell', function () {
 $(document).on('mouseup mouseleave dragstart', function () {
     isDragging = false;
 });
+
+/*Disable right clicking*/
+$('.cell').bind("contextmenu", function (e) {
+    return false;
+});
