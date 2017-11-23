@@ -52,18 +52,6 @@ function createGrid(r, c) {
     appendDiv(r, c);
 }
 
-/*Sets number of rows*/
-/*$('#set-rows').on('change', function () {
-    rows = $('#set-rows').val();
-    grid.css('grid-template-rows', 'repeat(' + rows + ', 1fr)');
-    Number(rows);
-    Number(cols);
-    grid.empty();
-    for (var i = 0; i < (rows * cols); i++) {
-        appendDiv();
-    }
-});*/
-
 /*Sets number of cols and row on change at inputs*/
 $('.input-row-cell').on('change', function () {
     rows = $('#set-rows').val() === null ? 10 : Number($('#set-rows').val());

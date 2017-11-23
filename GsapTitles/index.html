@@ -7,7 +7,7 @@
 
     <title>Video Sandbox</title>
 
-    <link rel="stylesheet" href="css/normalize.css">
+    <link rel="stylesheet" href="../css/normalize.css">
     <link rel="stylesheet" href="css/style.css">
 
 </head>
@@ -21,77 +21,254 @@
         </div>
         <div class="sidebar-container">
             <div class="direction-ltr">
-                <div class="sidebar-panel-heading">
-                    <div class="panel-icon panel-icon-title"></div>
-                    <div class="panel-heading">Titles</div>
+
+                <!--Opener-->
+                <div id="opener-wrapper" class="display-none title-options">
+                    <div class="sidebar-panel-heading">
+                        <div class="panel-icon panel-icon-title"></div>
+                        <div class="panel-heading">Titles</div>
+                    </div>
+                    <div class="sidebar-panel-content">
+                        <div class="sidebar-text-field">
+                            <div class="label small">First line</div>
+                            <div class="input-wrapper">
+                                <input type="text" maxlength="25" placeholder="First name, Headline, etc." class="text-input text-input-super">
+                                <div class="input-char-counter">25</div>
+                            </div>
+                        </div>
+                        <div class="sidebar-text-field">
+                            <div class="label small">Second line</div>
+                            <div class="input-wrapper">
+                                <input type="text" maxlength="25" placeholder="Last name, Desctiption, etc." class="text-input text-input-super">
+                                <div class="input-char-counter">25</div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="sidebar-panel-heading">
+                        <div class="panel-icon panel-icon-style"></div>
+                        <div class="panel-heading">Styles</div>
+                    </div>
+                    <div class="sidebar-panel-content">
+                        <div class="sidebar-style-item"></div>
+                        <div class="sidebar-style-item"></div>
+                        <div class="sidebar-style-item"></div>
+                        <div class="sidebar-style-item"></div>
+                    </div>
+                    <div class="sidebar-panel-heading">
+                        <div class="panel-icon panel-icon-duration"></div>
+                        <div class="panel-heading">Duration</div>
+                    </div>
+                    <div class="sidebar-panel-content">
+                        <input type="range" min="3" max="10" step="0.5">
+                    </div>
                 </div>
-                <div class="sidebar-panel-content">
-                    <div class="sidebar-text-field">
-                        <div class="label small">First line</div>
-                        <div class="input-wrapper">
-                            <input type="text" maxlength="25" placeholder="First name, Headline, etc." class="text-input text-input-super">
-                            <div class="input-char-counter">25</div>
+
+                <!--Super-->
+
+                <div id="super-1-wrapper" class="display-none title-options">
+                    <div class="sidebar-panel-heading">
+                        <div class="panel-icon panel-icon-title"></div>
+                        <div class="panel-heading">Titles</div>
+                    </div>
+                    <div class="sidebar-panel-content">
+                        <div class="sidebar-text-field">
+                            <div class="label small">First line</div>
+                            <div class="input-wrapper">
+                                <input type="text" maxlength="25" placeholder="First name, Headline, etc." class="text-input text-input-super">
+                                <div class="input-char-counter">25</div>
+                            </div>
                         </div>
                     </div>
-                    <div class="sidebar-text-field">
-                        <div class="label small">Second line</div>
-                        <div class="input-wrapper">
-                            <input type="text" maxlength="25" placeholder="Last name, Desctiption, etc." class="text-input text-input-super">
-                            <div class="input-char-counter">25</div>
+                    <div class="sidebar-panel-heading">
+                        <div class="panel-icon panel-icon-style"></div>
+                        <div class="panel-heading">Styles</div>
+                    </div>
+                    <div class="sidebar-panel-content">
+                        <div class="sidebar-style-item"></div>
+                        <div class="sidebar-style-item"></div>
+                        <div class="sidebar-style-item"></div>
+                        <div class="sidebar-style-item"></div>
+                    </div>
+                    <div class="sidebar-panel-heading">
+                        <div class="panel-icon panel-icon-duration"></div>
+                        <div class="panel-heading">Duration</div>
+                    </div>
+                    <div class="sidebar-panel-content">
+                        <input type="range" min="3" max="10" step="0.5">
+                    </div>
+                </div>
+
+                <!--Text List-->
+
+                <div id="list-1-wrapper" class="display-none title-options">
+                    <div class="sidebar-panel-heading">
+                        <div class="panel-icon panel-icon-title"></div>
+                        <div class="panel-heading">Titles</div>
+                    </div>
+                    <div class="sidebar-panel-content">
+                        <div class="sidebar-text-field">
+                            <div class="label small">First item</div>
+                            <div class="input-wrapper">
+                                <input type="text" maxlength="25" placeholder="First name, Headline, etc." class="text-input text-input-super">
+                                <div class="input-char-counter">25</div>
+                            </div>
+                        </div>
+                        <div class="sidebar-text-field">
+                            <div class="label small">Second item</div>
+                            <div class="input-wrapper">
+                                <input type="text" maxlength="25" placeholder="Last name, Desctiption, etc." class="text-input text-input-super">
+                                <div class="input-char-counter">25</div>
+                            </div>
+                        </div>
+                        <div class="sidebar-text-field">
+                            <div class="label small">Third item</div>
+                            <div class="input-wrapper">
+                                <input type="text" maxlength="25" placeholder="First name, Headline, etc." class="text-input text-input-super">
+                                <div class="input-char-counter">25</div>
+                            </div>
+                        </div>
+                        <div class="sidebar-text-field">
+                            <div class="label small">Fourth item</div>
+                            <div class="input-wrapper">
+                                <input type="text" maxlength="25" placeholder="Last name, Desctiption, etc." class="text-input text-input-super">
+                                <div class="input-char-counter">25</div>
+                            </div>
+                        </div>
+                        <div class="sidebar-text-field">
+                            <div class="label small">Fifth item</div>
+                            <div class="input-wrapper">
+                                <input type="text" maxlength="25" placeholder="First name, Headline, etc." class="text-input text-input-super">
+                                <div class="input-char-counter">25</div>
+                            </div>
                         </div>
                     </div>
-                    <!--<div class="sidebar-text-field">
-    <div class="label small">Second line</div>
-    <div class="input-wrapper">
-        <input type="text" maxlength="25" placeholder="Last name, Desctiption, etc." class="text-input text-input-super">
-        <div class="input-char-counter">25</div>
-    </div>
-</div>
-<div class="sidebar-text-field">
-    <div class="label small">Second line</div>
-    <div class="input-wrapper">
-        <input type="text" maxlength="25" placeholder="Last name, Desctiption, etc." class="text-input text-input-super">
-        <div class="input-char-counter">25</div>
-    </div>
-</div>
-<div class="sidebar-text-field">
-    <div class="label small">Second line</div>
+                    <div class="sidebar-panel-heading">
+                        <div class="panel-icon panel-icon-style"></div>
+                        <div class="panel-heading">Styles</div>
+                    </div>
+                    <div class="sidebar-panel-content">
+                        <div class="sidebar-style-item"></div>
+                        <div class="sidebar-style-item"></div>
+                        <div class="sidebar-style-item"></div>
+                        <div class="sidebar-style-item"></div>
+                    </div>
+                    <div class="sidebar-panel-heading">
+                        <div class="panel-icon panel-icon-duration"></div>
+                        <div class="panel-heading">Duration</div>
+                    </div>
+                    <div class="sidebar-panel-content">
+                        <input type="range" min="3" max="10" step="0.5">
+                    </div>
+                </div>
+
+                <!--Super-->
+
+                <div id="super-2-wrapper" class="display-none title-options">
+                    <div class="sidebar-panel-heading">
+                        <div class="panel-icon panel-icon-title"></div>
+                        <div class="panel-heading">Titles</div>
+                    </div>
+                    <div class="sidebar-panel-content">
+                        <div class="sidebar-text-field">
+                            <div class="label small">First item</div>
+                            <div class="input-wrapper">
+                                <input type="text" maxlength="25" placeholder="First name, Headline, etc." class="text-input text-input-super">
+                                <div class="input-char-counter">25</div>
+                            </div>
+                        </div>
+                        <!--<div class="sidebar-text-field">
+    <div class="label small">Second item</div>
     <div class="input-wrapper">
         <input type="text" maxlength="25" placeholder="Last name, Desctiption, etc." class="text-input text-input-super">
         <div class="input-char-counter">25</div>
     </div>
 </div>-->
+                    </div>
+                    <div class="sidebar-panel-heading">
+                        <div class="panel-icon panel-icon-style"></div>
+                        <div class="panel-heading">Styles</div>
+                    </div>
+                    <div class="sidebar-panel-content">
+                        <div class="sidebar-style-item"></div>
+                        <div class="sidebar-style-item"></div>
+                        <div class="sidebar-style-item"></div>
+                        <div class="sidebar-style-item"></div>
+                    </div>
+                    <div class="sidebar-panel-heading">
+                        <div class="panel-icon panel-icon-duration"></div>
+                        <div class="panel-heading">Duration</div>
+                    </div>
+                    <div class="sidebar-panel-content">
+                        <input type="range" min="3" max="10" step="0.5">
+                    </div>
+                </div>
 
+                <!--Closer-->
+
+                <div id="closer-wrapper" class="title-options">
+                    <div class="sidebar-panel-heading">
+                        <div class="panel-icon panel-icon-title"></div>
+                        <div class="panel-heading">Titles</div>
+                    </div>
+                    <div class="sidebar-panel-content">
+                        <div class="sidebar-text-field">
+                            <div class="label small">First item</div>
+                            <div class="input-wrapper">
+                                <input type="text" maxlength="25" placeholder="First name, Headline, etc." class="text-input text-input-super">
+                                <div class="input-char-counter">25</div>
+                            </div>
+                        </div>
+                        <div class="sidebar-text-field">
+                            <div class="label small">Second item</div>
+                            <div class="input-wrapper">
+                                <input type="text" maxlength="25" placeholder="Last name, Desctiption, etc." class="text-input text-input-super">
+                                <div class="input-char-counter">25</div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="sidebar-panel-heading">
+                        <div class="panel-icon panel-icon-style"></div>
+                        <div class="panel-heading">Styles</div>
+                    </div>
+                    <div class="sidebar-panel-content">
+                        <div class="sidebar-style-item"></div>
+                        <div class="sidebar-style-item"></div>
+                        <div class="sidebar-style-item"></div>
+                        <div class="sidebar-style-item"></div>
+                    </div>
+                    <div class="sidebar-panel-heading">
+                        <div class="panel-icon panel-icon-duration"></div>
+                        <div class="panel-heading">Duration</div>
+                    </div>
+                    <div class="sidebar-panel-content">
+                        <input type="range" min="3" max="10" step="0.5">
+                    </div>
                 </div>
-                <div class="sidebar-panel-heading">
-                    <div class="panel-icon panel-icon-style"></div>
-                    <div class="panel-heading">Styles</div>
-                </div>
-                <div class="sidebar-panel-content">
-                    <div class="sidebar-style-item"></div>
-                    <div class="sidebar-style-item"></div>
-                    <div class="sidebar-style-item"></div>
-                    <div class="sidebar-style-item"></div>
-                </div>
-                <div class="sidebar-panel-heading">
-                    <div class="panel-icon panel-icon-duration"></div>
-                    <div class="panel-heading">Duration</div>
-                </div>
-                <div class="sidebar-panel-content">
-                    <input type="range" min="3" max="10" step="0.5">
-                </div>
+                <!--end of closer title-->
             </div>
         </div>
+        <!--end of Sidebar-->
+        <!--timeline-->
         <div class="timeline-container">
             <div class="flex-center-hor-ver">
                 <div class="timeline-wrapper">
                     <div class="panel-heading">Timeline</div>
                     <div class="timeline">
                         <div class="title-wrapper title-opener"></div>
-                        <div class="title-wrapper title-super"></div>
-                        <div class="title-wrapper title-list"></div>
-                        <div class="title-wrapper title-super"></div>
-                        <div class="title-wrapper title-add"></div>
+                        <div class="title-wrapper title-super-1"></div>
+                        <div class="title-wrapper title-list-1"></div>
+                        <div class="title-wrapper title-super-2"></div>
+                        <div class="title-add">+
+                            <div class="title-add-menu-wrapper display-none">
+                                <div class="filter-shadow-wrapper">
+                                    <div class="caret"></div>
+                                    <div class="title-add-menu">
+                                        <div class="title-add-item title-super-3"></div>
+                                        <div class="title-add-item title-list-2"></div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
                         <div class="title-wrapper title-closer"></div>
                     </div>
                 </div>
@@ -103,7 +280,7 @@
             </div>
             <div class="video-wrapper">
 
-                <video src="images/stars.mov">
+                <video id="video" src="images/stars.mov">
                 </video>
             </div>
             <div class="controls-wrapper">
@@ -113,6 +290,8 @@
             </div>
         </div>
     </div>
+    <script src="https://code.jquery.com/jquery-3.2.1.min.js" integrity="sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4=" crossorigin="anonymous"></script>
+    <script src="js/script.js"></script>
 </body>
 
 </html>

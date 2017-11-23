@@ -9,6 +9,15 @@
 @gray: #E6E6E6;
 @light-gray: #F2F2F2;
 
+/*General*/
+
+.display-none {
+    display: none;
+}
+.filter-shadow-wrapper {
+    filter: drop-shadow(0 0 2px rgba(0, 0, 0, 0.2));
+}
+
 /*Typography*/
 
 * {
@@ -21,6 +30,7 @@ body {}
 .small {
     font-size: 14px;
     line-height: 21px;
+    margin: 0 0 2px 0;
 }
 .panel-heading {
     font-size: 18px;
@@ -33,7 +43,7 @@ body {}
 .container {
     display: grid;
     height: 100vh;
-    grid-template-columns: 300px 1fr;
+    grid-template-columns: 310px 1fr;
     grid-template-rows: 45px 160px 1fr;
     grid-gap: 0 20px;
     grid-template-areas: "header header" "sidebar timeline" "sidebar video";
@@ -173,6 +183,7 @@ input[type=range]:focus::-ms-fill-upper {
     background-color: @light-gray;
     box-shadow: 0 0 5px rgba(0, 0, 0, 0.2);
     overflow-y: auto;
+    overflow: overlay;
     direction: rtl;
     padding: 0 0 40px 0;
     .direction-ltr {
@@ -183,7 +194,7 @@ input[type=range]:focus::-ms-fill-upper {
         margin: 0 0 10px 0;
         align-items: center;
         flex-flow: row nowrap;
-        padding: 0 20px;
+        padding: 2px 20px;
         background-color: white;
         border-bottom: 2px;
         border-bottom-style: solid;
@@ -218,12 +229,9 @@ input[type=range]:focus::-ms-fill-upper {
         display: flex;
         justify-content: space-between;
         flex-flow: row wrap;
-        /*        &:last-child {
-            margin-bottom: 40px;
-        }*/
         .sidebar-text-field {
-            width: 100%;
             margin: 0 0 15px 0;
+            flex-basis: ~"calc(100% - 15px)";
             &:not(: first-child) {
                 margin: 0 0 20px 0;
             }
@@ -252,7 +260,7 @@ input[type=range]:focus::-ms-fill-upper {
             }
         }
         .sidebar-style-item {
-            width: 123px;
+            width: 128px;
             height: 78px;
             margin-bottom: 10px;
             background-color: white;
@@ -279,35 +287,85 @@ input[type=range]:focus::-ms-fill-upper {
         display: flex;
         flex-flow: row nowrap;
         justify-content: space-between;
+        align-items: center;
         background: url(../images/timeline-line.svg) center repeat-x;
         transition: all 200ms ease;
         .title-wrapper {
             width: 112px;
             height: 63px;
             background-size: contain;
-            margin-right: 15px;
+            margin-right: 20px;
             border-radius: 5px;
-            box-shadow: 0 0 4px rgba(0, 0, 0, 0.2);
+            box-shadow: 0 0 4px rgba(0, 0, 0, 0.1);
+            transition: box-shadow 300ms ease;
             &:last-child {
                 margin-right: 0;
+            }
+            &:hover {
+                box-shadow: 0 0 6px rgba(0, 0, 0, 0.2);
+            }
+            &.title-wrapper-active {
+                box-shadow: 0 0 10px rgba(143, 61, 184, 0.5);
             }
         }
         .title-opener {
             background: url('../images/opener.svg') center center no-repeat;
             background-size: contain;
         }
-        .title-super {
+        .title-super-1,
+        .title-super-2,
+        .title-super-3 {
             background: url('../images/super.svg') center center no-repeat;
             background-size: contain;
         }
-        .title-list {
+        .title-list-1,
+        .title-list-2 {
             background: url('../images/list.svg') center center no-repeat;
             background-size: contain;
         }
         .title-add {
-            background: url('../images/add.svg') center center no-repeat;
-            background-size: contain;
-            box-shadow: 0 0 4px rgba(0, 0, 0, 0);
+            background-color: white;
+            position: relative;
+            height: 40px;
+            width: 40px;
+            line-height: 34px;
+            text-align: center;
+            color: #8f3db8;
+            font-size: 30px;
+            border-radius: 100%;
+            margin: 0 56px 0 36px;
+            box-shadow: 0 0 4px rgba(0, 0, 0, 0.2);
+            .title-add-menu-wrapper {
+                .caret {
+                    position: absolute;
+                    top: 50px;
+                    left: 10px;
+                    width: 20px;
+                    height: 20px;
+                    background-color: white;
+                    transform: rotate(45deg);
+                }
+                .title-add-menu {
+                    position: absolute;
+                    top: 60px;
+                    left: -122px;
+                    width: 244px;
+                    display: flex;
+                    padding: 20px;
+                    border-radius: 6px;
+                    background-color: white;
+                    .title-add-item {
+                        width: 112px;
+                        height: 63px;
+                        background-size: contain;
+                        margin-right: 20px;
+                        border-radius: 5px;
+                        &:last-child {
+                            margin-right: 0;
+                        }
+                    }
+                }
+            }
         }
         .title-closer {
             background: url('../images/closer.svg') center center no-repeat;
@@ -355,16 +413,20 @@ input[type=range]:focus::-ms-fill-upper {
             box-shadow: 0 1px 4px rgba(143, 61, 184, 0.5);
             background-color: white;
             line-height: 50px;
+            transition: all 100ms ease;
+            &:active {
+                transform: translateY(3%);
+                box-shadow: 0 0 4px rgba(143, 61, 184, 0.5);
+            }
             &:last-child {
                 margin: 25px 0 0 0;
             }
             &.video-controls-prev-button {
-                background: white url(../images/icons/arrow.svg) center center no-repeat;
+                background: white url(../images/icons/arrow-left.svg) center center no-repeat;
                 background-size: auto;
-                transform: scaleX(-1);
             }
             &.video-controls-next-button {
-                background: white url(../images/icons/arrow.svg) center center no-repeat;
+                background: white url(../images/icons/arrow-right.svg) center center no-repeat;
                 background-size: auto;
             }
             &.video-controls-play-button {
@@ -374,3 +436,7 @@ input[type=range]:focus::-ms-fill-upper {
         }
     }
 }
+
+/*Animations*/
+
+@keyframes button-click {}
