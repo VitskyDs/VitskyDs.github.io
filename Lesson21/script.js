@@ -1,14 +1,15 @@
 /*Setting vars and initial values for rows and cols*/
 
-var grid = $('.grid-container'),
-    rows = 10,
+const grid = $('.grid-container');
+let rows = 10,
     cols = 10,
+    isDragging = false,
     color;
 
 /*function that converts Hex to RGB*/
 
 function hexToRgb(hex) {
-    var c;
+    let c;
     if (/^#([A-Fa-f0-9]{3}){1,2}$/.test(hex)) {
         c = hex.substring(1).split('');
         if (c.length == 3) {
@@ -20,22 +21,37 @@ function hexToRgb(hex) {
     throw new Error('Bad Hex');
 }
 
-/* funciton that appends divs into grid*/
+/*function that calculates cell size*/
+
+var clacCellSize = function (r, c) {
+    if (r > c) {
+        let cellSize = 500 / r;
+        $('.cell').css('height', cellSize);
+        $('.cell').css('width', cellSize);
+    } else {
+        let cellSize = 500 / c;
+        $('.cell').css('height', cellSize);
+        $('.cell').css('width', cellSize);
+    }
+};
+
+/* function that appends divs into grid*/
 
 var appendDiv = function (r, c) {
 
-    for (var i = 0; i < (r * c); i++) {
+    for (let i = 0; i < (r * c); i++) {
         grid.append('<div class="cell"></div>');
     }
 };
 
 /*Sets initial state of grid and resets on calling*/
-var resetGrid = function () {
+const resetGrid = function () {
     $('select').val('10');
     grid.empty();
     grid.css('grid-template-rows', 'repeat(10, 1fr)');
     grid.css('grid-template-columns', 'repeat(10, 1fr)');
     appendDiv(10, 10);
+    clacCellSize(10, 10);
 };
 
 resetGrid();
@@ -50,6 +66,7 @@ function createGrid(r, c) {
     grid.css('grid-template-columns', 'repeat(' + c + ', 1fr)');
     grid.empty();
     appendDiv(r, c);
+    clacCellSize(r, c);
 }
 
 /*Sets number of cols and row on change at inputs*/
@@ -73,4 +90,22 @@ grid.on('click', '.cell', function () {
     } else {
         $(this).css('background-color', color);
     }
+});
+
+/*Draggable painting*/
+
+$(grid).on('mousedown', '.cell', function () {
+    isDragging = true;
+});
+
+$(grid).on('mousemove', '.cell', function () {
+    if (isDragging) {
+        $(this).css('background-color', color);
+    }
+});
+/*
+ Stop painting when mouse isn't dragging anymore
+ */
+$(document).on('mouseup mouseleave dragstart', function () {
+    isDragging = false;
 });
