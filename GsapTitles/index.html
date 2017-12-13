@@ -22,15 +22,26 @@
         <div class="sidebar-container">
             <div class="direction-ltr">
 
+                <div class="sidebar-panel-heading">
+                    <div class="panel-icon panel-icon-style"></div>
+                    <div class="panel-heading">Styles</div>
+                </div>
+                <div class="sidebar-panel-content">
+                    <div class="sidebar-style-item"></div>
+                    <div class="sidebar-style-item"></div>
+                    <div class="sidebar-style-item"></div>
+                    <div class="sidebar-style-item"></div>
+                </div>
+
                 <!--Opener-->
-                <div id="opener-wrapper" class="display-none title-options">
+                <div id="opener-wrapper" class="title-options">
                     <div class="sidebar-panel-heading">
                         <div class="panel-icon panel-icon-title"></div>
                         <div class="panel-heading">Titles</div>
                     </div>
                     <div class="sidebar-panel-content">
                         <div class="sidebar-text-field">
-                            <div class="label small">First line</div>
+                            <div class="label small">Opener first line</div>
                             <div class="input-wrapper">
                                 <input type="text" maxlength="25" placeholder="First name, Headline, etc." class="text-input text-input-super">
                                 <div class="input-char-counter">25</div>
@@ -43,16 +54,6 @@
                                 <div class="input-char-counter">25</div>
                             </div>
                         </div>
-                    </div>
-                    <div class="sidebar-panel-heading">
-                        <div class="panel-icon panel-icon-style"></div>
-                        <div class="panel-heading">Styles</div>
-                    </div>
-                    <div class="sidebar-panel-content">
-                        <div class="sidebar-style-item"></div>
-                        <div class="sidebar-style-item"></div>
-                        <div class="sidebar-style-item"></div>
-                        <div class="sidebar-style-item"></div>
                     </div>
                     <div class="sidebar-panel-heading">
                         <div class="panel-icon panel-icon-duration"></div>
@@ -79,16 +80,7 @@
                             </div>
                         </div>
                     </div>
-                    <div class="sidebar-panel-heading">
-                        <div class="panel-icon panel-icon-style"></div>
-                        <div class="panel-heading">Styles</div>
-                    </div>
-                    <div class="sidebar-panel-content">
-                        <div class="sidebar-style-item"></div>
-                        <div class="sidebar-style-item"></div>
-                        <div class="sidebar-style-item"></div>
-                        <div class="sidebar-style-item"></div>
-                    </div>
+
                     <div class="sidebar-panel-heading">
                         <div class="panel-icon panel-icon-duration"></div>
                         <div class="panel-heading">Duration</div>
@@ -143,16 +135,6 @@
                         </div>
                     </div>
                     <div class="sidebar-panel-heading">
-                        <div class="panel-icon panel-icon-style"></div>
-                        <div class="panel-heading">Styles</div>
-                    </div>
-                    <div class="sidebar-panel-content">
-                        <div class="sidebar-style-item"></div>
-                        <div class="sidebar-style-item"></div>
-                        <div class="sidebar-style-item"></div>
-                        <div class="sidebar-style-item"></div>
-                    </div>
-                    <div class="sidebar-panel-heading">
                         <div class="panel-icon panel-icon-duration"></div>
                         <div class="panel-heading">Duration</div>
                     </div>
@@ -176,23 +158,6 @@
                                 <div class="input-char-counter">25</div>
                             </div>
                         </div>
-                        <!--<div class="sidebar-text-field">
-    <div class="label small">Second item</div>
-    <div class="input-wrapper">
-        <input type="text" maxlength="25" placeholder="Last name, Desctiption, etc." class="text-input text-input-super">
-        <div class="input-char-counter">25</div>
-    </div>
-</div>-->
-                    </div>
-                    <div class="sidebar-panel-heading">
-                        <div class="panel-icon panel-icon-style"></div>
-                        <div class="panel-heading">Styles</div>
-                    </div>
-                    <div class="sidebar-panel-content">
-                        <div class="sidebar-style-item"></div>
-                        <div class="sidebar-style-item"></div>
-                        <div class="sidebar-style-item"></div>
-                        <div class="sidebar-style-item"></div>
                     </div>
                     <div class="sidebar-panel-heading">
                         <div class="panel-icon panel-icon-duration"></div>
@@ -205,7 +170,7 @@
 
                 <!--Closer-->
 
-                <div id="closer-wrapper" class="title-options">
+                <div id="closer-wrapper" class="display-none title-options">
                     <div class="sidebar-panel-heading">
                         <div class="panel-icon panel-icon-title"></div>
                         <div class="panel-heading">Titles</div>
@@ -227,16 +192,6 @@
                         </div>
                     </div>
                     <div class="sidebar-panel-heading">
-                        <div class="panel-icon panel-icon-style"></div>
-                        <div class="panel-heading">Styles</div>
-                    </div>
-                    <div class="sidebar-panel-content">
-                        <div class="sidebar-style-item"></div>
-                        <div class="sidebar-style-item"></div>
-                        <div class="sidebar-style-item"></div>
-                        <div class="sidebar-style-item"></div>
-                    </div>
-                    <div class="sidebar-panel-heading">
                         <div class="panel-icon panel-icon-duration"></div>
                         <div class="panel-heading">Duration</div>
                     </div>
@@ -254,7 +209,7 @@
                 <div class="timeline-wrapper">
                     <div class="panel-heading">Timeline</div>
                     <div class="timeline">
-                        <div class="title-wrapper title-opener"></div>
+                        <div class="title-wrapper title-opener title-wrapper-active"></div>
                         <div class="title-wrapper title-super-1"></div>
                         <div class="title-wrapper title-list-1"></div>
                         <div class="title-wrapper title-super-2"></div>
@@ -278,10 +233,67 @@
             <div class="headline-row">
                 <div class="panel-heading">Video Preview</div>
             </div>
-            <div class="video-wrapper">
-
-                <video id="video" src="images/stars.mov">
-                </video>
+            <div class="video-container">
+                <div class="video-title-wrapper">
+                    <video width="640" height="360" id="video" controls src="images/video/opener.mp4">
+                    </video>
+                    <!--Title Content here-->
+                    <div class="title-container">
+                        <div class="theme-name">
+                            <div class="opener">
+                                <div class="opener-bg"></div>
+                                <div class="opener-text-1-wrapper">
+                                    <div class="opener-text-1">this is the headline</div>
+                                </div>
+                                <div class="opener-text-2-wrapper">
+                                    <div class="opener-text-2">this is the sub-headline</div>
+                                </div>
+                                <div class="opener-particle">1</div>
+                                <div class="opener-particle">2</div>
+                                <div class="opener-particle">3</div>
+                                <div class="opener-particle">4</div>
+                                <div class="opener-particle">5</div>
+                                <div class="opener-particle">6</div>
+                            </div>
+                            <div class="super-1">
+                                <div class="super-1-flah">
+                                    <div class="super-1-text"></div>
+                                </div>
+                            </div>
+                            <div class="text-list-1">
+                                <div class="list-item">
+                                    <div class="list-item-bullet"></div>
+                                    <div class="list-item-text"></div>
+                                </div>
+                                <div class="list-item">
+                                    <div class="list-item-bullet"></div>
+                                    <div class="list-item-text"></div>
+                                </div>
+                                <div class="list-item">
+                                    <div class="list-item-bullet"></div>
+                                    <div class="list-item-text"></div>
+                                </div>
+                                <div class="list-item">
+                                    <div class="list-item-bullet"></div>
+                                    <div class="list-item-text"></div>
+                                </div>
+                                <div class="list-item">
+                                    <div class="list-item-bullet"></div>
+                                    <div class="list-item-text"></div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="super-2">
+                            <div class="super-2-flah">
+                                <div class="super-2-text"></div>
+                            </div>
+                        </div>
+                        <div class="closer">
+                            <div class="closer-flah"></div>
+                            <div class="closer-bg"></div>
+                        </div>
+                    </div>
+                </div>
             </div>
             <div class="controls-wrapper">
                 <div class="video-controls video-controls-play-button">Start</div>
@@ -291,6 +303,7 @@
         </div>
     </div>
     <script src="https://code.jquery.com/jquery-3.2.1.min.js" integrity="sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4=" crossorigin="anonymous"></script>
+    <script src="../js/TweenMax.js"></script>
     <script src="js/script.js"></script>
 </body>
 

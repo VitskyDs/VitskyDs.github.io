@@ -1,6 +1,7 @@
 /*Font import*/
 
 @import url('https://fonts.googleapis.com/css?family=Titillium+Web:300,400,600');
+@import url('https://fonts.googleapis.com/css?family=Roboto:400,700,900');
 
 /*Color Variables*/
 
@@ -390,14 +391,27 @@ input[type=range]:focus::-ms-fill-upper {
             line-height: 37px;
         }
     }
-    .video-wrapper {
+    .video-container {
         width: 100%;
-        height: 360px;
         background-image: linear-gradient(to right, white, rgba(0, 0, 0, 0.1), white);
-        video {
+        .video-title-wrapper {
+            position: relative;
             width: 640px;
+            height: 360px;
             display: block;
             margin: 0 auto;
+            #video {
+                z-index: 100;
+            }
+            .title-container {
+                position: absolute;
+                top: 0;
+                left: 0;
+                width: 1920px;
+                height: 1080px;
+                zoom: 33.3%;
+                overflow: hidden;
+            }
         }
     }
     .controls-wrapper {
@@ -437,6 +451,73 @@ input[type=range]:focus::-ms-fill-upper {
     }
 }
 
-/*Animations*/
+/*Themes*/
 
-@keyframes button-click {}
+// First Theme
+.theme-name {
+    .opener {
+        .opener-bg {
+            position: absolute;
+            width: 100%;
+            height: 100%;
+            background-color: transparent;
+        }
+        .opener-text-1-wrapper {
+            overflow: hidden;
+            width: 100%;
+            height: 560px;
+            position: absolute;
+            top: 0;
+            left: 0;
+            .opener-text-1 {
+                font-family: 'Roboto', sans-serif;
+                font-size: 72px;
+                font-weight: 900;
+                text-transform: uppercase;
+                padding: 80px 285px;
+                background-color: white;
+                border: 20px solid black;
+                width: fit-content;
+                position: absolute;
+                top: 324px;
+                left: 203px;
+            }
+        }
+        .opener-text-2-wrapper {
+            overflow: hidden;
+            width: 100%;
+            height: 540px;
+            position: absolute;
+            top: 520px;
+            left: 0;
+            .opener-text-2 {
+                font-family: 'Roboto', sans-serif;
+                font-size: 50px;
+                font-weight: 600;
+                text-transform: lowercase;
+                padding: 60px 165px;
+                background-color: white;
+                border: 20px solid black;
+                width: fit-content;
+                position: absolute;
+                top: 0;
+                right: 200px;
+            }
+        }
+        .opener-particle {
+            position: absolute;
+            width: 75px;
+            height: 75px;
+            background-color: black;
+            color: white;
+            &.opener-particle:nth-child(4),
+            &.opener-particle:nth-child(7) {
+                position: absolute;
+                top: 50;
+                width: 150px;
+                height: 150px;
+                background-color: black;
+            }
+        }
+    }
+}
