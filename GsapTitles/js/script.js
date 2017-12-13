@@ -6,7 +6,7 @@ const btnPrev = $('.video-controls-prev-button'),
     btnAdd = $('.title-add'),
     video = document.getElementById('video');
 
-const animUnits = [0.15, 0.2, 0.25, 0.5, 1];
+const animUnits = [0.15, 0.2, 0.35, 0.5, 0.75, 1];
 /*Sidebar*/
 
 
@@ -64,8 +64,17 @@ const themeTl = new TimelineMax({
     paused: true
 });
 
-themeTl.add("start", 0).from('.opener-text-1', animUnits[2], {
-    y: 300
-}, "start").from('.opener-text-2', animUnits[2], {
-    y: -300
-}, "start");
+themeTl.add("start", 0).add("titles", 0.3)
+    .staggerFrom('.opener-particle', animUnits[2], {
+        ease: Power0.easeNone,
+        x: -2250,
+        rotation: -360
+    }, 0.15)
+    .from('.opener-text-1', animUnits[3], {
+        ease: Expo.easeOut,
+        y: 300
+    }, "titles")
+    .from('.opener-text-2', animUnits[3], {
+        ease: Expo.easeOut,
+        y: -300
+    }, "titles");

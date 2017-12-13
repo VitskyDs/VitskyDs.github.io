@@ -478,11 +478,22 @@ input[type=range]:focus::-ms-fill-upper {
   height: 75px;
   background-color: black;
   color: white;
+  right: -200px;
 }
-.theme-name .opener .opener-particle.opener-particle:nth-child(4),
-.theme-name .opener .opener-particle.opener-particle:nth-child(7) {
-  position: absolute;
-  top: 50;
+.theme-name .opener .opener-particle:nth-child(4) {
+  top: 75px;
+  width: 150px;
+  height: 150px;
+  background-color: black;
+}
+.theme-name .opener .opener-particle:nth-child(5) {
+  top: 940px;
+}
+.theme-name .opener .opener-particle:nth-child(6) {
+  top: 100px;
+}
+.theme-name .opener .opener-particle:nth-child(7) {
+  top: 70px;
   width: 150px;
   height: 150px;
   background-color: black;

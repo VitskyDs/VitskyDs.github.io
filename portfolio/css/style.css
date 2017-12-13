@@ -374,27 +374,27 @@ footer {
 }
 /*Projects Thumbnails*/
 #urbanika .item-content {
-  background: #fffaf3 url('/images/thumbnail-urbanika.png') center center no-repeat;
+  background: #fffaf3 url('../images/thumbnail-urbanika.png') center center no-repeat;
   background-size: contain;
 }
 #chefbot .item-content {
-  background: #f5fbfb url('/images/thumbnail-chefbot.svg') center center no-repeat;
+  background: #f5fbfb url('../images/thumbnail-chefbot.svg') center center no-repeat;
   background-size: contain;
 }
 #showreel .item-content {
-  background: white url('/images/thumbnail-showreel.png') no-repeat;
+  background: white url('../images/thumbnail-showreel.png') no-repeat;
   background-size: cover;
 }
 #showbox .item-content {
-  background: url('/images/thumbnail-selfserve.png') center center no-repeat;
+  background: url('../images/thumbnail-selfserve.png') center center no-repeat;
   background-size: cover;
 }
 #voop .item-content {
-  background: #020202 url('/images/thumbnail-voop.png') center center no-repeat;
+  background: #020202 url('../images/thumbnail-voop.png') center center no-repeat;
   background-size: cover;
 }
 #gsap .item-content {
-  background: #020202 url('/images/thumbnail-gsap.png') center top no-repeat;
+  background: #020202 url('../images/thumbnail-gsap.png') center top no-repeat;
   background-size: cover;
 }
 /*Media Queries*/
