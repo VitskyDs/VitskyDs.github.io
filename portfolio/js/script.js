@@ -5,8 +5,6 @@ $(document).ready(function () {
         menuButton = $('.menu-button'),
         mobileMenu = $('.mobile-menu');
 
-
-
     /*Initialize Flickity Carousels*/
 
     $('.main-carousel').flickity({

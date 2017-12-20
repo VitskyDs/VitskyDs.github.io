@@ -9,11 +9,9 @@
 
     <link rel="stylesheet" href="../css/normalize.css">
     <link rel="stylesheet" href="css/style.css">
-
 </head>
 
 <body>
-
     <div class="container">
         <div class="header">
             <div class="brand"><img src="images/Logo.svg" alt="Video Sandbox Logo"></div>
@@ -34,7 +32,8 @@
                 </div>
 
                 <!--Opener-->
-                <div id="opener-wrapper" class="title-options">
+                <div id="opener-wrapper" class="opener-01-target title-displayNone-target title-options">
+                    <div class="sidebar-panel-heading sidebar-panel-title">Opener</div>
                     <div class="sidebar-panel-heading">
                         <div class="panel-icon panel-icon-title"></div>
                         <div class="panel-heading">Titles</div>
@@ -43,14 +42,14 @@
                         <div class="sidebar-text-field">
                             <div class="label small">Opener first line</div>
                             <div class="input-wrapper">
-                                <input type="text" maxlength="25" placeholder="First name, Headline, etc." class="text-input text-input-super">
+                                <input id="opener-text-1" type="text" maxlength="25" placeholder="First name, Headline, etc." class="text-input text-input-super">
                                 <div class="input-char-counter">25</div>
                             </div>
                         </div>
                         <div class="sidebar-text-field">
                             <div class="label small">Second line</div>
                             <div class="input-wrapper">
-                                <input type="text" maxlength="25" placeholder="Last name, Desctiption, etc." class="text-input text-input-super">
+                                <input id="opener-text-2" type="text" maxlength="25" placeholder="Last name, Desctiption, etc." class="text-input text-input-super">
                                 <div class="input-char-counter">25</div>
                             </div>
                         </div>
@@ -66,7 +65,8 @@
 
                 <!--Super-->
 
-                <div id="super-1-wrapper" class="display-none title-options">
+                <div id="super-1-wrapper" class="super-01-target title-displayNone-target title-options display-none">
+                    <div class="sidebar-panel-heading sidebar-panel-title">Lower Third</div>
                     <div class="sidebar-panel-heading">
                         <div class="panel-icon panel-icon-title"></div>
                         <div class="panel-heading">Titles</div>
@@ -92,7 +92,8 @@
 
                 <!--Text List-->
 
-                <div id="list-1-wrapper" class="display-none title-options">
+                <div id="list-1-wrapper" class="txtlist-01-target title-displayNone-target title-options display-none">
+                    <div class="sidebar-panel-heading sidebar-panel-title">List</div>
                     <div class="sidebar-panel-heading">
                         <div class="panel-icon panel-icon-title"></div>
                         <div class="panel-heading">Titles</div>
@@ -145,7 +146,8 @@
 
                 <!--Super-->
 
-                <div id="super-2-wrapper" class="display-none title-options">
+                <div id="super-2-wrapper" class="super-02-target  title-displayNone-target title-options display-none">
+                    <div class="sidebar-panel-heading sidebar-panel-title">Lower Third</div>
                     <div class="sidebar-panel-heading">
                         <div class="panel-icon panel-icon-title"></div>
                         <div class="panel-heading">Titles</div>
@@ -170,7 +172,8 @@
 
                 <!--Closer-->
 
-                <div id="closer-wrapper" class="display-none title-options">
+                <div id="closer-wrapper" class="closer-01-target title-displayNone-target title-options display-none">
+                    <div class="sidebar-panel-heading sidebar-panel-title">Closer</div>
                     <div class="sidebar-panel-heading">
                         <div class="panel-icon panel-icon-title"></div>
                         <div class="panel-heading">Titles</div>
@@ -209,10 +212,10 @@
                 <div class="timeline-wrapper">
                     <div class="panel-heading">Timeline</div>
                     <div class="timeline">
-                        <div class="title-wrapper title-opener title-wrapper-active"></div>
-                        <div class="title-wrapper title-super-1"></div>
-                        <div class="title-wrapper title-list-1"></div>
-                        <div class="title-wrapper title-super-2"></div>
+                        <div class="opener-01-target title-wrapper title-opener title-wrapper-active"></div>
+                        <div class="super-01-target title-wrapper title-super-1"></div>
+                        <div class="txtlist-01-target title-wrapper title-list-1"></div>
+                        <div class="super-02-target title-wrapper title-super-2"></div>
                         <div class="title-add">+
                             <div class="title-add-menu-wrapper display-none">
                                 <div class="filter-shadow-wrapper">
@@ -224,23 +227,26 @@
                                 </div>
                             </div>
                         </div>
-                        <div class="title-wrapper title-closer"></div>
+                        <div class="closer-01-target title-wrapper title-closer"></div>
                     </div>
                 </div>
             </div>
         </div>
+        <!--end of timline-->
+        <!--video container-->
         <div class="video-container">
             <div class="headline-row">
                 <div class="panel-heading">Video Preview</div>
             </div>
             <div class="video-container">
                 <div class="video-title-wrapper">
-                    <video width="640" height="360" id="video" controls src="images/video/opener.mp4">
+                    <video width="640" height="360" id="video" src="images/video/super.mp4">
                     </video>
                     <!--Title Content here-->
                     <div class="title-container">
                         <div class="theme-name">
-                            <div class="opener">
+                            <!--Opener-->
+                            <div class="opener-01-target opener title-displayNone-target">
                                 <div class="opener-bg"></div>
                                 <div class="opener-text-1-wrapper">
                                     <div class="opener-text-1">this is the headline</div>
@@ -255,12 +261,22 @@
                                 <div class="opener-particle"></div>
                                 <div class="opener-particle"></div>
                             </div>
-                            <div class="super-1">
+                            <!--Super 01-->
+                            <div class="super-01-target super-template title-displayNone-target display-none">
                                 <div class="super-1-flah">
-                                    <div class="super-1-text"></div>
+                                    <div class="super-particle"></div>
+                                    <div class="super-particle"></div>
+
+                                    <div class="super-1-text">
+                                        This is the text
+                                    </div>
+                                    <div class="super-2-text">
+                                        This is the text
+                                    </div>
                                 </div>
                             </div>
-                            <div class="text-list-1">
+                            <!--Text List-->
+                            <div class="text-list-1 display-none">
                                 <div class="list-item">
                                     <div class="list-item-bullet"></div>
                                     <div class="list-item-text"></div>
@@ -282,16 +298,19 @@
                                     <div class="list-item-text"></div>
                                 </div>
                             </div>
-                        </div>
-                        <div class="super-2">
-                            <div class="super-2-flah">
-                                <div class="super-2-text"></div>
+                            <!--Super 02-->
+                            <div class="super-2 title-displayNone-target display-none">
+                                <div class="super-2-flah">
+                                    <div class="super-2-text"></div>
+                                </div>
+                            </div>
+                            <!--Closer-->
+                            <div class="closer title-displayNone-target display-none">
+                                <div class="closer-flah"></div>
+                                <div class="closer-bg"></div>
                             </div>
                         </div>
-                        <div class="closer">
-                            <div class="closer-flah"></div>
-                            <div class="closer-bg"></div>
-                        </div>
+
                     </div>
                 </div>
             </div>
@@ -302,9 +321,14 @@
             </div>
         </div>
     </div>
-    <script src="https://code.jquery.com/jquery-3.2.1.min.js" integrity="sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4=" crossorigin="anonymous"></script>
+    <!--Scripts-->
+    <script src="../js/jquery-3.2.1.js"></script>
     <script src="../js/TweenMax.js"></script>
     <script src="js/script.js"></script>
 </body>
 
 </html>
+
+<!--
+    In the middle of animating super 01
+-->
