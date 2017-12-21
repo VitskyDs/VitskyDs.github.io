@@ -16,9 +16,15 @@
 @import url('https://fonts.googleapis.com/css?family=Roboto:300,400,500');
 @import url('https://fonts.googleapis.com/css?family=Vollkorn:400,400i');
 /*General*/
+* {
+  cursor: default;
+}
 body {
   width: 100%;
   overflow-x: hidden;
+}
+a {
+  cursor: pointer;
 }
 .mobile-hidden {
   display: none !important;
@@ -46,6 +52,10 @@ main {
 * {
   font: 400 16px/26px Roboto, sans-serif;
 }
+h1 {
+  font: 300 44px/50px Roboto, sans-serif;
+  margin-top: 0;
+}
 h2 {
   font-size: 16px;
   font-weight: 500;
@@ -54,15 +64,28 @@ h2 {
 .section-description {
   margin: 0;
 }
+h4 {
+  margin: 10px 0 0 0;
+}
 .caption {
+  font-size: 14px;
+  letter-spacing: 0.6px;
   line-height: 21px;
-  margin-bottom: 0;
+  color: #999999;
+  font-weight: 300;
+}
+p.intro-paragraph {
+  line-height: 30px;
+}
+p.light-p {
+  font-weight: 300;
 }
 .small {
   font-size: 12px;
   line-height: 21px;
   margin-top: 0;
   color: #999999;
+  letter-spacing: 0.2px;
 }
 ul {
   list-style: none;
@@ -141,6 +164,49 @@ a {
 .mobile-menu ul li a:hover {
   color: #44bea4;
 }
+.section-carousel {
+  grid-column: 1 / span 6;
+}
+.section-carousel .main-carousel {
+  background-color: #fcfcfc;
+}
+.section-carousel .main-carousel .carousel-cell {
+  width: 100vw;
+  text-align: center;
+}
+.section-carousel .main-carousel .carousel-cell img {
+  width: 320px;
+}
+.section-carousel .main-carousel .caption {
+  margin-bottom: 0;
+  position: absolute;
+  bottom: -20px;
+  left: 50%;
+  transform: translateX(-50%);
+}
+.section-carousel-buttons {
+  grid-column: 1 / span 6;
+  display: flex;
+  justify-content: space-around;
+}
+.section-carousel-buttons .carousel-button-prev {
+  transform: scaleX(-1);
+  margin: 0 5px 0 0;
+  padding: 0 15px;
+}
+.section-carousel-buttons .cell-button-group {
+  display: flex;
+}
+.section-carousel-buttons .cell-button-group .button {
+  margin: -6px 2px 0 2px;
+}
+.section-carousel-buttons .cell-button-group .button.is-selected g {
+  fill: #FF95D2;
+}
+.section-carousel-buttons .carousel-button-next {
+  margin: 0 0 0 5px;
+  padding: 0 15px;
+}
 footer p {
   margin: 0;
 }
@@ -163,6 +229,9 @@ footer p {
 .section-name .underline {
   position: relative;
   bottom: 0;
+  height: 7px;
+  width: 100%;
+  background-color: #44bea4;
 }
 .section-name.work {
   margin: 35px 0 20px 0;
@@ -191,6 +260,9 @@ footer p {
 }
 .item {
   grid-column: span 1;
+}
+.cv {
+  cursor: pointer;
 }
 .cv a {
   font-weight: 500;
@@ -244,7 +316,7 @@ footer p {
   grid-column: 1 / span 6;
 }
 footer {
-  margin-top: 30px;
+  margin: 30px 0 15px 0;
   grid-column: 1 / span 6;
 }
 .project-item-wrapper {
@@ -261,8 +333,15 @@ footer {
 .project-container .project-section {
   grid-column: 1 / span 6;
 }
-.project-container .video-container {
+.project-container .video-section {
   grid-column: 1 / span 6;
+}
+.project-container .image-section {
+  grid-column: 1 / span 6;
+  margin: 0 0 30px 0;
+}
+.project-container .image-section img {
+  width: 100%;
 }
 .project-container .next-project {
   grid-column: 1 / span 6;
@@ -271,11 +350,20 @@ footer {
   grid-row: auto;
 }
 /*Project Page Style*/
-.project-container .video-container {
+.project-container .video-section {
   position: relative;
   box-shadow: 0 0 6px 0 rgba(0, 0, 0, 0.25);
+  line-height: 0;
 }
-.project-container .video-container .video-button-title {
+.project-container .video-section .video-white-overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: white;
+}
+.project-container .video-section .video-white-overlay .video-button-title {
   position: absolute;
   top: 50%;
   left: 50%;
@@ -285,7 +373,7 @@ footer {
   justify-content: center;
   align-items: center;
 }
-.project-container .video-container .video-button-title .video-play-button {
+.project-container .video-section .video-white-overlay .video-button-title .video-play-button {
   height: 70px;
   width: 70px;
   background-color: #ff0052;
@@ -295,7 +383,7 @@ footer {
   justify-content: center;
   align-items: center;
 }
-.project-container .video-container .video-button-title .video-play-button .play-icon {
+.project-container .video-section .video-white-overlay .video-button-title .video-play-button .play-icon {
   height: 30px;
   width: 38px;
   margin: 0 0 0 20px;
@@ -304,12 +392,12 @@ footer {
   border-bottom: 15px solid transparent;
   border-top: 15px solid transparent;
 }
-.project-container .video-container .video-button-title .video-title {
+.project-container .video-section .video-white-overlay .video-button-title .video-title {
   margin: 5px 0 0 0;
   font-family: Vollkorn;
   font-style: italic;
 }
-.project-container .video-container .video {
+.project-container .video-section .video-white-overlay .video {
   width: 100%;
 }
 .project-container .next-project {
@@ -335,42 +423,6 @@ footer {
   font-size: 44px;
   font-weight: 300;
   margin: 0 0 30px 0;
-}
-.section-carousel {
-  grid-column: 1 / span 6;
-}
-.section-carousel .main-carousel {
-  background-color: #fcfcfc;
-}
-.section-carousel .main-carousel .carousel-cell {
-  width: 100vw;
-  text-align: center;
-}
-.section-carousel .main-carousel .carousel-cell img {
-  width: 320px;
-}
-.section-carousel-buttons {
-  grid-column: 1 / span 6;
-  display: flex;
-  justify-content: space-around;
-}
-.section-carousel-buttons .carousel-button-prev {
-  transform: scaleX(-1);
-  margin: 0 5px 0 0;
-  padding: 0 15px;
-}
-.section-carousel-buttons .cell-button-group {
-  display: flex;
-}
-.section-carousel-buttons .cell-button-group .button {
-  margin: -6px 2px 0 2px;
-}
-.section-carousel-buttons .cell-button-group .button.is-selected g {
-  fill: #FF95D2;
-}
-.section-carousel-buttons .carousel-button-next {
-  margin: 0 0 0 5px;
-  padding: 0 15px;
 }
 /*Projects Thumbnails*/
 #urbanika .item-content {
@@ -426,6 +478,7 @@ footer {
   }
   .header {
     margin: 30px 0;
+    align-items: baseline;
   }
   .header .desktop-menu ul {
     display: block;
@@ -446,6 +499,9 @@ footer {
   }
   .header .desktop-menu ul li a:hover {
     color: #ff0052;
+  }
+  .section-carousel .main-carousel .caption {
+    bottom: -55px;
   }
   .item .item-content {
     height: 200px;
@@ -549,7 +605,7 @@ footer {
   }
   .intro {
     grid-column: 2 / span 4;
-    margin: 20px 0 40px 0;
+    margin: 0 0 40px 0;
   }
   .work {
     grid-column: 2;
@@ -603,23 +659,26 @@ footer {
     padding: 0;
   }
   .project-container .section-carousel {
-    grid-column: 1 / span 10;
+    grid-column: 1 / span 8;
   }
-  .project-container .video-container {
+  .project-container .video-section {
+    grid-column: 2 / span 6;
+  }
+  .project-container .image-section {
     grid-column: 2 / span 6;
   }
   .project-container .next-project {
-    grid-column: 2 / span 8;
+    grid-column: 2 / span 6;
     width: 350px;
   }
   .project-container footer {
-    grid-column: 2 / span 8;
+    grid-column: 2 / span 6;
   }
   .section-carousel .main-carousel .carousel-cell img {
     width: 900px;
   }
   .section-carousel-buttons {
-    grid-column: 8 / span 2;
+    grid-column: 7 / span 2;
     justify-self: end;
   }
   .section-carousel .main-carousel .carousel-cell img {

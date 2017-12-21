@@ -6,7 +6,6 @@ $(document).ready(function () {
         mobileMenu = $('.mobile-menu');
 
     /*Initialize Flickity Carousels*/
-
     $('.main-carousel').flickity({
         // options
         cellAlign: 'center',
@@ -14,23 +13,23 @@ $(document).ready(function () {
         imagesLoaded: true,
         setGallerySize: true,
         prevNextButtons: false,
-        pageDots: false
+        pageDots: false,
+        cellSelector: '.carousel-cell'
     });
 
     const cellButtonGroup = $('.cell-button-group');
 
     //update button on change slide
     $('.main-carousel').on('select.flickity', function () {
-        const cellButtons = $(this).parent('.section-carousel').next().find('.button');
-        const flkty = $(this).data('flickity');
-        const caption = $(this).parent('.section-carousel').find('.caption');
-        caption.text(flkty.selectedElement.alt);
+        const cellButtons = $(this).parent('.section-carousel').next().find('.button'),
+            flkty = $(this).data('flickity'),
+            caption = $(this).parent('.section-carousel').find('.caption'),
+            selectedImg = $(this).find('.is-selected.carousel-cell').find('img');
 
-        cellButtons.filter('.is-selected')
-            .removeClass('is-selected');
-        cellButtons.eq(flkty.selectedIndex)
-            .addClass('is-selected');
-
+        //caption.text(flkty.selectedElement.find('img').alt);
+        caption.text(selectedImg.attr('alt'));
+        cellButtons.filter('.is-selected').removeClass('is-selected');
+        cellButtons.eq(flkty.selectedIndex).addClass('is-selected');
     });
 
     // select cell on button click
@@ -56,26 +55,14 @@ $(document).ready(function () {
         $('.header').find('path').toggleClass('path-fill-white');
     });
 
-    /*Welcome Animation*/
-    var welcomeTl = new TimelineMax();
-    welcomeTl.addLabel("start", "0")
-        .from('.container', 0.6, {
-            y: 30,
-            opacity: 0
-        }, "start+=0.5")
-        .from('.intro', 0.6, {
-            y: 60
-        }, "start+=0.3");
-
     /*Video Controls*/
-
-    $('.video-container').click(function () {
+    $('.video-section').click(function () {
         const video = $(this).find('video').get(0);
         if (video.paused) {
-            $(this).children('.video-button-title').fadeToggle(200);
+            $(this).children('.video-white-overlay').fadeToggle(200);
             video.play();
         } else {
-            $(this).children('.video-button-title').fadeToggle(200);
+            $(this).children('.video-white-overlay').fadeToggle(200);
             video.pause();
         }
     });

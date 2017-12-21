@@ -54,47 +54,48 @@
         <div class="work-section">
             <div class="project-item-wrapper">
                 <div id="showbox" class="item">
-                    <a href="projects/showbox-porject.html">
+                    <a href="projects/showbox-project.html">
                         <div class="item-content"></div>
-                        <p class="caption">Showbox</p>
+                        <h4>Showbox</h4>
                     </a>
                     <p class="small">UI/UX, Branding, Front-end</p>
                 </div>
                 <div id="chefbot" class="item">
-                    <a href="projects/chefbot-porject.html">
+                    <a href="projects/chefbot-project.html">
                         <div class="item-content"></div>
-                        <p class="caption">ChefBot</p>
+                        <h4>ChefBot</h4>
                     </a>
                     <p class="small">UI/UX, Branding, Front-end</p>
                 </div>
 
                 <div id="showreel" class="item">
-                    <a href="projects/showreel-porject.html">
+                    <a href="projects/showreel-project.html">
                         <div class="item-content"></div>
-                        <p class="caption">Motion Design</p>
+                        <h4>Motion Design</h4>
                     </a>
                     <p class="small">Motion Design, Branding, Animaiton</p>
                 </div>
-                <div id="voop" class="item">
-                    <a href="projects/voop-project.html">
-                        <div class="item-content"></div>
-                        <p class="caption">Voop</p>
-                    </a>
-                    <p class="small">UI/UX, Branding</p>
-                </div>
+
                 <div id="gsap" class="item">
                     <a href="projects/gsap-project.html">
                         <div class="item-content"></div>
-                        <p class="caption">Video Sandbox</p>
+                        <h4>Video Sandbox</h4>
                     </a>
                     <p class="small">UI/UX, Front-end</p>
                 </div>
                 <div id="urbanika" class="item">
-                    <a href="projects/urbanika-porject.html">
+                    <a href="projects/urbanika-project.html">
                         <div class="item-content"></div>
-                        <p class="caption">Urbanika</p>
+                        <h4>Urbanika</h4>
                     </a>
                     <p class="small">UI/UX, Branding, Motion Design</p>
+                </div>
+                <div id="voop" class="item">
+                    <a href="projects/voop-project.html">
+                        <div class="item-content"></div>
+                        <h4>Voop</h4>
+                    </a>
+                    <p class="small">UI/UX, Branding</p>
                 </div>
             </div>
 
@@ -154,6 +155,21 @@
             autoplay: true,
             path: 'js/data.json' // the path to the animation json
         });
+
+    </script>
+    <!--Welcome Animation-->
+    <script type="text/javascript">
+        var welcomeTl = new TimelineMax({
+            paused: false
+        });
+        welcomeTl.addLabel("start", "0")
+            .from('.container', 0.6, {
+                y: 30,
+                opacity: 0
+            }, "start+=0.5")
+            .from('.intro', 0.6, {
+                y: 60
+            }, "start+=0.3");
 
     </script>
     <script src="js/script.js"></script>

@@ -25,9 +25,15 @@
 
 /*General*/
 
+* {
+    cursor: default;
+}
 body {
     width: 100%;
     overflow-x: hidden;
+}
+a {
+    cursor: pointer;
 }
 .mobile-hidden {
     display: none !important;
@@ -57,7 +63,10 @@ main {
 * {
     font: 400 16px/26px Roboto, sans-serif;
 }
-h1 {}
+h1 {
+    font: 300 44px/50px Roboto, sans-serif;
+    margin-top: 0;
+}
 h2 {
     font-size: 16px;
     font-weight: 500;
@@ -67,15 +76,30 @@ h3 {}
 .section-description {
     margin: 0;
 }
+h4 {
+    margin: 10px 0 0 0;
+}
 .caption {
+    font-size: 14px;
+    letter-spacing: 0.6px;
     line-height: 21px;
-    margin-bottom: 0;
+    color: @gray;
+    font-weight: 300;
+}
+p {
+    &.intro-paragraph {
+        line-height: 30px;
+    }
+    &.light-p {
+        font-weight: 300;
+    }
 }
 .small {
     font-size: 12px;
     line-height: 21px;
     margin-top: 0;
     color: @gray;
+    letter-spacing: 0.2px;
 }
 ul {
     list-style: none;
@@ -160,6 +184,54 @@ a {
         }
     }
 }
+//Carousel
+.section-carousel {
+    grid-column: 1 / span 6;
+    .main-carousel {
+        //        background: linear-gradient(to right, #FFF2FA 0%, #fff 8%, #fff 92%, #FFF2FA);
+        background-color: #fcfcfc;
+        .carousel-cell {
+            width: 100vw;
+            text-align: center;
+            picture {}
+            img {
+                width: 320px;
+            }
+        }
+        .caption {
+            margin-bottom: 0;
+            position: absolute;
+            bottom: -20px;
+            left: 50%;
+            transform: translateX(-50%);
+        }
+    }
+}
+.section-carousel-buttons {
+    grid-column: 1 / span 6;
+    display: flex;
+    justify-content: space-around;
+    .carousel-button-prev {
+        transform: scaleX(-1);
+        margin: 0 5px 0 0;
+        padding: 0 15px;
+    }
+    .cell-button-group {
+        display: flex;
+        .button {
+            margin: -6px 2px 0 2px;
+            &.is-selected {
+                g {
+                    fill: #FF95D2;
+                }
+            }
+        }
+    }
+    .carousel-button-next {
+        margin: 0 0 0 5px;
+        padding: 0 15px;
+    }
+}
 //Footer
 footer {
     p {
@@ -187,6 +259,9 @@ footer {
     .underline {
         position: relative;
         bottom: 0;
+        height: 7px;
+        width: 100%;
+        background-color: @secondary;
     }
     &.work {
         margin: 35px 0 20px 0;
@@ -219,6 +294,7 @@ footer {
     grid-column: span 1;
 }
 .cv {
+    cursor: pointer;
     a {
         font-weight: 500;
         svg {
@@ -279,7 +355,7 @@ footer {
     grid-column: 1 / span 6;
 }
 footer {
-    margin-top: 30px;
+    margin: 30px 0 15px 0;
     grid-column: 1 / span 6;
 }
 //
@@ -303,8 +379,15 @@ footer {
     .project-section {
         grid-column: 1 / span 6;
     }
-    .video-container {
+    .video-section {
         grid-column: 1 / span 6;
+    }
+    .image-section {
+        grid-column: 1 / span 6;
+        margin: 0 0 30px 0;
+        img {
+            width: 100%;
+        }
     }
     .next-project {
         grid-column: 1 / span 6;
@@ -317,45 +400,54 @@ footer {
 /*Project Page Style*/
 
 .project-container {
-    .video-container {
+    .video-section {
         position: relative;
         box-shadow: 0 0 6px 0 rgba(0, 0, 0, 0.25);
-        .video-button-title {
+        line-height: 0;
+        .video-white-overlay {
             position: absolute;
-            top: 50%;
-            left: 50%;
-            transform: translateX(-50%) translateY(-50%);
-            display: flex;
-            flex-flow: column nowrap;
-            justify-content: center;
-            align-items: center;
-            .video-play-button {
-                height: 70px;
-                width: 70px;
-                background-color: @primary;
-                border-radius: 50%;
-                box-shadow: 0 0 7px 0 rgba(0, 0, 0, 0.25);
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-color: white;
+            .video-button-title {
+                position: absolute;
+                top: 50%;
+                left: 50%;
+                transform: translateX(-50%) translateY(-50%);
                 display: flex;
+                flex-flow: column nowrap;
                 justify-content: center;
                 align-items: center;
-                .play-icon {
-                    height: 30px;
-                    width: 38px;
-                    margin: 0 0 0 20px;
-                    box-sizing: border-box;
-                    border-left: 25px solid white;
-                    border-bottom: 15px solid transparent;
-                    border-top: 15px solid transparent;
+                .video-play-button {
+                    height: 70px;
+                    width: 70px;
+                    background-color: @primary;
+                    border-radius: 50%;
+                    box-shadow: 0 0 7px 0 rgba(0, 0, 0, 0.25);
+                    display: flex;
+                    justify-content: center;
+                    align-items: center;
+                    .play-icon {
+                        height: 30px;
+                        width: 38px;
+                        margin: 0 0 0 20px;
+                        box-sizing: border-box;
+                        border-left: 25px solid white;
+                        border-bottom: 15px solid transparent;
+                        border-top: 15px solid transparent;
+                    }
+                }
+                .video-title {
+                    margin: 5px 0 0 0;
+                    font-family: Vollkorn;
+                    font-style: italic;
                 }
             }
-            .video-title {
-                margin: 5px 0 0 0;
-                font-family: Vollkorn;
-                font-style: italic;
+            .video {
+                width: 100%;
             }
-        }
-        .video {
-            width: 100%;
         }
     }
     .next-project {
@@ -384,47 +476,6 @@ footer {
     }
 }
 //
-//Carousel
-.section-carousel {
-    grid-column: 1 / span 6;
-    .main-carousel {
-        //        background: linear-gradient(to right, #FFF2FA 0%, #fff 8%, #fff 92%, #FFF2FA);
-        background-color: #fcfcfc;
-        .carousel-cell {
-            width: 100vw;
-            text-align: center;
-            picture {}
-            img {
-                width: 320px;
-            }
-        }
-    }
-}
-.section-carousel-buttons {
-    grid-column: 1 / span 6;
-    display: flex;
-    justify-content: space-around;
-    .carousel-button-prev {
-        transform: scaleX(-1);
-        margin: 0 5px 0 0;
-        padding: 0 15px;
-    }
-    .cell-button-group {
-        display: flex;
-        .button {
-            margin: -6px 2px 0 2px;
-            &.is-selected {
-                g {
-                    fill: #FF95D2;
-                }
-            }
-        }
-    }
-    .carousel-button-next {
-        margin: 0 0 0 5px;
-        padding: 0 15px;
-    }
-}
 
 /*Projects Thumbnails*/
 
@@ -508,6 +559,7 @@ footer {
     //Header
     .header {
         margin: 30px 0;
+        align-items: baseline;
         .desktop-menu {
             ul {
                 display: block;
@@ -528,6 +580,14 @@ footer {
                         }
                     }
                 }
+            }
+        }
+    }
+    //Carousel
+    .section-carousel {
+        .main-carousel {
+            .caption {
+                bottom: -55px;
             }
         }
     }
@@ -641,13 +701,13 @@ footer {
         padding: 0;
     }
     .header {
-        grid-column: 2/span 6;
+        grid-column: 2/ span 6;
         margin: 20px auto;
         width: 100%;
     }
     .intro {
         grid-column: 2 / span 4;
-        margin: 20px 0 40px 0;
+        margin: 0 0 40px 0;
     }
     .work {
         grid-column: 2;
@@ -704,17 +764,20 @@ footer {
             padding: 0;
         }
         .section-carousel {
-            grid-column: 1 / span 10;
+            grid-column: 1 / span 8;
         }
-        .video-container {
+        .video-section {
+            grid-column: 2 / span 6;
+        }
+        .image-section {
             grid-column: 2 / span 6;
         }
         .next-project {
-            grid-column: 2 / span 8;
+            grid-column: 2 / span 6;
             width: 350px;
         }
         footer {
-            grid-column: 2 / span 8;
+            grid-column: 2 / span 6;
         }
     }
     .section-carousel {
@@ -727,7 +790,7 @@ footer {
         }
     }
     .section-carousel-buttons {
-        grid-column: 8 / span 2;
+        grid-column: 7 / span 2;
         justify-self: end;
     }
     .section-carousel {
