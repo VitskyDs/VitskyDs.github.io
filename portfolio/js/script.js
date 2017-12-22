@@ -1,13 +1,9 @@
 $(document).ready(function () {
 
-    const mainContent = $('main'),
-        header = $('.header'),
-        menuButton = $('.menu-button'),
-        mobileMenu = $('.mobile-menu');
+    const mobileMenu = $('.mobile-menu');
 
     /*Initialize Flickity Carousels*/
     $('.main-carousel').flickity({
-        // options
         cellAlign: 'center',
         contain: true,
         imagesLoaded: true,
@@ -26,7 +22,6 @@ $(document).ready(function () {
             caption = $(this).parent('.section-carousel').find('.caption'),
             selectedImg = $(this).find('.is-selected.carousel-cell').find('img');
 
-        //caption.text(flkty.selectedElement.find('img').alt);
         caption.text(selectedImg.attr('alt'));
         cellButtons.filter('.is-selected').removeClass('is-selected');
         cellButtons.eq(flkty.selectedIndex).addClass('is-selected');
@@ -48,11 +43,20 @@ $(document).ready(function () {
     });
 
     /*Menu*/
-    menuButton.click(function () {
-        mobileMenu.toggleClass('hide-menu');
-        mobileMenu.toggleClass('menu-closed');
-        mainContent.toggleClass('desaturate-blur');
-        $('.header').find('path').toggleClass('path-fill-white');
+
+    const toggleMenu = function () {
+            mobileMenu.toggleClass('menu-closed');
+            $('main').toggleClass('desaturate-blur');
+            $('.header').find('path').toggleClass('path-fill-white');
+            $('body').css('position', 'fixed');
+        }
+        //toggles menu
+    $('body').on('click', '.menu-button', function () {
+        toggleMenu();
+    });
+
+    mobileMenu.on('click', 'a', function () {
+        toggleMenu();
     });
 
     /*Video Controls*/
@@ -66,7 +70,5 @@ $(document).ready(function () {
             video.pause();
         }
     });
-
-    /*svg morph*/
 
 });
