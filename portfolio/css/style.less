@@ -186,8 +186,7 @@ a {
 .section-carousel {
     grid-column: 1 / span 6;
     .main-carousel {
-        //        background: linear-gradient(to right, #FFF2FA 0%, #fff 8%, #fff 92%, #FFF2FA);
-        background-color: #fcfcfc;
+        background-color: white;
         .carousel-cell {
             width: 100vw;
             text-align: center;
@@ -197,11 +196,7 @@ a {
             }
         }
         .caption {
-            margin-bottom: 0;
-            position: absolute;
-            bottom: -20px;
-            left: 50%;
-            transform: translateX(-50%);
+            display: none;
         }
     }
 }
@@ -673,6 +668,18 @@ footer {
     }
     .item .item-content {
         height: 220px;
+    }
+    .section-carousel {
+        .main-carousel {
+            .caption {
+                display: block;
+                margin-bottom: 0;
+                position: absolute;
+                bottom: -40px;
+                left: 50%;
+                transform: translateX(-50%);
+            }
+        }
     }
 }
 

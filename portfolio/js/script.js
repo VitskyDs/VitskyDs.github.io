@@ -54,7 +54,6 @@ $(document).ready(function () {
     $('body').on('click', '.menu-button', function () {
         toggleMenu();
     });
-
     mobileMenu.on('click', 'a', function () {
         toggleMenu();
     });
@@ -63,10 +62,10 @@ $(document).ready(function () {
     $('.video-section').click(function () {
         const video = $(this).find('video').get(0);
         if (video.paused) {
-            $(this).children('.video-white-overlay').fadeToggle(200);
+            $(this).children('.video-white-overlay').fadeOut(200);
             video.play();
         } else {
-            $(this).children('.video-white-overlay').fadeToggle(200);
+            $(this).children('.video-white-overlay').fadeOut(200);
             video.pause();
         }
     });

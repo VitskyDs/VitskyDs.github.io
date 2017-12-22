@@ -166,7 +166,7 @@ a {
   grid-column: 1 / span 6;
 }
 .section-carousel .main-carousel {
-  background-color: #fcfcfc;
+  background-color: white;
 }
 .section-carousel .main-carousel .carousel-cell {
   width: 100vw;
@@ -176,11 +176,7 @@ a {
   width: 320px;
 }
 .section-carousel .main-carousel .caption {
-  margin-bottom: 0;
-  position: absolute;
-  bottom: -20px;
-  left: 50%;
-  transform: translateX(-50%);
+  display: none;
 }
 .section-carousel-buttons {
   grid-column: 1 / span 6;
@@ -573,6 +569,14 @@ footer {
   }
   .item .item-content {
     height: 220px;
+  }
+  .section-carousel .main-carousel .caption {
+    display: block;
+    margin-bottom: 0;
+    position: absolute;
+    bottom: -40px;
+    left: 50%;
+    transform: translateX(-50%);
   }
 }
 /*Large*/
