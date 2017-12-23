@@ -42,6 +42,9 @@ a {
 .hide-menu {
   transition: all 500ms ease;
 }
+.position-fixed {
+  position: fixed;
+}
 main {
   transition: filter 500ms ease;
 }
@@ -117,6 +120,26 @@ a {
 }
 .header .menu-button {
   height: 18px;
+}
+.header .menu-button #hamburger-icon {
+  fill: #000;
+}
+.header .menu-button #ham-top {
+  transform: translateY(0);
+  transition: all 250ms ease;
+}
+.header .menu-button #ham-bottom {
+  transform: translateY(0);
+  transition: all 250ms ease;
+}
+.header .menu-button.menu-button-close #hamburger-icon {
+  fill: #fff;
+}
+.header .menu-button.menu-button-close #ham-top {
+  transform: translateY(-7px);
+}
+.header .menu-button.menu-button-close #ham-bottom {
+  transform: translateY(7px);
 }
 .mobile-menu {
   display: flex;

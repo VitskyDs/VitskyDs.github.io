@@ -46,9 +46,10 @@ $(document).ready(function () {
 
     const toggleMenu = function () {
             mobileMenu.toggleClass('menu-closed');
+            $('.menu-button').toggleClass('menu-button-close');
             $('main').toggleClass('desaturate-blur');
             $('.header').find('path').toggleClass('path-fill-white');
-            $('body').css('position', 'fixed');
+            $('body').toggleClass('position-fixed');
         }
         //toggles menu
     $('body').on('click', '.menu-button', function () {

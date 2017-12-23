@@ -51,6 +51,9 @@ a {
 .hide-menu {
     transition: all 500ms ease;
 }
+.position-fixed {
+    position: fixed;
+}
 main {
     transition: filter 500ms ease;
 }
@@ -133,6 +136,28 @@ a {
     position: relative;
     .menu-button {
         height: 18px;
+        #hamburger-icon {
+            fill: #000;
+        }
+        #ham-top {
+            transform: translateY(0);
+            transition: all 250ms ease;
+        }
+        #ham-bottom {
+            transform: translateY(0);
+            transition: all 250ms ease;
+        }
+        &.menu-button-close {
+            #hamburger-icon {
+                fill: #fff;
+            }
+            #ham-top {
+                transform: translateY(-7px);
+            }
+            #ham-bottom {
+                transform: translateY(7px);
+            }
+        }
     }
 }
 //Mobile Menu
