@@ -54,7 +54,7 @@ main {
 }
 h1 {
   font: 300 44px/50px Roboto, sans-serif;
-  margin-top: 0;
+  margin: 20px 0 0 0;
 }
 h2 {
   font-size: 16px;
@@ -76,6 +76,7 @@ h4 {
 }
 p.intro-paragraph {
   line-height: 30px;
+  margin: 5px 0;
 }
 p.light-p {
   font-weight: 300;
@@ -103,6 +104,12 @@ ul li:first-child {
 }
 .desktop-menu ul li a {
   font: italic 18px/21px Vollkorn;
+}
+.desktop-menu ul li {
+  transition: all 150ms ease;
+}
+.desktop-menu ul li:hover {
+  transform: translateY(-4px);
 }
 a {
   font-weight: 500;
@@ -688,7 +695,7 @@ footer {
     width: 900px;
   }
   .section-carousel-buttons {
-    grid-column: 7 / span 2;
+    grid-column: 6 / span 2;
     justify-self: end;
   }
   .section-carousel .main-carousel .carousel-cell img {

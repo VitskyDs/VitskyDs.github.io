@@ -10,7 +10,8 @@ $(document).ready(function () {
         setGallerySize: true,
         prevNextButtons: false,
         pageDots: false,
-        cellSelector: '.carousel-cell'
+        cellSelector: '.carousel-cell',
+        wrapAround: true
     });
 
     const cellButtonGroup = $('.cell-button-group');
@@ -28,17 +29,17 @@ $(document).ready(function () {
     });
 
     // select cell on button click
-    cellButtonGroup.on('click', '.button', function () {
+    cellButtonGroup.on('click touchstart', '.button', function () {
         const carousel = $(this).parent('.section-carousel-buttons').prev().find('.main-carousel');
         var index = $(this).index();
         carousel.flickity('select', index);
     });
     // previous
-    $('.carousel-button-prev').on('click', function () {
+    $('.carousel-button-prev').on('click touchstart', function () {
         $(this).parents('.section-carousel-buttons').prev().find('.main-carousel').flickity('previous');
     });
     // next
-    $('.carousel-button-next').on('click', function () {
+    $('.carousel-button-next').on('click touchstart', function () {
         $(this).parents('.section-carousel-buttons').prev().find('.main-carousel').flickity('next');
     });
 
@@ -52,10 +53,10 @@ $(document).ready(function () {
             $('body').toggleClass('position-fixed');
         }
         //toggles menu
-    $('body').on('click', '.menu-button', function () {
+    $('body').on('click touchstart', '.menu-button', function () {
         toggleMenu();
     });
-    mobileMenu.on('click', 'a', function () {
+    mobileMenu.on('click touchstart', 'a', function () {
         toggleMenu();
     });
 
