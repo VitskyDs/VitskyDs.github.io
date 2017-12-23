@@ -156,10 +156,10 @@ a {
   top: 0;
   left: 0;
   width: 100vw;
-  height: 100vh;
+  height: 80vh;
   opacity: 0.85;
   transition: opacity 500ms ease-in-out;
-  padding: 0;
+  padding: 20vh 0 0 0;
   z-index: 10;
   background-color: #ff0052;
 }
