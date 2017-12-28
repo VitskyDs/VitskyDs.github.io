@@ -1,5 +1,3 @@
-$(document).ready(function () {
-
     const mobileMenu = $('.mobile-menu');
 
     /*Initialize Flickity Carousels*/
@@ -71,5 +69,3 @@ $(document).ready(function () {
             video.pause();
         }
     });
-
-});

@@ -75,7 +75,7 @@ h4 {
   font-weight: 300;
 }
 p.intro-paragraph {
-  line-height: 30px;
+  color: #494949;
   margin: 5px 0;
 }
 p.light-p {
@@ -269,7 +269,7 @@ footer p {
   width: 100%;
   height: 200px;
   background: white;
-  border-radius: 8px;
+  border-radius: 4px;
   box-shadow: 0 0 7px 0 rgba(0, 0, 0, 0.15);
   transition: all 300ms ease;
 }
@@ -451,23 +451,24 @@ footer {
 /*Projects Thumbnails*/
 #urbanika .item-content {
   background: #fffaf3 url('../images/thumbnail-urbanika.png') center center no-repeat;
-  background-size: contain;
+  background-size: 70%;
 }
 #chefbot .item-content {
   background: #f5fbfb url('../images/thumbnail-chefbot.svg') center center no-repeat;
-  background-size: contain;
+  background-size: 70%;
 }
 #showreel .item-content {
-  background: white url('../images/thumbnail-showreel.png') no-repeat;
+  background-color: white;
+  position: relative;
   background-size: cover;
 }
 #showbox .item-content {
-  background: url('../images/thumbnail-selfserve.png') center center no-repeat;
-  background-size: cover;
+  background: url('../images/thumbnail-showbox.svg') center center no-repeat;
+  background-size: 40%;
 }
 #voop .item-content {
   background: #95dac9 url('../images/thumbnail-voop.png') center center no-repeat;
-  background-size: contain;
+  background-size: 70%;
 }
 #gsap .item-content {
   background: #020202 url('../images/thumbnail-gsap.png') center top no-repeat;
