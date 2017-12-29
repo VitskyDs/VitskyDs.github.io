@@ -77,6 +77,16 @@ $('.timeline').on('click', '.title-add', function () {
     $('.title-add-menu-wrapper').toggleClass('display-none');
 });
 
+
+/*$('.title-add-item').click(function () {
+    if ($(this).hasClass('super-03-target')) {
+        $('.title-add').replaceWith(`<div class="super-03-target title-wrapper title-super-3 title-wrapper-active"></div>`);
+    } else {
+        $('.title-add').replaceWith(`<div class="txtlist-02-target title-wrapper title-list-2 title-wrapper-active"></div>`);
+    }
+});*/
+
+/*
 $('.title-add-item').click(function () {
     $('.title-options').addClass('display-none');
     // add content title-super-3 or title-list-2 and replace title-wrapper
@@ -88,6 +98,7 @@ $('.title-add-item').click(function () {
         $('.title-add').replaceWith(`<div class="title-wrapper title-list-2 title-wrapper-active"></div>`);
     }
 });
+*/
 
 /*Reset all timeline*/
 const resetAllTl = function () {
@@ -163,22 +174,28 @@ recttxtlisttl.add("start", 0.5).add("end", 6)
         rotation: -360
     }, 0.25, "start-=0.5");
 
-rectclosertl.add("start", 0.5)
-    .from('.closer-bg', animUnits[4], {
-        ease: Sine.easeOut,
+rectclosertl.add("start", 0.5).add("title", 0.7)
+    .from('.closer-bg', animUnits[3], {
+        ease: Power4.easeOut,
         x: -1920
     }, "start")
-    .from('.closer-particle', animUnits[7], {
-        ease: Sine.easeOut,
-        x: -1920,
-        rotation: 360
+    .from('.closer-particle', animUnits[3], {
+        ease: Power0.easeNone,
+        x: -2200,
+        rotation: 405
     }, "start")
-    .from('.closer-flah', animUnits[6], {
-        css: {
-            ease: Sine.easeOut,
-            clip: "rect(0px, 0px, 200px, 0px)"
-        }
-    }, "start");
+    .from('.closer-particle', animUnits[6], {
+        ease: Sine.easeOut,
+        rotation: 800
+    })
+    .from('.closer-flah-1', animUnits[3], {
+        y: 400
+    }, "title")
+    .fromTo('.closer-flah-2', animUnits[3], {
+        y: -200
+    }, {
+        y: 50
+    }, "title");
 
 /* Circle Theme*/
 const circThemeTl = new TimelineMax({
@@ -195,6 +212,12 @@ $('.timeline').on('click', '.title-wrapper', function () {
     resetAllTl();
     //close title-add-menu
     $('.title-add-menu-wrapper').addClass('display-none');
+    //add title instead of menu
+    if ($(this).hasClass('super-03-target')) {
+        $('.title-add').replaceWith(`<div class="super-03-target title-wrapper title-super-3 title-wrapper-active"></div>`);
+    } else {
+        $('.title-add').replaceWith(`<div class="txtlist-02-target title-wrapper title-list-2 title-wrapper-active"></div>`);
+    }
     //manipulate timeline div
     $('.title-wrapper').removeClass('title-wrapper-active');
     $(this).addClass('title-wrapper-active');
@@ -207,4 +230,6 @@ $('.timeline').on('click', '.title-wrapper', function () {
     //change title contents
     timeline = theme + currentTitle.substr(1, currentTitle.indexOf('-') - 1) + 'tl';
     timeline = eval(timeline);
+
+
 });
