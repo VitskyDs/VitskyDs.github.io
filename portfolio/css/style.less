@@ -16,7 +16,7 @@
 /*Imports and @*/
 
 //imports
-@import url('https://fonts.googleapis.com/css?family=Roboto:300,400,500');
+@import url('https://fonts.googleapis.com/css?family=Roboto:100,300,400,500,700,900');
 @import url('https://fonts.googleapis.com/css?family=Vollkorn:400,400i');
 //variables
 @primary: #FF0052;
@@ -61,7 +61,7 @@ main {
 /*Typography*/
 
 * {
-    font: 400 16px/26px Roboto, sans-serif;
+    font: 400 15px/26px Roboto, sans-serif;
 }
 h1 {
     font: 300 44px/50px Roboto, sans-serif;
@@ -134,6 +134,10 @@ a {
 /*Components*/
 
 //Header
+header {
+    margin-top: 100vh;
+    background-color: white;
+}
 .header {
     margin: 35px 0;
     display: flex;
@@ -334,7 +338,7 @@ footer {
     opacity: 1;
     width: 150px;
     height: 45px;
-    animation-timing-function: cubic-bezier(0.860, 0.000, 0.070, 1.000);
+    animation-timing-function: cubic-bezier(0.090, 0.455, 0.150, 0.860);
     z-index: 35;
 }
 #work-underline {
@@ -345,14 +349,50 @@ footer {
 /*Grid*/
 
 //
+//welcome container
+//
+.welcome-container {
+    position: fixed;
+    top: 0;
+    left: 0;
+    height: 100vh;
+    width: 100vw;
+    display: grid;
+    grid-template-columns: repeat(6, 1fr);
+    grid-template-rows: repeat(6, 1fr);
+    background-color: @primary;
+    color: white;
+    .welcome-message {
+        grid-column: 1 / span 6;
+        grid-row: 1 / span 6;
+        align-self: center;
+        padding: 0 25px;
+        h1 {
+            font-family: 'Roboto', sans-serif;
+            font-weight: 900;
+            text-align: Left;
+            font-size: 100px;
+            letter-spacing: 2px;
+            text-transform: uppercase;
+            line-height: 115%;
+            span {
+                font-size: 54px;
+                font-weight: 900;
+            }
+        }
+    }
+}
+//
 //main grid
 //
 .container {
     display: grid;
+    position: relative;
     grid-template-columns: repeat(6, 1fr);
     grid-auto-rows: minmax(75px, auto);
     grid-gap: 30px;
     padding: 0 15px;
+    background-color: white;
 }
 .header {
     grid-column: 1/ span 6;
@@ -582,6 +622,13 @@ footer {
             }
         }
     }
+    //Welcome message
+    .welcome-container {
+        .welcome-message {
+            grid-column: 2 / span 5;
+            padding: 0;
+        }
+    }
     //Header
     .header {
         margin: 30px 0;
@@ -713,19 +760,42 @@ footer {
             }
         }
     }
+    .welcome-container {
+        grid-template-columns: repeat(12, 1fr);
+        .welcome-message {
+            grid-column: 3 / span 7;
+            grid-row: 2 / span 4;
+            align-self: start;
+            span {
+                font-size: 120px;
+                transition: all 500ms ease;
+                &:hover {
+                    transform: translateY(-45px);
+                }
+            }
+        }
+    }
 }
 
 /*Large*/
 
 @media screen and (min-width: 1200px) {
+    .welcome-container {
+        position: fixed;
+        top: 0;
+    }
     .container {
+        position: relative;
         margin: 0 auto;
         grid-template-columns: 1fr repeat(6, 137px) 1fr;
         padding: 0;
     }
+    header {
+        margin-top: 100vh !important;
+    }
     .header {
         grid-column: 2/ span 6;
-        width: 100%;
+        //width: 100%;
     }
     .intro {
         grid-column: 2 / span 4;
