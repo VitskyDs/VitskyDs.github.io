@@ -134,9 +134,11 @@ a {
 /*Components*/
 
 //Header
-header {
-    margin-top: 100vh;
+.landing-page-container {
+    margin-top: 100vh !important;
     background-color: white;
+    box-shadow: 0 -10px 50px 0 rgba(0, 0, 0, 0.3);
+    padding-top: 75px !important;
 }
 .header {
     margin: 35px 0;
@@ -370,15 +372,11 @@ footer {
         h1 {
             font-family: 'Roboto', sans-serif;
             font-weight: 900;
-            text-align: Left;
             font-size: 100px;
             letter-spacing: 2px;
             text-transform: uppercase;
-            line-height: 115%;
-            span {
-                font-size: 54px;
-                font-weight: 900;
-            }
+            line-height: 105%;
+            transition: all 200ms ease;
         }
     }
 }
@@ -769,9 +767,6 @@ footer {
             span {
                 font-size: 120px;
                 transition: all 500ms ease;
-                &:hover {
-                    transform: translateY(-45px);
-                }
             }
         }
     }
@@ -898,4 +893,4 @@ footer {
 
 /*Extra Large*/
 
-@media screen and (min-width: 1440px) {}
+@media screen and (min-width: 1920px) {}
