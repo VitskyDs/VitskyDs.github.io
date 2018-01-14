@@ -28,18 +28,24 @@
     <link rel="canonical" href="index.html">
 
     <link rel="stylesheet" href="css/normalize.css">
-    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/style-2.css">
 
 </head>
 
 <body>
     <!--Welcome Container-->
-    <div class="welcome-container">
+    <div class="welcome-container position-fixed">
         <div class="welcome-message">
-            <h1 class="welcome-line">I'm vitsky,</h1>
-            <h1 class="welcome-line">UI/UX</h1>
-            <h1 class="welcome-line">& Front-end</h1>
-            <h1 class="welcome-line">Designer</h1>
+            <div class="welcome-line">I'm vitsky,</div>
+            <div class="welcome-line">UI/UX</div>
+            <div class="welcome-line">&
+                <!--<br class="desktop-hidden">-->Front-end</div>
+            <div class="welcome-line">Designer</div>
+            <br>
+            <br>
+        </div>
+        <div class="down-arrow-wrapper">
+            <div class="down-arrow desktop-hidden"></div>
         </div>
     </div>
     <!--Mobile Menu-->
@@ -53,67 +59,76 @@
     <!---->
     <!--Main Content-->
     <!---->
-    <main class="container landing-page-container">
+    <main class="container lp-main-container">
         <div id="work" class="work section-name">Work
             <div class="underline"></div>
         </div>
-        <div class="work-section">
-            <div class="project-item-wrapper">
+        <section class="work-section">
+            <div class="project-item-grid">
                 <div id="showbox" class="item">
                     <a href="projects/showbox-project.html">
-                        <div class="item-content"></div>
-                        <h4>Showbox</h4>
+                        <figure>
+                            <div class="item-content"></div>
+                            <figcaption>Showbox</figcaption>
+                        </figure>
                     </a>
-                    <p class="small">UI/UX, Branding, Front-end</p>
+                    <small>UI/UX, Branding, Front-end</small>
                 </div>
                 <div id="chefbot" class="item">
                     <a href="projects/chefbot-project.html">
-                        <div class="item-content"></div>
-                        <h4>ChefBot</h4>
+                        <figure>
+                            <div class="item-content"></div>
+                            <figcaption>Chefbot</figcaption>
+                        </figure>
                     </a>
-                    <p class="small">UI/UX, Branding, Front-end</p>
+                    <small>UI/UX, Branding, Front-end</small>
                 </div>
 
                 <div id="showreel" class="item">
                     <a href="projects/showreel-project.html">
-                        <div class="item-content">
-                            <div class="rectangle"></div>
-                            <div class="circle"></div>
-                        </div>
-                        <h4>Motion Design</h4>
+                        <figure>
+                            <div class="item-content"></div>
+                            <figcaption>
+                                Motion Design</figcaption>
+                        </figure>
                     </a>
-                    <p class="small">Motion Design, Branding, Animaiton</p>
+                    <small>Motion Design, Branding, Animaiton</small>
                 </div>
 
                 <div id="gsap" class="item">
                     <a href="projects/gsap-project.html">
-                        <div class="item-content"></div>
-                        <h4>Video Sandbox</h4>
+                        <figure>
+                            <div class="item-content"></div>
+                            <figcaption>Video Sandbox</figcaption>
+                        </figure>
                     </a>
-                    <p class="small">UI/UX, Front-end</p>
+                    <small>UI/UX, Front-end</small>
                 </div>
                 <div id="urbanika" class="item">
                     <a href="projects/urbanika-project.html">
-                        <div class="item-content"></div>
-                        <h4>Urbanika</h4>
+                        <figure>
+                            <div class="item-content"></div>
+                            <figcaption>Urbanika</figcaption>
+                        </figure>
                     </a>
-                    <p class="small">UI/UX, Branding, Motion Design</p>
+                    <small>UI/UX, Branding, Motion Design</small>
                 </div>
                 <div id="voop" class="item">
                     <a href="projects/voop-project.html">
-                        <div class="item-content"></div>
-                        <h4>Voop</h4>
+                        <figure>
+                            <div class="item-content"></div>
+                            <figcaption>Voop</figcaption>
+                        </figure>
                     </a>
-                    <p class="small">UI/UX, Branding</p>
+                    <small>UI/UX, Branding</small>
                 </div>
             </div>
-
-        </div>
+        </section>
         <!--About-->
         <div id="about" class="about section-name">About
             <div class="underline"></div>
         </div>
-        <div class="about-section">I’m a Digital-Designer and FrontEnd Web Designer; passionate about solving problems in a human-centered way. I enjoy learning new stuff - especially in the process of making a new product.
+        <section class="about-section">I’m a Digital-Designer and FrontEnd Web Designer; passionate about solving problems in a human-centered way. I enjoy learning new stuff - especially in the process of making a new product.
             <ul>
                 <li>Skills</li>
                 <li>UI/UX Design </li>
@@ -133,7 +148,7 @@
 </svg>
            </a>
             </div>
-        </div>
+        </section>
 
         <!--Contact-->
 
@@ -141,32 +156,31 @@
             Contact
             <div class="underline"></div>
         </div>
-        <div class="contact-section">
+        <section class="contact-section">
             You can email me at <a href="mailto:vitskyds@gmail.com">vitskyds@gmail.com</a>
             <br> follow me on <a href="">dribbble</a>
             <br> or check my repository at <a href="">github</a>
-        </div>
+        </section>
         <div class="image mobile-hidden"></div>
         <footer>
-            <p class="small">©2018 Issac Sheptovitsky</p>
-            <p class="small">Last update on 13/10/2017</p>
+            <small>©2018 Issac Sheptovitsky</small>
+            <small>Last update on 13/10/2017</small>
         </footer>
     </main>
     <script src="https://code.jquery.com/jquery-3.2.1.min.js" integrity="sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4=" crossorigin="anonymous"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/1.20.3/TweenMax.min.js"></script>
     <script src="https://unpkg.com/flickity@2/dist/flickity.pkgd.min.js"></script>
-    <script src="js/bodymovin.js" type="text/javascript"></script>
-    <script type="application/javascript">
-        bodymovin.loadAnimation({
-            container: document.getElementById("bodymovin"),
-            animType: 'html',
-            renderer: 'svg',
-            loop: false,
-            autoplay: true,
-            path: 'js/data.json' // the path to the animation json
-        });
-
-    </script>
+    <!--<script src="js/bodymovin.js" type="text/javascript"></script>
+<script type="application/javascript">
+    bodymovin.loadAnimation({
+        container: document.getElementById("bodymovin"),
+        animType: 'html',
+        renderer: 'svg',
+        loop: false,
+        autoplay: true,
+        path: 'js/data.json' // the path to the animation json
+    });
+</script>-->
     <script src="js/script.js"></script>
 </body>
 

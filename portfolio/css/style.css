@@ -117,12 +117,6 @@ a {
   text-decoration: none;
 }
 /*Components*/
-.landing-page-container {
-  margin-top: 100vh !important;
-  background-color: white;
-  box-shadow: 0 -10px 50px 0 rgba(0, 0, 0, 0.3);
-  padding-top: 75px !important;
-}
 .header {
   margin: 35px 0;
   display: flex;
@@ -246,9 +240,6 @@ footer p {
   height: 50px;
 }
 /*Landing Page*/
-.intro {
-  color: #999999;
-}
 .section-name {
   font: 400 40px/60px Vollkorn, sans-serif;
   position: relative;
@@ -287,9 +278,6 @@ footer p {
   display: grid;
   grid-auto-rows: minmax(125px, auto);
   grid-gap: .5rem;
-}
-.item {
-  grid-column: span 1;
 }
 .cv {
   cursor: pointer;
@@ -352,7 +340,6 @@ footer p {
 }
 .intro {
   grid-column: 1 / span 6;
-  color: aqua;
 }
 .work {
   grid-column: 1 / span 6;
@@ -380,9 +367,6 @@ footer {
   display: grid;
   grid-template-columns: 1fr;
   grid-gap: 15px 30px;
-}
-.item {
-  grid-column: span 1;
 }
 .project-container .project-header {
   grid-column: 1 / span 6;
