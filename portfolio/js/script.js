@@ -71,8 +71,8 @@ $('.video-section').click(function () {
 });
 /*Welcome animation*/
 const welcomeLinesTl = new TimelineMax();
-/*welcomeLinesTl.add("start", 0.5).staggerFrom('.welcome-line', 0.5, {
+welcomeLinesTl.add("start", 0.5).staggerFrom('.welcome-line', 0.5, {
     y: 50,
     opacity: 0,
     ease: Power3.easeOut
-}, 0.3);*/
+}, 0.1);
