@@ -1,5 +1,10 @@
 const mobileMenu = $('.mobile-menu');
 
+const removeNoScroll = function () {
+    $('body').removeClass('no-scroll');
+
+}
+
 /*Initialize Flickity Carousels*/
 $('.main-carousel').flickity({
     cellAlign: 'center',
@@ -46,17 +51,16 @@ $('.carousel-button-next').on('click touchstart', function () {
 const toggleMenu = function () {
         mobileMenu.toggleClass('menu-closed');
         $('.menu-button').toggleClass('menu-button-close');
-        $('main').toggleClass('desaturate-blur');
-        $('.header').find('path').toggleClass('path-fill-white');
+        $('header').find('path').toggleClass('path-fill-white');
         $('body').toggleClass('position-fixed');
     }
     //toggles menu
-$('body').on('click touchstart', '.menu-button', function () {
+$('body').on('click touchstart', '.menu-button, a', function () {
     toggleMenu();
 });
-mobileMenu.on('click touchstart', 'a', function () {
+/*mobileMenu.on('click touchstart', 'a', function () {
     toggleMenu();
-});
+});*/
 
 /*Video Controls*/
 $('.video-section').click(function () {
@@ -70,16 +74,6 @@ $('.video-section').click(function () {
     }
 });
 /*Welcome animation*/
-if (!sessionStorage.getItem('animationPlayed')) {
-    $('body').addClass('no-scroll');
-    sessionStorage.setItem('animationPlayed', 'true');
-} else {
-    scrollLinesTl.progress(1);
-}
-const removeNoScroll = function () {
-    $('body').removeClass('no-scroll');
-
-}
 const welcomeLinesTl = new TimelineMax({
     onComplete: removeNoScroll
 });
@@ -97,6 +91,13 @@ welcomeLinesTl.add("start", 0.1)
 const scrollLinesTl = new TimelineMax({
     paused: true
 });
+
+if (!sessionStorage.getItem('animationPlayed')) {
+    $('body').addClass('no-scroll');
+    sessionStorage.setItem('animationPlayed', 'true');
+} else {
+    scrollLinesTl.progress(1);
+}
 
 scrollLinesTl.add("start", 0)
     .to('.welcome-line:nth-child(1)', 1, {
