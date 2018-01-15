@@ -34,20 +34,21 @@
 
 <body>
     <!--Welcome Container-->
-    <div class="welcome-container position-fixed">
-        <div class="welcome-message">
-            <div class="welcome-line">I'm vitsky,</div>
-            <div class="welcome-line">UI/UX</div>
-            <div class="welcome-line">&
-                <!--<br class="desktop-hidden">-->Front-end</div>
-            <div class="welcome-line">Designer</div>
-            <br>
-            <br>
+    <a href="#lp-container">
+        <div class="welcome-container position-fixed">
+            <div class="welcome-message">
+                <div class="welcome-line">I'm vitsky,</div>
+                <div class="welcome-line">UI/UX</div>
+                <div class="welcome-line">& Front-end</div>
+                <div class="welcome-line">Designer</div>
+                <br>
+                <br>
+            </div>
+            <div class="down-arrow-wrapper">
+                <div class="down-arrow desktop-hidden"></div>
+            </div>
         </div>
-        <div class="down-arrow-wrapper">
-            <div class="down-arrow desktop-hidden"></div>
-        </div>
-    </div>
+    </a>
     <!--Mobile Menu-->
     <div class="mobile-menu desktop-hidden menu-closed">
         <ul>
@@ -59,7 +60,7 @@
     <!---->
     <!--Main Content-->
     <!---->
-    <main class="container lp-main-container">
+    <main id="lp-container" class="container lp-main-container">
         <div id="work" class="work section-name">Work
             <div class="underline"></div>
         </div>
@@ -157,14 +158,14 @@
             <div class="underline"></div>
         </div>
         <section class="contact-section">
-            You can email me at <a href="mailto:vitskyds@gmail.com">vitskyds@gmail.com</a>
-            <br> follow me on <a href="">dribbble</a>
-            <br> or check my repository at <a href="">github</a>
+            You can email me at <a href="mailto:vitskyds@gmail.com">vitskyds@gmail.com</a>,
+            <br> follow me on <a href="">dribbble</a>,
+            <br> or check my repository at <a href="">github</a>.
         </section>
-        <div class="image mobile-hidden"></div>
+        <!--
+<div class="image mobile-hidden"></div>-->
         <footer>
-            <small>©2018 Issac Sheptovitsky</small>
-            <small>Last update on 13/10/2017</small>
+            <small>©2018 Issac Sheptovitsky, Last update on 13/10/2017.</small>
         </footer>
     </main>
     <script src="https://code.jquery.com/jquery-3.2.1.min.js" integrity="sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4=" crossorigin="anonymous"></script>
