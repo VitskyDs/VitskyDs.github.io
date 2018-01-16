@@ -55,12 +55,9 @@ const toggleMenu = function () {
         $('body').toggleClass('position-fixed');
     }
     //toggles menu
-$('body').on('click touchstart', '.menu-button, a', function () {
+$('body').on('click touchstart', '.menu-button, .menu-link', function () {
     toggleMenu();
 });
-/*mobileMenu.on('click touchstart', 'a', function () {
-    toggleMenu();
-});*/
 
 /*Video Controls*/
 $('.video-section').click(function () {
@@ -74,30 +71,32 @@ $('.video-section').click(function () {
     }
 });
 /*Welcome animation*/
-const welcomeLinesTl = new TimelineMax({
-    onComplete: removeNoScroll
-});
+
+/*
+const welcomeLinesTl = new TimelineMax(
+    //{onComplete: removeNoScroll}
+);
 
 welcomeLinesTl.add("start", 0.1)
     .staggerFrom('.welcome-line', 1.6, {
-        opacity: 0,
+        color: "#FF0052",
         ease: Sine.easeInOut
     }, 0.1, "start")
     .from('.down-arrow', 1, {
         y: -100,
         ease: Circ.easeOut
-    }, "start+=1");
+    }, "start+=1");*/
 
 const scrollLinesTl = new TimelineMax({
     paused: true
 });
-
+/*
 if (!sessionStorage.getItem('animationPlayed')) {
     $('body').addClass('no-scroll');
     sessionStorage.setItem('animationPlayed', 'true');
 } else {
     scrollLinesTl.progress(1);
-}
+}*/
 
 scrollLinesTl.add("start", 0)
     .to('.welcome-line:nth-child(1)', 1, {

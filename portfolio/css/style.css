@@ -115,7 +115,8 @@ a {
   transform: translateY(-4px);
 }
 .desktop-menu ul li a {
-  font: italic 18px/21px Vollkorn;
+  font: 18px/21px Vollkorn;
+  font-style: italic;
 }
 /*Components*/
 /*Grid*/
@@ -343,26 +344,27 @@ figure figcaption {
   z-index: 35;
 }
 /*Animation*/
-/*.welcome-line {
-    animation: 1500ms fade-in-welcome-line cubic-bezier(0.445, 0.050, 0.550, 0.950) forwards;
+.welcome-line {
+  color: #ff0052;
+  animation: 1500ms fade-in-welcome-line cubic-bezier(0.445, 0.05, 0.55, 0.95) forwards;
 }
 .welcome-line:nth-child(2) {
-    animation-delay: 150ms;
+  animation-delay: 150ms;
 }
 .welcome-line:nth-child(3) {
-    animation-delay: 300ms;
+  animation-delay: 300ms;
 }
 .welcome-line:nth-child(4) {
-    animation-delay: 450ms;
+  animation-delay: 450ms;
 }
 @keyframes fade-in-welcome-line {
-    0% {
-        opacity: 0;
-    }
-    100% {
-        opacity: 1;
-    }
-}*/
+  0% {
+    color: #ff0052;
+  }
+  100% {
+    color: white;
+  }
+}
 /*Landing Page Style*/
 .welcome-container {
   display: flex;
@@ -382,8 +384,10 @@ figure figcaption {
 .welcome-container .down-arrow-wrapper {
   position: absolute;
   overflow: hidden;
-  align-self: flex-end;
   padding: 0 0 30px 0;
+  bottom: 0;
+  left: 50%;
+  transform: translateX(-50%);
 }
 .welcome-container .down-arrow-wrapper .down-arrow {
   height: 75px;
@@ -426,7 +430,7 @@ figure figcaption {
 }
 /*project page style*/
 .project-container .project-name {
-  margin: 15px 0 5px 0;
+  margin: 25px 0 5px 0;
 }
 .project-container .project-section h2 {
   margin-bottom: 5px;
@@ -533,6 +537,9 @@ figure figcaption {
   .welcome-container {
     padding: 0 30px;
   }
+  .welcome-container .welcome-message {
+    padding: 0;
+  }
   /*Components*/
   header {
     margin: 30px 0;
@@ -607,8 +614,15 @@ figure figcaption {
 /*Medium-Large*/
 @media screen and (min-width: 900px) {
   /*Welcom-container*/
+  .welcome-line {
+    font-size: 10vw;
+  }
+  /**/
   .container.lp-main-container {
     padding-top: 50px;
+  }
+  .project-container .project-name {
+    margin: 45px 0 5px 0;
   }
   /*Components*/
   .section-name {
@@ -657,6 +671,9 @@ figure figcaption {
   .welcome-message,
   .welcome-line {
     cursor: url('../images/cursor-arrow.svg'), auto;
+  }
+  .down-arrow {
+    display: none;
   }
   /**/
   .section-name {
@@ -753,6 +770,10 @@ figure figcaption {
   .desktop-hidden {
     display: none;
   }
+  /*Typography*/
+  .welcome-line {
+    font-size: 9vw;
+  }
   /*Components*/
   .section-carousel .main-carousel .carousel-cell img {
     width: 900px;
@@ -766,11 +787,6 @@ figure figcaption {
   }
 }
 /*Extra Large*/
-@media screen and (min-width: 1600px) {
-  .welcome-line {
-    font-size: 10vw;
-  }
-}
 @media screen and (min-width: 1920px) {
   .welcome-line {
     font-size: 10vw;

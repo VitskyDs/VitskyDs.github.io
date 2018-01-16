@@ -128,7 +128,8 @@ a {
         transform: translateY(-4px);
     }
     a {
-        font: italic 18px/21px Vollkorn;
+        font: 18px/21px Vollkorn;
+        font-style: italic;
     }
 }
 
@@ -386,8 +387,8 @@ figure {
 /*Animation*/
 
 //fade in welcome line
-
-/*.welcome-line {
+.welcome-line {
+    color: @primary;
     animation: 1500ms fade-in-welcome-line cubic-bezier(0.445, 0.050, 0.550, 0.950) forwards;
 }
 .welcome-line:nth-child(2) {
@@ -401,13 +402,12 @@ figure {
 }
 @keyframes fade-in-welcome-line {
     0% {
-        opacity: 0;
+        color: @primary;
     }
     100% {
-        opacity: 1;
+        color: white;
     }
-}*/
-
+}
 
 /*Landing Page Style*/
 
@@ -428,8 +428,11 @@ figure {
     .down-arrow-wrapper {
         position: absolute;
         overflow: hidden;
-        align-self: flex-end;
+        //align-self: flex-end;
         padding: 0 0 30px 0;
+        bottom: 0;
+        left: 50%;
+        transform: translateX(-50%);
         .down-arrow {
             height: 75px;
             width: 35px;
@@ -491,7 +494,7 @@ figure {
 
 .project-container {
     .project-name {
-        margin: 15px 0 5px 0;
+        margin: 25px 0 5px 0;
     }
     .project-section {
         h2 {
@@ -619,7 +622,9 @@ figure {
     //Welcome message
     .welcome-container {
         padding: 0 30px;
-        .welcome-message {}
+        .welcome-message {
+            padding: 0;
+        }
     }
     /*Components*/
     //Header
@@ -710,9 +715,18 @@ figure {
 
 @media screen and (min-width: 900px) {
     /*Welcom-container*/
+    .welcome-line {
+        font-size: 10vw;
+    }
+    /**/
     .container {
         &.lp-main-container {
             padding-top: 50px;
+        }
+    }
+    .project-container {
+        .project-name {
+            margin: 45px 0 5px 0;
         }
     }
     /*Components*/
@@ -766,6 +780,9 @@ figure {
     .welcome-message,
     .welcome-line {
         cursor: url('../images/cursor-arrow.svg'), auto;
+    }
+    .down-arrow {
+        display: none;
     }
     /**/
     .section-name {
@@ -868,6 +885,10 @@ figure {
     .desktop-hidden {
         display: none;
     }
+    /*Typography*/
+    .welcome-line {
+        font-size: 9vw;
+    }
     /*Components*/
     //carousel
     .section-carousel {
@@ -896,11 +917,7 @@ figure {
 
 /*Extra Large*/
 
-@media screen and (min-width: 1600px) {
-    .welcome-line {
-        font-size: 10vw;
-    }
-}
+@media screen and (min-width: 1600px) {}
 @media screen and (min-width: 1920px) {
     .welcome-line {
         font-size: 10vw;
