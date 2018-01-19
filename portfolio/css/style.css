@@ -83,7 +83,7 @@ p.light-p {
   font-weight: 300;
 }
 small {
-  font: 400 12px/21px Roboto, sans-serif;
+  font: 400 12px/18px Roboto, sans-serif;
   color: #999999;
   letter-spacing: 0.2px;
 }
@@ -365,6 +365,17 @@ figure figcaption {
     color: white;
   }
 }
+.down-arrow {
+  animation: 1500ms down-arrow cubic-bezier(0.445, 0.05, 0.55, 0.95) 400ms forwards;
+}
+@keyframes down-arrow {
+  0% {
+    transform: translateY(-100px);
+  }
+  100% {
+    transform: translateY(0);
+  }
+}
 /*Landing Page Style*/
 .welcome-container {
   display: flex;
@@ -462,8 +473,8 @@ figure figcaption {
   align-items: center;
 }
 .project-container .video-section .video-white-overlay .video-button-title .video-play-button {
-  height: 70px;
-  width: 70px;
+  height: 55px;
+  width: 55px;
   background-color: #ff0052;
   border-radius: 50%;
   box-shadow: 0 0 7px 0 rgba(0, 0, 0, 0.25);
@@ -581,6 +592,10 @@ figure figcaption {
   }
   .item .item-content {
     height: 200px;
+  }
+  .video-play-button {
+    height: 70px;
+    width: 70px;
   }
   /*grid*/
   .work {
