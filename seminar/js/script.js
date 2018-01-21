@@ -209,7 +209,7 @@ const plazas = {
                 "type": "Point",
                 "coordinates": [-3.7311324, 40.4397832]
             }
-                }]
+        }]
 };
 
 // add markers to map
