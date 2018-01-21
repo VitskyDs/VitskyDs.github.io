@@ -72,31 +72,9 @@ $('.video-section').click(function () {
 });
 /*Welcome animation*/
 
-/*
-const welcomeLinesTl = new TimelineMax(
-    //{onComplete: removeNoScroll}
-);
-
-welcomeLinesTl.add("start", 0.1)
-    .staggerFrom('.welcome-line', 1.6, {
-        color: "#FF0052",
-        ease: Sine.easeInOut
-    }, 0.1, "start")
-    .from('.down-arrow', 1, {
-        y: -100,
-        ease: Circ.easeOut
-    }, "start+=1");*/
-
 const scrollLinesTl = new TimelineMax({
     paused: true
 });
-/*
-if (!sessionStorage.getItem('animationPlayed')) {
-    $('body').addClass('no-scroll');
-    sessionStorage.setItem('animationPlayed', 'true');
-} else {
-    scrollLinesTl.progress(1);
-}*/
 
 scrollLinesTl.add("start", 0)
     .to('.welcome-line:nth-child(1)', 1, {
@@ -128,6 +106,43 @@ $(window).scroll(function (e) {
 
     scrollLinesTl.progress(scrollPercent).pause();
 });
+
+/*showreel animation*/
+
+const showreelTl = new TimelineMax({
+    repeat: -1,
+    repeatDelay: 2
+});
+
+showreelTl.add("end", 2).fromTo('.particle', 0.30, {
+    y: -50,
+    x: 250,
+    ease: Expo.easeIn
+}, {
+    y: -50,
+    x: -250,
+}).fromTo('.particle', 0.30, {
+    y: 50,
+    x: -250,
+    ease: Expo.easeIn
+}, {
+    y: 50,
+    x: 250
+}).fromTo('.particle', 0.20, {
+    y: 0,
+    x: 200
+}, {
+    y: 3,
+    x: 95,
+    ease: Expo.easeOut
+}).fromTo('.particle', 0.75, {
+    y: 3,
+    rotation: 0
+}, {
+    y: 150,
+    rotation: 220,
+    ease: Power4.easeIn
+}, "end");
 
 /*
 Smooth Scrolling*/
