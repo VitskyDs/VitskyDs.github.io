@@ -92,14 +92,17 @@ scrollLinesTl.add("start", 0)
     .to('.welcome-line:nth-child(4)', 1, {
         y: -60,
         opacity: 0
-    }, "start");
+    }, "start").to('.welcome-line', 1, {
+        opacity: 1,
+        y: 0
+    });
 
 /*Play animation with scroll*/
 $(window).scroll(function (e) {
     let scrollTop = $(window).scrollTop();
     //let docHeight = $(document).height();
     let winHeight = $('.welcome-container').height();
-    let scrollPercent = (scrollTop) / (winHeight);
+    let scrollPercent = (scrollTop) / (winHeight + 1200);
     let scrollPercentRounded = Math.round(scrollPercent * 100) / 100;
 
     $('#scrollPercentLabel>span').html(scrollPercentRounded);
@@ -114,7 +117,7 @@ const showreelTl = new TimelineMax({
     repeatDelay: 2
 });
 
-showreelTl.add("end", 2).fromTo('.particle', 0.30, {
+showreelTl.add("middle", 0.75).add("end", 2.2).fromTo('.particle', 0.30, {
     y: -50,
     x: 250,
     ease: Expo.easeIn
@@ -135,7 +138,7 @@ showreelTl.add("end", 2).fromTo('.particle', 0.30, {
     y: 3,
     x: 95,
     ease: Expo.easeOut
-}).fromTo('.particle', 0.75, {
+}, "middle").fromTo('.particle', 0.75, {
     y: 3,
     rotation: 0
 }, {
