@@ -105,6 +105,7 @@ small {
     letter-spacing: 0.2px;
 }
 caption {
+    display: none;
     color: @gray;
     font: 300 14px/21px Roboto, sans-serif;
     letter-spacing: 0.6px;
@@ -795,6 +796,7 @@ figure {
                 bottom: -40px;
                 left: 50%;
                 transform: translateX(-50%);
+                color: @gray;
             }
         }
     }
@@ -816,7 +818,10 @@ figure {
     .down-arrow {
         display: none;
     }
-    /**/
+    /*caption*/
+    caption {
+        display: block;
+    }
     .section-name {
         text-align: right;
     }

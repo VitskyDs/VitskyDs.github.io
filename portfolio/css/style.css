@@ -91,6 +91,7 @@ small {
   letter-spacing: 0.2px;
 }
 caption {
+  display: none;
   color: #999999;
   font: 300 14px/21px Roboto, sans-serif;
   letter-spacing: 0.6px;
@@ -688,6 +689,7 @@ figure figcaption {
     bottom: -40px;
     left: 50%;
     transform: translateX(-50%);
+    color: #999999;
   }
 }
 @media screen and (min-width: 1024px) {
@@ -707,7 +709,10 @@ figure figcaption {
   .down-arrow {
     display: none;
   }
-  /**/
+  /*caption*/
+  caption {
+    display: block;
+  }
   .section-name {
     text-align: right;
   }
