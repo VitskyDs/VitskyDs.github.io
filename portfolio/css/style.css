@@ -197,6 +197,7 @@ header {
   position: relative;
 }
 header .menu-button {
+  align-self: center;
   height: 18px;
 }
 header .menu-button #hamburger-icon {
@@ -428,6 +429,8 @@ figure figcaption {
 }
 #showreel .item-content .particle {
   position: absolute;
+  top: 50%;
+  left: 50%;
   height: 8px;
   width: 8px;
   background-color: #ff0052;
@@ -690,6 +693,13 @@ figure figcaption {
     left: 50%;
     transform: translateX(-50%);
     color: #999999;
+  }
+  /*Project Container*/
+  .project-section .project-header {
+    grid-column: 2 / span 5;
+  }
+  .project-section .project-section {
+    grid-column: 2 / span 5;
   }
 }
 @media screen and (min-width: 1024px) {

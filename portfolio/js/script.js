@@ -2,7 +2,6 @@ const mobileMenu = $('.mobile-menu');
 
 const removeNoScroll = function () {
     $('body').removeClass('no-scroll');
-
 }
 
 /*Initialize Flickity Carousels*/
@@ -99,11 +98,10 @@ scrollLinesTl.add("start", 0)
 
 /*Play animation with scroll*/
 $(window).scroll(function (e) {
-    let scrollTop = $(window).scrollTop();
-    //let docHeight = $(document).height();
-    let winHeight = $('.welcome-container').height();
-    let scrollPercent = (scrollTop) / (winHeight + 1200);
-    let scrollPercentRounded = Math.round(scrollPercent * 100) / 100;
+    let scrollTop = $(window).scrollTop(),
+        winHeight = $('.welcome-container').height(),
+        scrollPercent = (scrollTop) / (winHeight + 1200),
+        scrollPercentRounded = Math.round(scrollPercent * 100) / 100;
 
     $('#scrollPercentLabel>span').html(scrollPercentRounded);
 
@@ -117,7 +115,7 @@ const showreelTl = new TimelineMax({
     repeatDelay: 2
 });
 
-showreelTl.add("middle", 0.75).add("end", 2.2).fromTo('.particle', 0.30, {
+showreelTl.add("middle", 0.75).add("end", 2.5).fromTo('.particle', 0.30, {
     y: -50,
     x: 250,
     ease: Expo.easeIn
@@ -135,11 +133,11 @@ showreelTl.add("middle", 0.75).add("end", 2.2).fromTo('.particle', 0.30, {
     y: 0,
     x: 200
 }, {
-    y: 3,
+    y: 0,
     x: 95,
     ease: Expo.easeOut
 }, "middle").fromTo('.particle', 0.75, {
-    y: 3,
+    y: 0,
     rotation: 0
 }, {
     y: 150,

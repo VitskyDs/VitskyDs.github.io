@@ -222,6 +222,7 @@ header {
     z-index: 15;
     position: relative;
     .menu-button {
+        align-self: center;
         height: 18px;
         #hamburger-icon {
             fill: #000;
@@ -480,6 +481,8 @@ figure {
         overflow: hidden;
         .particle {
             position: absolute;
+            top: 50%;
+            left: 50%;
             height: 8px;
             width: 8px;
             background-color: @primary;
@@ -798,6 +801,15 @@ figure {
                 transform: translateX(-50%);
                 color: @gray;
             }
+        }
+    }
+    /*Project Container*/
+    .project-section {
+        .project-header {
+            grid-column: 2 / span 5;
+        }
+        .project-section {
+            grid-column: 2 / span 5;
         }
     }
 }
