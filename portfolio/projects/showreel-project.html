@@ -27,8 +27,8 @@
     <link rel="icon" type="image/png" href="../favicon.png">
     <link rel="canonical" href="index.html">
 
-    <link href="http://vjs.zencdn.net/6.6.0/video-js.css" rel="stylesheet">
     <link rel="stylesheet" href="../css/normalize.css">
+    <link rel="stylesheet" href="../css/plyr.css">
     <link rel="stylesheet" href="../css/style.css">
 
 </head>
@@ -78,7 +78,7 @@
             <p class="intro-paragraph">While my work at Showbox I had the opportunity to design and animate broadcast packages for different brands. I aimed at designing beautiful broadcast packages and develop an animation style for each one according to the brand's character.</p>
         </div>
         <div class="video-section">
-            <video class="video-js" width="100%" preload="metadata" id="showreel-video" controls data-setup='{ "aspectRatio":"16:9"}' poster="../images/poster-white.png">
+            <video class="" preload="metadata" id="showreel-video" controls poster="../images/poster-white.png">
                 <source src="http://res.cloudinary.com/dr4wbzb85/video/upload/v1516033107/Showreel-V04_psyafr.webm" type='video/webm'>
                 <source src="http://res.cloudinary.com/dr4wbzb85/video/upload/v1516033107/Showreel-V04_psyafr.mp4" type='video/mp4'>
                 <source src="http://res.cloudinary.com/dr4wbzb85/video/upload/v1516033107/Showreel-V04_psyafr.ogg" type="video/ogg"> </video>
@@ -112,7 +112,6 @@
         </footer>
     </main>
     <script src="https://code.jquery.com/jquery-3.2.1.min.js" integrity="sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4=" crossorigin="anonymous"></script>
-    <script src="http://vjs.zencdn.net/6.6.0/video.js"></script>
     <script src="../js/bodymovin.js" type="text/javascript"></script>
     <script type="application/javascript">
         bodymovin.loadAnimation({
@@ -122,6 +121,13 @@
             loop: false,
             autoplay: true,
             path: '../js/data.json' // the path to the animation json
+        });
+
+    </script>
+    <script src="../js/plyr.js"></script>
+    <script>
+        plyr.setup({
+            controls: ['play-large', 'play', 'progress', 'fullscreen','mute']
         });
 
     </script>
