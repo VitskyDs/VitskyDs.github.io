@@ -27,8 +27,8 @@
     <link rel="icon" type="image/png" href="../favicon.png">
     <link rel="canonical" href="index.html">
 
-    <link href="http://vjs.zencdn.net/6.6.0/video-js.css" rel="stylesheet">
     <link rel="stylesheet" href="../css/normalize.css">
+    <link rel="stylesheet" href="../css/plyr.css">
     <link rel="stylesheet" href="https://unpkg.com/flickity@2/dist/flickity.min.css">
     <link rel="stylesheet" href="../css/style.css">
 
@@ -81,10 +81,11 @@
             <p class="light-p">Graduation project, Bezalel 2015. change 2</p>
         </div>
         <div class="video-section">
-            <video class="video-js" width="100%" preload="metadata" id="urbanika-video" controls data-setup='{ "aspectRatio":"16:9"}' poster="../images/poster-white.png">
+            <video preload="metadata" id="urbanika-video" controls poster="../images/poster-white.png">
                 <source src="http://res.cloudinary.com/dr4wbzb85/video/upload/v1516034328/urbanika_flnyrc.webm" type='video/webm'>
                 <source src="http://res.cloudinary.com/dr4wbzb85/video/upload/v1516034328/urbanika_flnyrc.mp4" type='video/mp4'>
                 <source src="http://res.cloudinary.com/dr4wbzb85/video/upload/v1516034328/urbanika_flnyrc.ogg" type="video/ogg">
+
             </video>
         </div>
         <!--<div class="video-section">
@@ -126,6 +127,13 @@
             loop: false,
             autoplay: true,
             path: '../js/data.json' // the path to the animation json
+        });
+
+    </script>
+    <script src="../js/plyr.js"></script>
+    <script>
+        plyr.setup({
+            controls: ['play-large', 'play', 'progress', 'fullscreen', 'mute']
         });
 
     </script>

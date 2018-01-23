@@ -183,4 +183,4 @@ $('a[href*="#"]')
         }
     });
 
-//video setup
+//video plyr
