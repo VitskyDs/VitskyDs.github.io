@@ -345,6 +345,47 @@ figure figcaption {
   animation-timing-function: cubic-bezier(0.09, 0.455, 0.15, 0.86);
   z-index: 35;
 }
+.video-section {
+  grid-column: 2 / span 6;
+}
+.video-js {
+  font-size: 10px;
+}
+.video-js .vjs-control-bar {
+  background-color: rgba(0, 0, 0, 0.2);
+}
+.video-js .vjs-slider {
+  background-color: rgba(255, 255, 255, 0.9);
+}
+.video-js .vjs-play-progress {
+  background-color: #ff0052;
+}
+.vjs-big-play-button {
+  display: none !important;
+}
+.video-js .vjs-play-progress:before {
+  display: none !important;
+}
+.vjs-volume-panel {
+  display: none !important;
+}
+.vjs-remaining-time {
+  display: none !important;
+}
+.vjs-icon-play:before,
+.video-js .vjs-big-play-button .vjs-icon-placeholder:before,
+.video-js .vjs-play-control .vjs-icon-placeholder:before {
+  color: #ff0052;
+}
+.vjs-mouse-display {
+  top: -20px;
+}
+.vjs-mouse-display .vjs-time-tooltip {
+  display: block !important;
+}
+.vjs-time-tooltip {
+  display: none !important;
+}
 /*Animation*/
 .welcome-line {
   color: #ff0052;
@@ -463,12 +504,12 @@ figure figcaption {
 .project-container .project-section p {
   margin-top: 0;
 }
-.project-container .video-section {
+.project-container .video-section-obsolete {
   position: relative;
   box-shadow: 0 0 6px 0 rgba(0, 0, 0, 0.25);
   line-height: 0;
 }
-.project-container .video-section .video-white-overlay {
+.project-container .video-section-obsolete .video-white-overlay {
   position: absolute;
   top: 0;
   left: 0;
@@ -476,7 +517,7 @@ figure figcaption {
   height: 100%;
   background-color: white;
 }
-.project-container .video-section .video-white-overlay .video-button-title {
+.project-container .video-section-obsolete .video-white-overlay .video-button-title {
   position: absolute;
   top: 50%;
   left: 50%;
@@ -486,7 +527,7 @@ figure figcaption {
   justify-content: center;
   align-items: center;
 }
-.project-container .video-section .video-white-overlay .video-button-title .video-play-button {
+.project-container .video-section-obsolete .video-white-overlay .video-button-title .video-play-button {
   height: 55px;
   width: 55px;
   background-color: #ff0052;
@@ -496,7 +537,7 @@ figure figcaption {
   justify-content: center;
   align-items: center;
 }
-.project-container .video-section .video-white-overlay .video-button-title .video-play-button .play-icon {
+.project-container .video-section-obsolete .video-white-overlay .video-button-title .video-play-button .play-icon {
   height: 30px;
   width: 38px;
   margin: 0 0 0 20px;
@@ -505,12 +546,12 @@ figure figcaption {
   border-bottom: 15px solid transparent;
   border-top: 15px solid transparent;
 }
-.project-container .video-section .video-white-overlay .video-button-title .video-title {
+.project-container .video-section-obsolete .video-white-overlay .video-button-title .video-title {
   margin: 5px 0 0 0;
   font-family: Vollkorn;
   font-style: italic;
 }
-.project-container .video-section .video-white-overlay .video {
+.project-container .video-section-obsolete .video-white-overlay .video {
   width: 100%;
 }
 .project-container .next-project {

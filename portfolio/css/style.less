@@ -386,6 +386,48 @@ figure {
     animation-timing-function: cubic-bezier(0.090, 0.455, 0.150, 0.860);
     z-index: 35;
 }
+//Video Player
+.video-section {
+    grid-column: 2 / span 6;
+}
+.video-js {
+    font-size: 10px;
+}
+.video-js .vjs-control-bar {
+    background-color: rgba(0, 0, 0, 0.2);
+}
+.video-js .vjs-slider {
+    background-color: rgba(255, 255, 255, 0.9);
+}
+.video-js .vjs-play-progress {
+    background-color: @primary;
+}
+.vjs-big-play-button {
+    display: none !important;
+}
+.video-js .vjs-play-progress:before {
+    display: none !important;
+}
+.vjs-volume-panel {
+    display: none !important;
+}
+.vjs-remaining-time {
+    display: none !important;
+}
+.vjs-icon-play:before,
+.video-js .vjs-big-play-button .vjs-icon-placeholder:before,
+.video-js .vjs-play-control .vjs-icon-placeholder:before {
+    color: @primary;
+}
+.vjs-mouse-display {
+    top: -20px;
+    .vjs-time-tooltip {
+        display: block !important;
+    }
+}
+.vjs-time-tooltip {
+    display: none !important;
+}
 
 /*Animation*/
 
@@ -531,7 +573,7 @@ figure {
             margin-top: 0;
         }
     }
-    .video-section {
+    .video-section-obsolete {
         position: relative;
         box-shadow: 0 0 6px 0 rgba(0, 0, 0, 0.25);
         line-height: 0;
