@@ -355,7 +355,7 @@ figure figcaption {
   background-color: rgba(0, 0, 0, 0.2);
 }
 .video-js .vjs-slider {
-  background-color: rgba(255, 255, 255, 0.9);
+  background-color: rgba(115, 133, 159, 0.75);
 }
 .video-js .vjs-play-progress {
   background-color: #ff0052;
@@ -385,6 +385,9 @@ figure figcaption {
 }
 .vjs-time-tooltip {
   display: none !important;
+}
+.video-js .vjs-load-progress div {
+  background-color: white;
 }
 /*Animation*/
 .welcome-line {
