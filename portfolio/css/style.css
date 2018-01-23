@@ -350,15 +350,16 @@ figure figcaption {
 }
 .video-js {
   font-size: 10px;
+  box-shadow: 0 0 10px 0 rgba(0, 0, 0, 0.1);
 }
-.video-js .vjs-control-bar {
-  background-color: rgba(0, 0, 0, 0.2);
+.video-js .video-js .vjs-control-bar {
+  background-color: rgba(0, 0, 0, 0.2) !important;
 }
 .video-js .vjs-slider {
-  background-color: rgba(115, 133, 159, 0.75);
+  background-color: rgba(115, 133, 159, 0.75) !important;
 }
 .video-js .vjs-play-progress {
-  background-color: #ff0052;
+  background-color: #ff0052 !important;
 }
 .vjs-big-play-button {
   display: none !important;
