@@ -199,6 +199,7 @@ header {
 header .menu-button {
   align-self: center;
   height: 18px;
+  padding: 10px 0;
 }
 header .menu-button #hamburger-icon {
   fill: #000;
