@@ -246,12 +246,12 @@ header .menu-button.menu-button-close #ham-bottom {
   z-index: 10;
 }
 .mobile-menu ul li a {
-  font-size: 38px;
+  font-size: 36px;
   font-family: 'Vollkorn', serif;
   color: #FFFFFF;
   font-style: italic;
   letter-spacing: 0;
-  line-height: 120px;
+  line-height: 90px;
   cursor: pointer;
 }
 .mobile-menu ul li a:hover {
@@ -496,7 +496,7 @@ figure figcaption {
 /*404 page*/
 #error-page {
   height: 100vh;
-  width: 100vh;
+  width: 100vw;
   display: flex;
   justify-content: center;
   align-items: center;
