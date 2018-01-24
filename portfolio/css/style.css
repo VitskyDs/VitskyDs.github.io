@@ -9,7 +9,8 @@
 6. Animation
 7. Landing Page Style
 8. Project Page Style
-9. Media Queries
+9. 404 page
+10. Media Queries
 
 */
 /*imports and variables*/
@@ -492,6 +493,24 @@ figure figcaption {
 .video-section {
   box-shadow: 0 0 15px 0 rgba(0, 0, 0, 0.2);
 }
+/*404 page*/
+#error-page {
+  height: 100vh;
+  width: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+#error-page .error-wrapper {
+  width: 100%;
+  text-align: center;
+}
+#error-page .error-wrapper h1 {
+  font: 900 38px/55px Roboto;
+  color: #ff0052;
+  text-transform: uppercase;
+  margin: 0 0 0 0;
+}
 /*Media Queries*/
 @media screen and (min-width: 500px) {
   /*Typography*/
@@ -600,6 +619,10 @@ figure figcaption {
   }
   .about-section .cv {
     margin: 20px 0;
+  }
+  /*404 page*/
+  #error-page .error-wrapper {
+    width: 500px;
   }
 }
 /*Medium-Large*/
