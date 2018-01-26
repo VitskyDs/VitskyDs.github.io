@@ -209,6 +209,32 @@ const plazas = {
                 "type": "Point",
                 "coordinates": [-3.7311324, 40.4397832]
             }
+        },
+        {
+            "type": "Feature",
+            "properties": {
+                type: "poi",
+                "message": "Parroquia Buen Suceso",
+                "alt": "parroquia-buen-suceso",
+                "iconSize": [iconSize[0], iconSize[1]]
+            },
+            "geometry": {
+                "type": "Point",
+                "coordinates": [-3.715777, 40.429492]
+            }
+        },
+        {
+            "type": "Feature",
+            "properties": {
+                type: "poi",
+                "message": "Biblioteca Iván de Vargas",
+                "alt": "biblioteca-ivan-de-vargas",
+                "iconSize": [iconSize[0], iconSize[1]]
+            },
+            "geometry": {
+                "type": "Point",
+                "coordinates": [-3.709690, 40.414145]
+            }
         }]
 };
 

@@ -16,7 +16,6 @@ body {
     width: 100%;
     overflow: hidden;
 }
-article {}
 
 /*Typography*/
 
@@ -29,7 +28,7 @@ h1 {
     letter-spacing: 0;
     text-align: right;
     font-family: 'Suez One', serif;
-    margin: 0;
+    margin: 30px 0 0 0;
 }
 h2 {
     font: 18px/26px SuezOne, serif;
@@ -43,7 +42,7 @@ h3 {
     margin: 15px 0 0 0;
 }
 p {
-    text-align: right;
+    text-align: justify;
     margin: 0 0 5px 0;
 }
 
@@ -191,22 +190,37 @@ nav {
 /*Post*/
 
 main {
-    height: 100vh;
     overflow: scroll;
-    article {
-        display: none;
-        padding: 60px 0 60px 0;
+    height: 100vh;
+}
+article {
+    section {
         grid-column: 2;
+        padding: 60px 0 30px 0;
         direction: rtl;
-        overflow-y: scroll;
         p:first-of-type {
             margin: 10px 0 0 0;
         }
     }
     figure {
         grid-column: 1 / span 3;
-        img {}
-        figcaption {}
+        height: 570px;
+        width: 100%;
+        overflow-x: scroll;
+        text-align: center;
+        margin: 0;
+        text-align: center;
+        img {
+            object-fit: contain;
+            height: 550px;
+        }
+        figcaption {
+            margin: 10px 0 0 0;
+        }
+    }
+    video {
+        margin: 30px 0;
+        width: 100%;
     }
 }
 

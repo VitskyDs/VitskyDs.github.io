@@ -24,7 +24,7 @@ h1 {
   letter-spacing: 0;
   text-align: right;
   font-family: 'Suez One', serif;
-  margin: 0;
+  margin: 30px 0 0 0;
 }
 h2 {
   font: 18px/26px SuezOne, serif;
@@ -38,7 +38,7 @@ h3 {
   margin: 15px 0 0 0;
 }
 p {
-  text-align: right;
+  text-align: justify;
   margin: 0 0 5px 0;
 }
 /*Map*/
@@ -175,21 +175,35 @@ nav .index ul li {
 }
 /*Post*/
 main {
-  height: 100vh;
   overflow: scroll;
+  height: 100vh;
 }
-main article {
-  display: none;
-  padding: 60px 0 60px 0;
+article section {
   grid-column: 2;
+  padding: 60px 0 30px 0;
   direction: rtl;
-  overflow-y: scroll;
 }
-main article p:first-of-type {
+article section p:first-of-type {
   margin: 10px 0 0 0;
 }
-main figure {
+article figure {
   grid-column: 1 / span 3;
+  height: 570px;
+  width: 100%;
+  overflow-x: scroll;
+  margin: 0;
+  text-align: center;
+}
+article figure img {
+  object-fit: contain;
+  height: 550px;
+}
+article figure figcaption {
+  margin: 10px 0 0 0;
+}
+article video {
+  margin: 30px 0;
+  width: 100%;
 }
 /*About*/
 .about {
