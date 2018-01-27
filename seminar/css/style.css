@@ -216,7 +216,7 @@ main {
   height: 100vh;
 }
 article {
-  display: none;
+  display: none !imprtant;
   background-color: #fafafa;
 }
 article section {
