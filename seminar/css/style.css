@@ -41,6 +41,26 @@ p {
   text-align: justify;
   margin: 0 0 5px 0;
 }
+/*Loader*/
+body .loader-wrapper {
+  display: none;
+}
+body.loading .loader-wrapper {
+  position: fixed;
+  top: 0;
+  left: 0;
+  height: 100vh;
+  width: 100vw;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 1000;
+  background-color: white;
+}
+body.loading .loader-wrapper .loader {
+  height: 100px;
+  width: 100px;
+}
 /*Map*/
 .map-container {
   position: fixed;
@@ -91,6 +111,8 @@ p {
 }
 .tooltip {
   position: absolute;
+  top: 30px;
+  left: 50%;
   background: black;
   color: white;
   transform: translateX(-50%);

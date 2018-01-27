@@ -1,3 +1,13 @@
+
+$(document).ready(function() {
+
+    setTimeout(function(){
+        $('body').removeClass('loading');
+    }, 3000);
+
+});
+
+
 const bounds = [[-3.74200, 40.39900], [-3.66800, 40.44800]];
 
 mapboxgl.accessToken = 'pk.eyJ1Ijoidml0c2t5ZHMiLCJhIjoiOFZwQU50MCJ9.VyMMFpXAN7S8S1M0ryW1mQ';
@@ -238,6 +248,10 @@ const plazas = {
         }]
 };
 
+//fade out all articles
+$('article').fadeOut(0);
+$('#marquez-de-santa-ana').delay(1000).fadeIn(0);
+
 // add markers to map
 plazas.features.forEach(function (marker) {
     // create a DOM element for the marker
@@ -255,31 +269,13 @@ plazas.features.forEach(function (marker) {
 
 });
 
-// Create a popup, but don't add it to the map yet.
-var popup = new mapboxgl.Popup({
-    closeButton: false,
-    closeOnClick: false
-});
-
-map.on('mouseenter', '.marker', function (e) {
-
-    // Populate the popup and set its coordinates
-    // based on the feature found.
-    popup.setLngLat(e.features[0].geometry.coordinates)
-        .setHTML($(this).attr('alt'))
-        .addTo(map);
-});
-
-map.on('mouseleave', '.marker', function () {
-    map.getCanvas().style.cursor = '';
-    popup.remove();
-});
-
-$('.marker').hover(function () {
+//hover on marker
+$('.marker').on('mouseenter', function () {
     const alt = $(this).attr('alt');
     $('#map').append(`<div class="tooltip">${alt}</div>`);
-    $('.tooltip').css("top", event.clientY - 30);
-    $('.tooltip').css("left", event.clientX);
+    //tooltip position
+    $(this).css("top", event.clientY - 30);
+    $(this).css("left", event.clientX);
 
 });
 
