@@ -126,13 +126,12 @@ body {
         }
     }
     &.map-close {
-        top: ~'calc(-100vh + 30px)';
+        top: ~'calc(-100vh + 38px)';
         .arrow {
             transform: rotate(0);
         }
     }
 }
-#map {}
 .marker {
     display: block;
     border: none;
@@ -169,7 +168,7 @@ body {
 
 nav {
     position: fixed;
-    top: 0;
+    top: 4px;
     right: 15px;
     width: 50px;
     height: 30px;
@@ -211,15 +210,17 @@ nav {
     display: flex;
     bottom: 0;
     width: 100%;
-    height: 30px;
+    height: 38px;
     left: 0;
-    background: white;
-    border-top: 1px solid black;
-    border-bottom: 1px solid black;
     z-index: 100;
     justify-content: center;
     align-items: center;
-    background-color: rgb(250, 250, 250);
+    //background: white url('../images/noise-texture.png') repeat-x;
+    background-color: #fff;
+    background-image: linear-gradient(#ededed 2px, transparent 2px), linear-gradient(90deg, #ededed 2px, transparent 2px), linear-gradient(rgba(255, 255, 255, .3) 1px, transparent 1px), linear-gradient(90deg, rgba(255, 255, 255, .3) 1px, transparent 1px);
+    background-size: 100px 100px, 100px 100px, 20px 20px, 20px 20px;
+    background-position: -2px -2px, -2px -2px, -1px -1px, -1px -1px; box-shadow: 0 0 7px 0 rgba(0, 0, 0, 0.5);
+    box-sizing: border-box;
     .clickable-area {
         padding: 0 15px;
     }
