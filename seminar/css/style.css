@@ -55,7 +55,7 @@ body.loading .loader-wrapper {
   justify-content: center;
   align-items: center;
   z-index: 1000;
-  background-color: white;
+  background-color: black;
 }
 body.loading .loader-wrapper .loader {
   height: 100px;
@@ -73,6 +73,7 @@ body.loading .loader-wrapper .loader {
   align-items: center;
   z-index: 900;
   background-color: white;
+  opacity: 0.95;
 }
 /*Map*/
 .map-container {
@@ -84,6 +85,7 @@ body.loading .loader-wrapper .loader {
   height: 100vh;
   z-index: 90;
   transition: all 400ms cubic-bezier(0.445, 0.05, 0.55, 0.95);
+  background-color: white;
 }
 .map-container .legend {
   position: absolute;
@@ -179,7 +181,7 @@ nav .index ul li {
   font-size: 13px;
   line-height: 18px;
 }
-/**/
+/*arrow wrapper*/
 .arrow-wrapper {
   position: absolute;
   display: flex;
@@ -213,6 +215,10 @@ main {
   overflow: scroll;
   height: 100vh;
 }
+article {
+  display: none;
+  background-color: #fafafa;
+}
 article section {
   grid-column: 2;
   padding: 60px 0 30px 0;
@@ -223,7 +229,7 @@ article section p:first-of-type {
 }
 article figure {
   grid-column: 1 / span 3;
-  height: 570px;
+  height: 520px;
   width: 100%;
   overflow-x: scroll;
   margin: 0;
@@ -231,7 +237,16 @@ article figure {
 }
 article figure img {
   object-fit: contain;
-  height: 550px;
+  height: 500px;
+}
+article figure img.pano ::after {
+  content: "hola";
+  position: absolute;
+  left: 30px;
+  bottom: 30px;
+  width: 70px;
+  height: 40px;
+  background-color: rgba(0, 0, 0, 0.5);
 }
 article figure figcaption {
   margin: 10px 0 0 0;
