@@ -245,6 +245,19 @@ const plazas = {
                 "type": "Point",
                 "coordinates": [-3.709690, 40.414145]
             }
+        },
+        {
+            "type": "Feature",
+            "properties": {
+                type: "poi",
+                "message": "Universidad Politécnica de Madrid",
+                "alt": "universidad-politecnica-de-madrid",
+                "iconSize": [iconSize[0], iconSize[1]]
+            },
+            "geometry": {
+                "type": "Point",
+                "coordinates": [-3.731220, 40.440298]
+            }
         }]
 };
 
@@ -269,10 +282,6 @@ plazas.features.forEach(function (marker) {
 $('.marker').on('mouseenter', function () {
     const alt = $(this).attr('alt');
     $('#map').append(`<div class="tooltip">${alt}</div>`);
-    //tooltip position
-    $(this).css("top", event.clientY - 30);
-    $(this).css("left", event.clientX);
-
 });
 
 $('.marker').on('mouseleave', function () {

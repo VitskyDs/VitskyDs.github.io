@@ -227,23 +227,36 @@ article section p:first-of-type {
 article figure {
   grid-column: 1 / span 3;
   height: 520px;
+  max-height: 520px;
   width: 100%;
   overflow-x: scroll;
   margin: 0;
   text-align: center;
+  position: relative;
+}
+article figure .scroll-hint {
+  position: absolute;
+  left: 30px;
+  bottom: 30px;
+  height: 40px;
+  width: 90px;
+  background-color: rgba(0, 0, 0, 0.25);
+  border: 2px solid transparent;
+  box-sizing: border-box;
+  background: rgba(0, 0, 0, 0.25) url('../images/icons/panorama.svg') no-repeat center center;
+  background-size: contain;
+  opacity: 0.5;
+}
+article figure .scroll-hint .frame {
+  height: 32px;
+  width: 45px;
+  position: relative;
+  border: 2px solid #fff;
+  animation: 3s ease-in-out infinite alternate frame-anim;
 }
 article figure img {
   object-fit: contain;
   height: 500px;
-}
-article figure img.pano::after {
-  content: "hola";
-  position: absolute;
-  left: 30px;
-  bottom: 30px;
-  width: 70px;
-  height: 40px;
-  background-color: rgba(0, 0, 0, 0.5);
 }
 article figure figcaption {
   margin: 10px 0 0 0;
@@ -268,4 +281,13 @@ article video {
   display: flex;
   flex-flow: column nowrap;
   justify-content: center;
+}
+/*animation*/
+@keyframes frame-anim {
+  0% {
+    transform: translateX(0);
+  }
+  100% {
+    transform: translateX(36px);
+  }
 }
