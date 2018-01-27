@@ -248,9 +248,6 @@ const plazas = {
         }]
 };
 
-/*//fade out all articles
-$('#marquez-de-santa-ana').delay(1000).fadeIn(0);*/
-
 // add markers to map
 plazas.features.forEach(function (marker) {
     // create a DOM element for the marker
@@ -287,16 +284,13 @@ $('.arrow-clickable-area').click(function () {
     $('.map-container').toggleClass('map-close');
 });
 /*open relevant article*/
-//open index
-$('.toggle-index').click(function () {
-    $('.index').fadeToggle(0);
-});
+
 //close map and open relevant article
 $('.fire-article').click(function () {
     $('.map-container').addClass('map-close');
     $('article').fadeOut(0);
     const article = "#" + $(this).attr('alt');
-    $(article).fadeIn(0);
+    $(article).css("display","grid");
 });
 //open article on click on marker
 $('.marker').click(function () {
