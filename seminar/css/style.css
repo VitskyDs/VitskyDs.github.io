@@ -195,6 +195,7 @@ nav .index ul li {
   z-index: 100;
   justify-content: center;
   align-items: center;
+  background-color: #fafafa;
 }
 .arrow-wrapper .clickable-area {
   padding: 0 15px;
@@ -214,10 +215,6 @@ nav .index ul li {
 main {
   overflow: scroll;
   height: 100vh;
-}
-article {
-  display: none !imprtant;
-  background-color: #fafafa;
 }
 article section {
   grid-column: 2;
@@ -239,7 +236,7 @@ article figure img {
   object-fit: contain;
   height: 500px;
 }
-article figure img.pano ::after {
+article figure img.pano::after {
   content: "hola";
   position: absolute;
   left: 30px;
