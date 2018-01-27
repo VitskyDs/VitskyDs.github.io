@@ -248,9 +248,8 @@ const plazas = {
         }]
 };
 
-//fade out all articles
-$('article').fadeOut(0);
-$('#marquez-de-santa-ana').delay(1000).fadeIn(0);
+/*//fade out all articles
+$('#marquez-de-santa-ana').delay(1000).fadeIn(0);*/
 
 // add markers to map
 plazas.features.forEach(function (marker) {
@@ -315,4 +314,8 @@ $('#about-button').click(function () {
 //close about
 $('#close-about').click(function () {
     $('.about').fadeOut(300);
+});
+//clsoe welcome screen
+$('#welcome-close').click(function(){
+   $('#welcome-screen').fadeOut(300);
 });

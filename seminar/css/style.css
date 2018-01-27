@@ -61,6 +61,19 @@ body.loading .loader-wrapper .loader {
   height: 100px;
   width: 100px;
 }
+/*welcome screen*/
+.welcome-screen {
+  position: fixed;
+  top: 0;
+  left: 0;
+  height: 100vh;
+  width: 100vw;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 900;
+  background-color: white;
+}
 /*Map*/
 .map-container {
   position: fixed;

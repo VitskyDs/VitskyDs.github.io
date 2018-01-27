@@ -19,6 +19,7 @@
     <link rel="stylesheet" href="../css/normalize.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/plyr/2.0.18/plyr.css">
     <link rel="stylesheet" href="css/style.css">
+
 </head>
 
 <body class="loading">
@@ -26,39 +27,19 @@
     <div class="loader-wrapper">
         <div class="loader">loading</div>
     </div>
+    <!--welcome screen-->
+    <div id="welcome-screen" class="welcome-screen">
+        <div class="welcome-message">
+            <h1>פרוייקט</h1>
+            <p>
+                כאן מגיע ההסבר ששירה תכתוב ותמשיך לכתוב וצריך הרבה טקסט כי צריך מה לעשות זה טקסט דמי אז למי אכפת
+            </p>
+            <button id="welcome-close">להמשך</button>
+        </div>
+    </div>
     <!--nav-->
     <nav>
-        <!--
-        <img class="toggle-index cursor-pointer" src="images/icons/index.svg" alt="">-->
         <img id="about-button" class="cursor-pointer" src="images/icons/information.svg" alt="">
-        <!--<div class="index">
-            <ul>
-                <li class="toggle-index fire-article cursor-pointer" alt="marquez-de-santa-ana">
-                    מרפסת
-                </li>
-                <li class="toggle-index fire-article cursor-pointer">
-                    מטרו
-                </li>
-                <li class="toggle-index fire-article cursor-pointer">
-                    Plaza del Dos de Mayo
-                </li>
-                <li class="toggle-index fire-article cursor-pointer">
-                    Plaza de San Ildefonso
-                </li>
-                <li class="toggle-index fire-article cursor-pointer">
-
-                </li>
-                <li class="toggle-index fire-article cursor-pointer">
-
-                </li>
-                <li class="toggle-index fire-article cursor-pointer" alt="noviciado-plaza-de-espana">
-
-                </li>
-                <li class="toggle-index fire-article  cursor-pointer">
-
-                </li>
-            </ul>
-        </div>-->
     </nav>
     <!--about-->
     <div class="about container">
@@ -126,7 +107,7 @@
                 <p>לנו אין מה להסתיר, שום דבר בדירה לא שייך לנו חוץ מהבגדים ומוצרי המזון שקנינו. משום מה משהו בעובדה זו משכנע כי לחשיפה של הדירה כלפי חוץ אין השלכות של ממש עלינו, הקשר בינינו לבית הבית הוא זמני, אנחנו אחראים עליו רק לרגע חולף. לכן אין חשש, לא מדובר בייצוג האמיתי שלנו, אנחנו לא נחשפים ברגעים הקטנים והשוליים ביותר שלנו ששייכים רק לנו. כאן אין לנו מה להפסיד. </p>
                 <p>החיים פה מתנהלים עבורי בשני מקצבים - הראשון הוא המקצב ה״תיירי״, המהיר. יש לו התחלה וסוף, באמצע קיימות מטרות שיש לחתור אליהן כי הזמן קצוב: טיולים לפה ולשם, נסיעות, מוזיאונים, יעדים לכבוש לפני שהזמן אוזל. לשכנים או לאנשים ששואלים אותי ברחוב איך להגיע לנקודה כלשהי בעיר, אני צריכה להסביר שאני לא גרה כאן, כלומר אני גרה כאן אבל רק באופן זמני, לא תיירת אבל גם לא כאן כדי להישאר.</p>
                 <p>מתחת למקצב הראשון, פועם המקצב השני האיטי מבין שניהם. זה המקצב השייך לקניות בחנות ירקות ברחוב ליד, לנסיעה במטרו ללימודים, לקפה של אחה״צ על המרפסת והקפיצה למאפייה לקנות בדיוק את אותו מאפין אלוהי שיש רק שם, שבוע שעבר לא היה והבטיחו שהשבוע הוא יחזור.</p>
-                <video preload="metadata">
+                <video muted preload="metadata">
                     <source src="http://res.cloudinary.com/dr4wbzb85/video/upload/v1516959501/porch-night_pawuje.webm" type="video/webm">
                     <source src="http://res.cloudinary.com/dr4wbzb85/video/upload/v1516959501/porch-night_pawuje.mp4" type="video/mp4">
                     <source src="http://res.cloudinary.com/dr4wbzb85/video/upload/v1516959501/porch-night_pawuje.ogg" type="video/ogg">
@@ -333,7 +314,7 @@
             <section>
                 <p>זו כיכר קטנטונת, מאין חצר פנימית וחבויה בתוך ההמולה של מרכז העיר. הקולות מהרחובות העוטפים אותה מגיעים אל הכיכר רק כהדהוד קלוש כאילו מעולם אחר. פה ושם שומעים בבירור קולות אנשים ואת צלצול פעמוני הכנסיה הקרובה. אין פה שום דבר חוץ מכמה עצים, ספסל, שורת הברזיות וצלילי עיר קרובה-רחוקה.</p>
 
-                <video preload="metadata">
+                <video muted preload="metadata">
                     <source src="http://res.cloudinary.com/dr4wbzb85/video/upload/v1516954660/torres-collon-video_rymzuj.webm" type="video/webm">
                     <source src="http://res.cloudinary.com/dr4wbzb85/video/upload/v1516954660/torres-collon-video_rymzuj.mp4" type="video/mp4">
                     <source src="http://res.cloudinary.com/dr4wbzb85/video/upload/v1516954660/torres-collon-video_rymzuj.ogg" type="video/ogg">
@@ -349,7 +330,7 @@
             <section>
                 <p>כשמחפשים את מדריד בגוגל מפות, הסיכה ננעצת ממש כאן. זוהי הכיכר הראשית של העיר, נדמה שמגיעים אליה תמיד אם רוצים או לא. אל נקודה זו מתנקזים עשרה רחובות ראשיים ותחנת מטרו גדולה ומסואבת, כולם כמו משפכים אשר מובילים אל תוך הכיכר המוני אנשים ביניהם תיירים אבודים, מיקי מאוסים מחופשים, קבצנים, כייסים, מוכרי כרטיסי לוטו ושוטרים בעלי עיניים חשדניות. בדרך כלל אני עושה מאמץ שלא לעבור פה, אפילו במחיר של עיקוף רחב דרך רחובות צדדיים. אם נפלטתי בכל זאת אל תוך ים האנשים שתמיד ממלא את הרחבה העצומה, אנסה להגיע כמה שיותר מהר לגדה השניה כשהיד לופתת את התיק בחוזקה.</p>
                 <p>זו הפעם הראשונה שאני מרשה לעצמי, או מכריחה את עצמי להשתהות פה, אני אפילו יושבת על שפת אחת המזרקות, פני אל אלפי ההתרחשויות שמולי.</p>
-                <video preload="metadata">
+                <video muted preload="metadata">
                     <source src="http://res.cloudinary.com/dr4wbzb85/video/upload/v1516954660/torres-collon-video_rymzuj.webm" type="video/webm">
                     <source src="http://res.cloudinary.com/dr4wbzb85/video/upload/v1516954660/torres-collon-video_rymzuj.mp4" type="video/mp4">
                     <source src="http://res.cloudinary.com/dr4wbzb85/video/upload/v1516954660/torres-collon-video_rymzuj.ogg" type="video/ogg">
@@ -366,7 +347,7 @@
             <figure><img src="images/plazas/plaza-de-conde-02.png" alt="Plaza del Conde del Valle de Suchil"></figure>
             <figure><img src="images/plazas/plaza-de-conde-pano.png" alt="Plaza del Conde del Valle de Suchil"></figure>
             <section>
-                <video preload="metadata">
+                <video muted preload="metadata">
                     <source src="http://res.cloudinary.com/dr4wbzb85/video/upload/v1516954660/torres-collon-video_rymzuj.webm" type="video/webm">
                     <source src="http://res.cloudinary.com/dr4wbzb85/video/upload/v1516954660/torres-collon-video_rymzuj.mp4" type="video/mp4">
                     <source src="http://res.cloudinary.com/dr4wbzb85/video/upload/v1516954660/torres-collon-video_rymzuj.ogg" type="video/ogg">
@@ -381,7 +362,7 @@
             </section>
             <figure><img src="images/plazas/plaza-olavide-pano.png" alt="Plaza de Olavide"></figure>
             <section>
-                <video preload="metadata">
+                <video muted preload="metadata">
                     <source src="http://res.cloudinary.com/dr4wbzb85/video/upload/v1516954660/torres-collon-video_rymzuj.webm" type="video/webm">
                     <source src="http://res.cloudinary.com/dr4wbzb85/video/upload/v1516954660/torres-collon-video_rymzuj.mp4" type="video/mp4">
                     <source src="http://res.cloudinary.com/dr4wbzb85/video/upload/v1516954660/torres-collon-video_rymzuj.ogg" type="video/ogg">
@@ -401,7 +382,7 @@
             </section>
             <figure><img src="images/plazas/plaza-mayor-pano.png" alt="Plaza Mayor"></figure>
             <section>
-                <video preload="metadata">
+                <video muted preload="metadata">
                     <source src="http://res.cloudinary.com/dr4wbzb85/video/upload/v1516954660/torres-collon-video_rymzuj.webm" type="video/webm">
                     <source src="http://res.cloudinary.com/dr4wbzb85/video/upload/v1516954660/torres-collon-video_rymzuj.mp4" type="video/mp4">
                     <source src="http://res.cloudinary.com/dr4wbzb85/video/upload/v1516954660/torres-collon-video_rymzuj.ogg" type="video/ogg">
