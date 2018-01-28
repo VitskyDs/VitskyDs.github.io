@@ -1,8 +1,0 @@
-<?xml version="1.0" encoding="UTF-8"?>
-    <svg width="10px" height="17px" viewBox="0 0 10 17" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
-        <g id="Universal/Components/Carousel/Controls" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd" transform="translate(-37.000000, 0.000000)">
-            <g id="Universal/Components/Carousel/Next-Button" transform="translate(37.000000, 0.000000)" fill="#FF0052" fill-rule="nonzero">
-                <polygon id="Path-2" points="8.27735782 8.5 0.827960362 1.3609941 1.51986573 0.639005897 9.72264218 8.5 1.51986573 16.3609941 0.827960362 15.6390059"></polygon>
-            </g>
-        </g>
-    </svg>
