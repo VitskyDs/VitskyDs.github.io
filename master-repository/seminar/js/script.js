@@ -211,19 +211,6 @@ const plazas = {
             "type": "Feature",
             "properties": {
                 type: "poi",
-                "message": "ETSAM",
-                "alt": "noviciado-plaza-de-espana",
-                "iconSize": [iconSize[0], iconSize[1]]
-            },
-            "geometry": {
-                "type": "Point",
-                "coordinates": [-3.7311324, 40.4397832]
-            }
-        },
-        {
-            "type": "Feature",
-            "properties": {
-                type: "poi",
                 "message": "Parroquia Buen Suceso",
                 "alt": "parroquia-buen-suceso",
                 "iconSize": [iconSize[0], iconSize[1]]
@@ -244,6 +231,19 @@ const plazas = {
             "geometry": {
                 "type": "Point",
                 "coordinates": [-3.709690, 40.414145]
+            }
+        },
+        {
+            "type": "Feature",
+            "properties": {
+                type: "poi",
+                "message": "Ciudad Universitaria",
+                "alt": "ciudad-universitaria",
+                "iconSize": [iconSize[0], iconSize[1]]
+            },
+            "geometry": {
+                "type": "Point",
+                "coordinates": [-3.7271513, 40.4403916]
             }
         },
         {
@@ -289,7 +289,7 @@ $('.marker').on('mouseleave', function () {
 });
 
 /*collapse map*/
-$('.arrow-clickable-area').click(function () {
+$('.arrow-wrapper').click(function () {
     $('.map-container').toggleClass('map-close');
 });
 /*open relevant article*/
