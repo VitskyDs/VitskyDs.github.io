@@ -148,12 +148,8 @@ body {
     background: black;
     color: white;
     transform: translateX(-50%);
-    padding: 0 5px;
-    font-size: 12px;
-}
-.mapboxgl-popup {
-    max-width: 400px;
-    font: 12px/20px 'Helvetica Neue', Arial, Helvetica, sans-serif;
+    padding: 5px 10px;
+    font-size: 15px;
 }
 
 /*Grid*/
@@ -216,7 +212,9 @@ nav {
     justify-content: center;
     align-items: center;
     background-color: #fff;
+    box-shadow: 0 0 5px 0 rgba(0, 0, 0, 0.25);
     .clickable-area {
+        cursor: pointer;
         padding: 5px 15px;
     }
     .arrow {
@@ -239,9 +237,10 @@ main {
     height: 100vh;
 }
 article {
+    margin: 30px 0 0 0;
     section {
         grid-column: 2;
-        padding: 60px 0 30px 0;
+        padding: 10px 0;
         direction: rtl;
         p:first-of-type {
             margin: 10px 0 0 0;
@@ -261,19 +260,19 @@ article {
             position: absolute;
             left: 30px;
             bottom: 30px;
-            height: 40px;
+            height: 45px;
             width: 90px;
-            background-color: rgba(0, 0, 0, 0.25);
             border: 2px solid transparent;
             box-sizing: border-box;
-            background: rgba(0, 0, 0, 0.25) url('../images/icons/panorama.svg') no-repeat center center;
+            background: white url('../images/icons/panorama.svg') no-repeat center center;
             background-size: contain;
-            opacity: 0.5;
+            opacity: 0.75;
+            box-shadow: 0 0 5px 0 rgba(0, 0, 0, 0.5);
             .frame {
-                height: 32px;
+                height: 37px;
                 width: 45px;
                 position: relative;
-                border: 2px solid #fff;
+                border: 2px solid #000;
                 animation: 3s ease-in-out infinite alternate frame-anim;
             }
         }
@@ -281,8 +280,33 @@ article {
             object-fit: contain;
             height: 500px;
         }
-        figcaption {
-            margin: 10px 0 0 0;
+    }
+    .pano-instruction {
+        grid-column: 2;
+        margin: 5px 0 0 0;
+        text-align: center;
+        display: flex;
+        justify-content: center;
+        align-content: center;
+        span {
+            line-height: 12px;
+            font-size: 11px;
+        }
+        .scroll-arrow {
+            margin: 0 10px;
+            height: 10px;
+            width: 10px;
+            background: white;
+            border-left: 5px solid white;
+            border-right: 5px solid white;
+            border-top: 9px solid black;
+            box-sizing: border-box;
+            transform: rotate(90deg);
+            //transition: all 400ms cubic-bezier(0.445, 0.050, 0.550, 0.950);
+            animation: 3s cubic-bezier(0.445, 0.050, 0.550, 0.950) infinite pano-arrow-left;
+            &:nth-child(3) {
+                animation: 3s cubic-bezier(0.445, 0.050, 0.550, 0.950) infinite pano-arrow-right;
+            }
         }
     }
     video {
@@ -317,6 +341,34 @@ article {
         transform: translateX(0);
     }
     100% {
-        transform: translateX(36px);
+        transform: translateX(37px);
+    }
+}
+@keyframes pano-arrow-left {
+    0% {
+        transform: translateX(0) rotate(90deg);
+    }
+    25% {
+        transform: translateX(-10px) rotate(90deg);
+    }
+    50% {
+        transform: translateX(0) rotate(90deg);
+    }
+    100% {
+        transform: translateX(0) rotate(90deg);
+    }
+}
+@keyframes pano-arrow-right {
+    0% {
+        transform: translateX(0) rotate(-90deg);
+    }
+    25% {
+        transform: translateX(10px) rotate(-90deg);
+    }
+    50% {
+        transform: translateX(0) rotate(-90deg);
+    }
+    100% {
+        transform: translateX(0) rotate(-90deg);
     }
 }
