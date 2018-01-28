@@ -23,7 +23,7 @@ body {
     font: 400 15px/21px Heebo, sans-serif;
 }
 h1 {
-    font: 30px/140% SuezOne, serif;
+    font: 30px/120% SuezOne, serif;
     color: #000000;
     letter-spacing: 0;
     text-align: right;
@@ -34,16 +34,22 @@ h2 {
     font: 18px/26px SuezOne, serif;
     text-align: right;
     font-family: 'Suez One', serif;
-    margin: 0 0 20px 0;
+    margin: 0;
 }
 h3 {
     font: 700 15px/24px Heebo, serif;
     text-align: right;
-    margin: 15px 0 0 0;
+    margin: 10px 0 15px 0;
 }
 p {
     text-align: justify;
     margin: 0 0 5px 0;
+    &:first-of-type {
+        margin: 20px 0 5px 0;
+    }
+    &:last-of-type {
+        margin: 0 0 20px 0;
+    }
 }
 
 /*Loader*/
@@ -148,8 +154,8 @@ body {
     background: black;
     color: white;
     transform: translateX(-50%);
-    padding: 5px 10px;
-    font-size: 15px;
+    padding: 2px 5px;
+    font-size: 13px;
 }
 
 /*Grid*/
@@ -237,53 +243,35 @@ main {
     height: 100vh;
 }
 article {
-    margin: 30px 0 0 0;
+    padding: 30px 0;
     section {
         grid-column: 2;
         padding: 10px 0;
         direction: rtl;
-        p:first-of-type {
-            margin: 10px 0 0 0;
-        }
     }
     figure {
         grid-column: 1 / span 3;
-        height: 520px;
-        max-height: 520px;
+        height: 500px;
+        max-height: 500px;
         width: 100%;
         overflow-x: scroll;
+        overflow-y: hidden;
         text-align: center;
         margin: 0;
         text-align: center;
         position: relative;
-        .scroll-hint {
-            position: absolute;
-            left: 30px;
-            bottom: 30px;
-            height: 45px;
-            width: 90px;
-            border: 2px solid transparent;
-            box-sizing: border-box;
-            background: white url('../images/icons/panorama.svg') no-repeat center center;
-            background-size: contain;
-            opacity: 0.75;
-            box-shadow: 0 0 5px 0 rgba(0, 0, 0, 0.5);
-            .frame {
-                height: 37px;
-                width: 45px;
-                position: relative;
-                border: 2px solid #000;
-                animation: 3s ease-in-out infinite alternate frame-anim;
-            }
-        }
         img {
             object-fit: contain;
             height: 500px;
+            max-width: 95%;
+            &.pano {
+                max-width: none;
+            }
         }
     }
     .pano-instruction {
         grid-column: 2;
-        margin: 5px 0 0 0;
+        margin: 0;
         text-align: center;
         display: flex;
         justify-content: center;
@@ -302,7 +290,6 @@ article {
             border-top: 9px solid black;
             box-sizing: border-box;
             transform: rotate(90deg);
-            //transition: all 400ms cubic-bezier(0.445, 0.050, 0.550, 0.950);
             animation: 3s cubic-bezier(0.445, 0.050, 0.550, 0.950) infinite pano-arrow-left;
             &:nth-child(3) {
                 animation: 3s cubic-bezier(0.445, 0.050, 0.550, 0.950) infinite pano-arrow-right;
@@ -310,7 +297,7 @@ article {
         }
     }
     video {
-        margin: 30px 0;
+        margin: 10px 0 30px 0;
         width: 100%;
     }
 }
