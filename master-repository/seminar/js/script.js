@@ -72,7 +72,7 @@ const plazas = {
             },
             "geometry": {
                 "type": "Point",
-                "coordinates": [-3.6985204, 40.4200411]
+                "coordinates": [-3.696077, 40.420224]
             }
             }, {
             "type": "Feature",
@@ -84,7 +84,7 @@ const plazas = {
             },
             "geometry": {
                 "type": "Point",
-                "coordinates": [-3.7108549, 40.4205315]
+                "coordinates": [-3.708438, 40.420104]
             }
             }, {
             "type": "Feature",
@@ -96,7 +96,7 @@ const plazas = {
             },
             "geometry": {
                 "type": "Point",
-                "coordinates": [-3.713778, 40.4159668]
+                "coordinates": [-3.7110, 40.41590]
             }
             }, {
             "type": "Feature",
@@ -115,7 +115,7 @@ const plazas = {
             "properties": {
                 type: "plaza",
                 "message": "Plaza del Conde del Valle de Suchil",
-                "alt": "plaza-del-conde-del-calle-de-suchil",
+                "alt": "valle-de-suchil",
                 "iconSize": [iconSize[0], iconSize[1]]
             },
             "geometry": {
@@ -192,7 +192,7 @@ const plazas = {
             },
             "geometry": {
                 "type": "Point",
-                "coordinates": [-3.7043703, 40.4290584]
+                "coordinates": [-3.701999, 40.429054]
             }
             }, {
             "type": "Feature",
@@ -243,7 +243,7 @@ const plazas = {
             },
             "geometry": {
                 "type": "Point",
-                "coordinates": [-3.7271513, 40.4403916]
+                "coordinates": [-3.726100, 40.443926]
             }
         },
         {
@@ -257,6 +257,32 @@ const plazas = {
             "geometry": {
                 "type": "Point",
                 "coordinates": [-3.731220, 40.440298]
+            }
+        },
+        {
+            "type": "Feature",
+            "properties": {
+                type: "plaza",
+                "message": "Plaza de Chueca",
+                "alt": "plaza-de-chueca",
+                "iconSize": [iconSize[0], iconSize[1]]
+            },
+            "geometry": {
+                "type": "Point",
+                "coordinates": [-3.697590, 40.422769]
+            }
+        },
+        {
+            "type": "Feature",
+            "properties": {
+                type: "poi",
+                "message": "אנשי המדרגה",
+                "alt": "stair-people",
+                "iconSize": [iconSize[0], iconSize[1]]
+            },
+            "geometry": {
+                "type": "Point",
+                "coordinates": [-3.705657, 40.424660]
             }
         }]
 };
