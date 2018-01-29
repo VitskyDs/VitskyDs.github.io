@@ -58,17 +58,6 @@ $('body').on('click touchstart', '.menu-button, .menu-link', function () {
     toggleMenu();
 });
 
-/*Video Controls*/
-$('.video-section').click(function () {
-    const video = $(this).find('video').get(0);
-    if (video.paused) {
-        $(this).children('.video-white-overlay').fadeOut(200);
-        video.play();
-    } else {
-        $(this).children('.video-white-overlay').fadeOut(200);
-        video.pause();
-    }
-});
 /*Welcome animation*/
 
 const scrollLinesTl = new TimelineMax({

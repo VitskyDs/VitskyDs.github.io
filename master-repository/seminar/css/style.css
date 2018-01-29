@@ -202,6 +202,8 @@ nav .index ul li {
   position: absolute;
   right: 15px;
   margin: 0;
+  font-size: 12px;
+  letter-spacing: 1px;
 }
 .arrow-wrapper .arrow {
   height: 10px;

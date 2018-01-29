@@ -238,7 +238,7 @@ const plazas = {
             "properties": {
                 type: "poi",
                 "message": "Ciudad Universitaria",
-                "alt": "ciudad-universitaria",
+                "alt": "noviciado-plaza-de-espana",
                 "iconSize": [iconSize[0], iconSize[1]]
             },
             "geometry": {
