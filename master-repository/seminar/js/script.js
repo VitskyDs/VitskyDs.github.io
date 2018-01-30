@@ -1,7 +1,6 @@
+$(document).ready(function () {
 
-$(document).ready(function() {
-
-    setTimeout(function(){
+    setTimeout(function () {
         $('body').removeClass('loading');
     }, 3000);
 
@@ -325,7 +324,7 @@ $('.fire-article').click(function () {
     $('.map-container').addClass('map-close');
     $('article').fadeOut(0);
     const article = "#" + $(this).attr('alt');
-    $(article).css("display","grid");
+    $(article).css("display", "grid");
 });
 //open article on click on marker
 $('.marker').click(function () {
@@ -337,14 +336,25 @@ $('.marker').click(function () {
 
 //open about
 $('#about-button').click(function () {
-    $('.about').css('display', 'grid')
+    $('.about').css('display', 'grid');
+    $('.about-indicator').remove();
+    localStorage.setItem('firstInformationEntry', 'true');
 });
 
 //close about
 $('#close-about').click(function () {
     $('.about').fadeOut(300);
 });
+
 //clsoe welcome screen
-$('#welcome-close').click(function(){
-   $('#welcome-screen').fadeOut(300);
+$('#welcome-close').click(function () {
+    $('#welcome-screen').fadeOut(300);
+    localStorage.setItem('firstEntry', 'true');
 });
+
+if (localStorage.getItem(firstEntry)) {
+    $('#welcome-screen').remove();
+}
+if (localStorage.getItem(firstInformationEntry)) {
+    $('.about-indicator').remove();
+}
