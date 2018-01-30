@@ -1,7 +1,10 @@
 $(document).ready(function () {
 
     setTimeout(function () {
-        $('body').removeClass('loading');
+        //$('body').removeClass('loading');
+        $('.loader').fadeOut(300);
+        $('.loader-wrapper').fadeOut(500);
+
     }, 3000);
 
     if (localStorage.getItem('firstEntry') === true) {
