@@ -76,12 +76,12 @@ body.loading .loader-wrapper .loader {
 body.loading .loader-wrapper .loader svg polyline {
   stroke-dasharray: 800;
   stroke-dashoffset: 800;
-  animation: 25s cubic-bezier(0.83, 0.15, 0.745, 0.715) forwards dash;
+  animation: 20s cubic-bezier(0.455, 0.03, 0.515, 0.955) forwards dash;
 }
 body.loading .loader-wrapper .loader svg path {
   stroke-dasharray: 800;
   stroke-dashoffset: 800;
-  animation: 25s cubic-bezier(0.83, 0.15, 0.745, 0.715) forwards dash;
+  animation: 20s cubic-bezier(0.455, 0.03, 0.515, 0.955) forwards dash;
 }
 /*welcome screen*/
 .welcome-screen {
@@ -122,10 +122,10 @@ body.loading .loader-wrapper .loader svg path {
 }
 .map-container .madrid {
   position: absolute;
+  color: #666;
   left: 30px;
   bottom: 60px;
-  font-size: 40px;
-  text-shadow: -1px -1px 0 #ffffff, 1px -1px 0 #ffffff, -1px 1px 0 #ffffff, 1px 1px 0 #ffffff;
+  font-size: 30px;
 }
 .map-container .legend {
   position: absolute;

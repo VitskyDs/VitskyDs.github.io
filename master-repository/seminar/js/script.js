@@ -1,11 +1,9 @@
 $(document).ready(function () {
 
     setTimeout(function () {
-        //$('body').removeClass('loading');
         $('.loader').fadeOut(300);
         $('.loader-wrapper').fadeOut(500);
-
-    }, 3000);
+    }, 4000);
 
     if (localStorage.getItem('firstEntry') === 'true') {
         $('#welcome-screen').remove();
@@ -309,7 +307,6 @@ plazas.features.forEach(function (marker) {
     new mapboxgl.Marker(el)
         .setLngLat(marker.geometry.coordinates)
         .addTo(map);
-
 });
 
 //hover on marker
