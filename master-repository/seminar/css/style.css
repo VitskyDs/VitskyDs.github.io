@@ -64,8 +64,18 @@ body.loading .loader-wrapper {
   background-color: black;
 }
 body.loading .loader-wrapper .loader {
-  height: 100px;
-  width: 100px;
+  height: 600px;
+  width: 700px;
+}
+body.loading .loader-wrapper .loader svg polyline {
+  stroke-dasharray: 1500;
+  stroke-dashoffset: 1500;
+  animation: 15s ease forwards dash;
+}
+body.loading .loader-wrapper .loader svg path {
+  stroke-dasharray: 1500;
+  stroke-dashoffset: 1500;
+  animation: 15s ease forwards dash;
 }
 /*welcome screen*/
 .welcome-screen {
@@ -406,5 +416,10 @@ article video {
   }
   100% {
     transform: translateX(0);
+  }
+}
+@keyframes dash {
+  to {
+    stroke-dashoffset: 0;
   }
 }

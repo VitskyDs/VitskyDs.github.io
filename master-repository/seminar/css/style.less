@@ -71,8 +71,20 @@ body {
             z-index: 1000;
             background-color: black;
             .loader {
-                height: 100px;
-                width: 100px;
+                height: 600px;
+                width: 700px;
+                svg {
+                    polyline {
+                        stroke-dasharray: 1500;
+                        stroke-dashoffset: 1500;
+                        animation: 15s ease forwards dash;
+                    }
+                    path {
+                        stroke-dasharray: 1500;
+                        stroke-dashoffset: 1500;
+                        animation: 15s ease forwards dash;
+                    }
+                }
             }
         }
     }
@@ -97,15 +109,13 @@ body {
             background: none;
             border: none;
             font-weight: 600;
-             text-decoration: underline;
+            text-decoration: underline;
             cursor: pointer;
             padding: 10px;
             margin: 30px -10px 0 0;
         }
     }
 }
-
-
 
 /*Map*/
 
@@ -439,5 +449,10 @@ article {
     }
     100% {
         transform: translateX(0);
+    }
+}
+@keyframes dash {
+    to {
+        stroke-dashoffset: 0;
     }
 }
