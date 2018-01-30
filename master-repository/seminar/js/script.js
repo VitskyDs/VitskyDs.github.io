@@ -7,10 +7,10 @@ $(document).ready(function () {
 
     }, 3000);
 
-    if (localStorage.getItem('firstEntry') === true) {
+    if (localStorage.getItem('firstEntry') === 'true') {
         $('#welcome-screen').remove();
     };
-    if (localStorage.getItem('firstInformationEntry' === true)) {
+    if (localStorage.getItem('firstInformationEntry') === 'true') {
         $('.about-indicator').remove();
     };
 });
