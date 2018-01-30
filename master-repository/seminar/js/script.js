@@ -2,7 +2,7 @@ $(document).ready(function () {
 
     setTimeout(function () {
         $('.loader').fadeOut(300);
-        $('.loader-wrapper').fadeOut(500);
+        $('.loader-wrapper').fadeOut(800);
     }, 4000);
 
     if (localStorage.getItem('firstEntry') === 'true') {
