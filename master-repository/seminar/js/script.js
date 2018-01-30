@@ -4,6 +4,12 @@ $(document).ready(function () {
         $('body').removeClass('loading');
     }, 3000);
 
+    if (localStorage.getItem('firstEntry') === true) {
+        $('#welcome-screen').remove();
+    };
+    if (localStorage.getItem('firstInformationEntry' === true)) {
+        $('.about-indicator').remove();
+    };
 });
 
 
@@ -346,15 +352,8 @@ $('#close-about').click(function () {
     $('.about').fadeOut(300);
 });
 
-//clsoe welcome screen
+//close welcome screen
 $('#welcome-close').click(function () {
     $('#welcome-screen').fadeOut(300);
     localStorage.setItem('firstEntry', 'true');
 });
-
-if (localStorage.getItem(firstEntry)) {
-    $('#welcome-screen').remove();
-}
-if (localStorage.getItem(firstInformationEntry)) {
-    $('.about-indicator').remove();
-}
