@@ -1,9 +1,9 @@
 $(document).ready(function () {
 
     setTimeout(function () {
-        $('.loader').fadeOut(300);
+        $('.loader').fadeOut(400);
         $('.loader-wrapper').fadeOut(800);
-    }, 4000);
+    }, 7000);
 
     if (localStorage.getItem('firstEntry') === 'true') {
         $('#welcome-screen').remove();
