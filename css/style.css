@@ -677,15 +677,6 @@ figure figcaption {
   .item .item-content {
     height: 220px;
   }
-  .section-carousel .main-carousel .caption {
-    display: block;
-    margin-bottom: 0;
-    position: absolute;
-    bottom: -40px;
-    left: 50%;
-    transform: translateX(-50%);
-    color: #999999;
-  }
   /*Project Container*/
   .project-container .project-section .project-header {
     grid-column: 2 / span 5;
@@ -822,15 +813,21 @@ figure figcaption {
     font-size: 9vw;
   }
   /*Components*/
-  .section-carousel .main-carousel .carousel-cell img {
-    width: 900px;
-  }
   .section-carousel-buttons {
     grid-column: 6 / span 2;
     justify-self: end;
   }
   .section-carousel .main-carousel .carousel-cell img {
     width: 1040px;
+  }
+  .section-carousel .main-carousel .caption {
+    display: block;
+    margin-bottom: 0;
+    position: absolute;
+    bottom: -40px;
+    left: 50%;
+    transform: translateX(-50%);
+    color: #999999;
   }
 }
 /*Extra Large*/

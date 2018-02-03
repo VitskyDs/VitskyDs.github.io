@@ -793,19 +793,6 @@ figure {
     .item .item-content {
         height: 220px;
     }
-    .section-carousel {
-        .main-carousel {
-            .caption {
-                display: block;
-                margin-bottom: 0;
-                position: absolute;
-                bottom: -40px;
-                left: 50%;
-                transform: translateX(-50%);
-                color: @gray;
-            }
-        }
-    }
     /*Project Container*/
     .project-container {
         .project-section {
@@ -956,15 +943,6 @@ figure {
     }
     /*Components*/
     //carousel
-    .section-carousel {
-        .main-carousel {
-            .carousel-cell {
-                img {
-                    width: 900px;
-                }
-            }
-        }
-    }
     .section-carousel-buttons {
         grid-column: 6 / span 2;
         justify-self: end;
@@ -975,6 +953,15 @@ figure {
                 img {
                     width: 1040px;
                 }
+            }
+            .caption {
+                display: block;
+                margin-bottom: 0;
+                position: absolute;
+                bottom: -40px;
+                left: 50%;
+                transform: translateX(-50%);
+                color: @gray;
             }
         }
     }
