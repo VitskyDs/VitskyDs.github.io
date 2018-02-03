@@ -513,10 +513,10 @@ figure figcaption {
   text-align: center;
 }
 #error-page .error-wrapper h1 {
-  font: 900 38px/55px Roboto;
+  font: 900 38px/50px Roboto;
   color: #ff0052;
   text-transform: uppercase;
-  margin: 0 0 0 0;
+  margin: 0 0 10px 0;
 }
 /*Media Queries*/
 @media screen and (min-width: 500px) {
