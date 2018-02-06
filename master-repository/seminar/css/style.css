@@ -275,7 +275,7 @@ article figure {
   height: 500px;
   max-height: 500px;
   width: 100%;
-  overflow-x: scroll;
+  overflow-x: auto;
   overflow-y: hidden;
   margin: 0;
   text-align: center;
