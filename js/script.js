@@ -1,4 +1,5 @@
-const mobileMenu = $('.mobile-menu');
+const mobileMenu = $('.mobile-menu'),
+    cellButtonGroup = $('.cell-button-group');
 
 const removeNoScroll = function () {
     $('body').removeClass('no-scroll');
@@ -15,8 +16,6 @@ $('.main-carousel').flickity({
     cellSelector: '.carousel-cell',
     wrapAround: true
 });
-
-const cellButtonGroup = $('.cell-button-group');
 
 //update button on change slide
 $('.main-carousel').on('select.flickity', function () {
@@ -77,10 +76,7 @@ scrollLinesTl.add("start", 0)
         y: -140,
         opacity: 0
     }, "start")
-    .to('.welcome-line:nth-child(4)', 1, {
-        y: -60,
-        opacity: 0
-    }, "start").to('.welcome-line', 1, {
+    .to('.welcome-line', 1, {
         opacity: 1,
         y: 0
     });

@@ -72,7 +72,7 @@ figcaption {
   font: 400 15px/26px Roboto, sans-serif;
 }
 .welcome-line {
-  font: 900 12vw/100% Roboto, sans-serif;
+  font: 900 12vw/115% Roboto, sans-serif;
   text-transform: uppercase;
   letter-spacing: 2px;
 }
@@ -410,11 +410,12 @@ figure figcaption {
 .welcome-container .welcome-message {
   align-self: center;
   width: 90%;
+  margin-top: -30px;
 }
 .welcome-container .down-arrow-wrapper {
   position: absolute;
   overflow: hidden;
-  padding: 0 0 30px 0;
+  padding: 0 0 60px 0;
   bottom: 0;
   left: 50%;
   transform: translateX(-50%);
@@ -528,7 +529,6 @@ figure figcaption {
 }
 /*Media Queries*/
 @media screen and (min-width: 500px) {
-  /*Typography*/
   /*Grid*/
   .project-item-grid {
     display: grid;
@@ -647,6 +647,9 @@ figure figcaption {
 /*Medium-Large*/
 @media screen and (min-width: 900px) {
   /*Welcom-container*/
+  .welcome-container .welcome-message {
+    margin-top: 0;
+  }
   .welcome-line {
     font-size: 10vw;
   }
