@@ -96,6 +96,21 @@ body {
     }
 }
 
+/*Desktop only screen*/
+
+.desktop-only-screen {
+    position: fixed;
+    top: 0;
+    left: 0;
+    height: 100vh;
+    width: 100vw;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 1000;
+    background-color: white;
+}
+
 /*welcome screen*/
 
 .welcome-screen {
@@ -464,3 +479,10 @@ article {
     }
 }
 
+/*Media Query*/
+
+@media screen and (min-width: 900px) {
+    .desktop-only-screen {
+        display: none;
+    }
+}
