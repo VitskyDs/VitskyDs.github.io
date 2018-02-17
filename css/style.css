@@ -14,7 +14,7 @@
 
 */
 /*imports and variables*/
-@import url('https://fonts.googleapis.com/css?family=Roboto:100,200,300,400,500,700,900');
+@import url('https://fonts.googleapis.com/css?family=Roboto:200,300,400,500,900');
 @import url('https://fonts.googleapis.com/css?family=Vollkorn:400,400i');
 /*General*/
 * {
@@ -273,6 +273,8 @@ footer {
 }
 footer p {
   margin: 0;
+  color: #999999;
+  font-size: 14px;
 }
 figure {
   margin: 0;
