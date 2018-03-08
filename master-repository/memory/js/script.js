@@ -28,8 +28,8 @@ const rating = document.getElementById('rating'),
 /*Functions*/
 
 function random(min, max) {
-        return Math.floor(Math.random() * (1 + max - min) + min);
-    }
+    return Math.floor(Math.random() * (1 + max - min) + min);
+}
 
 function particleAnimation(particleNum) {
     const tlexplosion = new TimelineMax(),
@@ -107,9 +107,9 @@ $('#player-name-input').on('update', function () {
 /*game reset*/
 const gameReset = function () {
     // reset the board by randomizing the array
-    /*    cardArray.sort(function () {
-            return 0.5 - Math.random()
-        });*/
+    cardArray.sort(function () {
+        return 0.5 - Math.random()
+    });
     for (let i = 0; i < 12; i++) {
         const newCard = document.createElement('div');
         newCard.classList.add('card', 'card-' + cardArray[i]);
@@ -169,7 +169,7 @@ $(document).on('click', '.card', function () {
     } else if (gameStats.clicks % 2 === 0) {
         setTimeout(function () {
             $(card).removeClass('flipped');
-        }, 900);
+        }, 400);
         cardData = '';
         cardId = $(this).attr('id');
     } else {
