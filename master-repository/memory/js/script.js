@@ -121,7 +121,7 @@ const gameReset = function () {
     cardsContainer.innerHTML = '';
     cardsContainer.append(fragment); // reset timer
     // reset rating, matches and timer
-    matches = 5;
+    matches = 0;
     rating.classList.remove('rating-2-3', 'rating-1-3');
     clock.timer('remove');
     clock.timer({
