@@ -47,7 +47,7 @@ function particleAnimation(particleNum) {
 
     // animation
     dots.each(function () {
-        tlexplosion.add(TweenMax.fromTo(this, 3, {
+        tlexplosion.add(TweenMax.fromTo(this, 1.5, {
             z: random(-700, 700),
             opacity: 1,
             rotation: 0
@@ -166,10 +166,15 @@ $(document).on('click', '.card', function () {
         cardId = $(this).attr('id');
         console.log(cardId);
         console.log(matches);
+        $('#particle-container').fadeIn(0);
+        particleAnimation(150);
+        setTimeout(function () {
+            $('#particle-container').fadeOut(0)
+        }, 1000);
     } else if (gameStats.clicks % 2 === 0) {
         setTimeout(function () {
             $(card).removeClass('flipped');
-        }, 400);
+        }, 900);
         cardData = '';
         cardId = $(this).attr('id');
     } else {
@@ -182,7 +187,7 @@ $(document).on('click', '.card', function () {
         gameStats.clicks = gameStats.clicks / 2;
         gameStats.timer = clock.data('seconds');;
         // update score
-        gameStats.score = 1000 - gameStats.timer * gameStats.clicks / gameStats.rating;
+        gameStats.score = Number(Math.round(1000 - gameStats.timer * gameStats.clicks / gameStats.rating));
         //blow confetti
         $('#particle-container').fadeIn(0);
         /*particle animation*/
@@ -190,6 +195,6 @@ $(document).on('click', '.card', function () {
         // display popup of success
         setTimeout(function () {
             winner.classList.remove('display-none');
-        }, 2250);
+        }, 1500);
     }
 });
