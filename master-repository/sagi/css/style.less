@@ -1,0 +1,245 @@
+/*imports and variables*/
+
+@primary: #C4A27B;
+@gray: #444444;
+
+/*Typography*/
+
+h1 {}
+h2 {}
+h3 {}
+p {}
+small {}
+
+/*Generic*/
+
+a {
+    color: white;
+    text-decoration: underline;
+}
+.hr {
+    height: 5px;
+}
+.icon {
+    width: 18px;
+    height: 18px;
+    &.icon-facebook {
+        background: url('/images/icon-facebook.svg') no-repeat center center;
+        background-size: contain;
+    }
+    &.icon-instagram {
+        background: url('/images/icon-instagram.svg') no-repeat center center;
+        background-size: contain;
+    }
+}
+.hr-small {
+    width: 23px;
+    height: 2px;
+    background-color: white;
+    margin: 12px 0;
+}
+
+/*Buttons*/
+
+.btn {
+    background-color: #444444;
+    color: @primary;
+    border-radius: 0;
+}
+
+/*Navbar*/
+
+nav {
+    .nav-link {
+        padding: 16px 8px;
+    }
+    .nav-link:last-of-type {
+        padding-right: 0;
+    }
+    a {
+        color: white;
+        font-size: 26px;
+        line-height: 18px;
+        font-style: italic;
+    }
+}
+
+/*Sections*/
+
+//generic
+section {
+    .text-box {
+        background: @primary;
+        padding: 40px 16px;
+        text-align: center;
+        line-height: 30px;
+        font-size: 18px;
+        border: none;
+    }
+}
+//specific
+.hero {
+    height: 100vh;
+    display: flex;
+    flex-flow: column nowrap;
+    justify-content: center;
+    align-items: center;
+    background: #C7A188 url('/images/hero-image.jpg') center center;
+    background-size: cover;
+    .brand-logo {
+        height: 170px;
+        width: 170px;
+        background: transparent url('/images/brand-logo.png') no-repeat center center;
+        background-size: contain;
+    }
+    .down-arrow {
+        width: 50px;
+        height: 93px;
+        position: absolute;
+        bottom: 30px;
+        background: transparent url('/images/down-arrow.svg') no-repeat center center;
+        background-size: contain;
+    }
+}
+.section-01 {
+    .text-box {
+        background: @primary url('/images/paper-texture-wide.jpg') center center;
+        background-size: cover;
+    }
+    .full-image {
+        background: #C7A188 url('/images/image-02.jpg') no-repeat center bottom;
+        background-size: cover;
+        height: 300px;
+    }
+}
+.section-02 {
+    background: @primary url('/images/paper-texture-wide.jpg') center center;
+    background-size: cover;
+    .full-image {
+        height: 400px;
+        background: @primary url('/images/image-03.jpg') center center;
+        background-size: cover;
+    }
+    .image {
+        height: 280px;
+        background: @primary url('/images/image-04.jpg') center center;
+        background-size: cover;
+    }
+}
+.section-03 {
+    padding: 60px 0;
+    background-color: @gray;
+    color: white;
+    .brand-logo {
+        height: 170px;
+        width: 170px;
+        background: transparent url('/images/brand-logo.png') no-repeat center center;
+        background-size: contain;
+        margin: 0 0 60px 0;
+    }
+    h4 {
+        text-align: center;
+        line-height: 30px;
+    }
+    p {
+        text-align: center;
+        line-height: 30px;
+    }
+    .social-wrapper {
+        margin: 60px 0 0 0;
+        .icon {
+            height: 24px;
+            width: 24px;
+            margin: 0 8px;
+        }
+    }
+}
+.google-maps {
+    height: 250px;
+    background: url('/images/google-maps.png') center center no-repeat;
+    background-size: cover;
+}
+.section-04 {
+    background: @primary url('/images/paper-texture-wide.jpg') center center;
+    background-size: cover;
+    padding: 60px 16px;
+    .hr-small {
+        background-color: @gray;
+    }
+    h4 {
+        text-align: center;
+        line-height: 30px;
+    }
+    p {
+        text-align: center;
+        line-height: 30px;
+    }
+    .logo-wrapper {
+        .logo-item {
+            height: 80px;
+            margin: 20px 0;
+            &.logo-romano {
+                background: url('/images/romano-logo.png') center center no-repeat;
+                background-size: contain;
+            }
+            &.logo-miznon {
+                background: url('/images/miznon-logo.svg') center center no-repeat;
+                background-size: contain;
+            }
+            &.logo-port-said {
+                background: url('/images/port-said-logo.png') center center no-repeat;
+                background-size: contain;
+            }
+            &.logo-salon {
+                background: url('/images/salon') center center no-repeat;
+                background-size: contain;
+            }
+            &.logo-teder {
+                background: url('/images/salon-logo.png') center center no-repeat;
+                background-size: contain;
+            }
+            &.logo-zafon {
+                background: url('/images/zafon-logo.png') center center no-repeat;
+                background-size: contain;
+            }
+        }
+    }
+}
+//footer
+footer {
+    padding: 20px 0;
+}
+
+/*media Queries*/
+
+@media screen and (min-height: 768px) {
+    /*Generic*/
+    .section-padding {
+        .text-box {
+            border: 4px solid @gray;
+            background: @primary url('/images/paper-texture-wide.jpg') no-repeat center center;
+            background-size: cover;
+        }
+    }
+    /*Section*/
+    .section-padding {
+        height: 90vh;
+        padding: 60px 16px;
+    }
+    .section-02 {
+        background: url('/images/image-02.jpg') center center no-repeat;
+        background-size: cover;
+    }
+    .section-03 {
+        background: url('/images/image-03.jpg') center center no-repeat;
+        background-size: cover;
+    }
+    .section-04 {
+        background: url('/images/image-04.jpg') center center no-repeat;
+        background-size: cover;
+    }
+    .section-05 {
+        background: url('/images/paper-texture-wide.jpg') center center no-repeat;
+        background-size: cover;
+    }
+}
