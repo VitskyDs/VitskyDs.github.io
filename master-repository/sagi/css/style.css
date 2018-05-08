@@ -61,13 +61,13 @@ section .text-box {
   flex-flow: column nowrap;
   justify-content: center;
   align-items: center;
-  background: #c7a188 url('/images/hero-image.jpg') center center;
+  background: #c7a188 url('../images/hero-image.jpg') center center;
   background-size: cover;
 }
 .hero .brand-logo {
   height: 170px;
   width: 170px;
-  background: transparent url('/images/brand-logo.png') no-repeat center center;
+  background: transparent url('images/brand-logo.png') no-repeat center center;
   background-size: contain;
 }
 .hero .down-arrow {
