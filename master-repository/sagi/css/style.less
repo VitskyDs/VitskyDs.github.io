@@ -1,18 +1,45 @@
 /*imports and variables*/
 
+@import url('https://fonts.googleapis.com/css?family=Open+Sans:400,700,700i,800,800i');
 @primary: #C4A27B;
-@gray: #444444;
+@primary-dark: #4A4A4A;
 
 /*Typography*/
 
-h1 {}
-h2 {}
+* {
+    font: 700 16px/24px Open Sans
+}
+h1 {
+    font-weight: 800
+}
+h2 {
+    font-size: 32px;
+    font-weight: 800;
+    margin: 0 0 40px 0;
+}
+* {
+    font: 700 15px/32px Open Sans, sans-serif
+}
 h3 {}
-p {}
-small {}
+h4 {
+    font-size: 18px;
+    font-weight: 800;
+}
+p {
+    margin: 0;
+}
+small {
+    font-size: 12px;
+    line-height: 20px;
+    font-weight: 700;
+}
+.italic {
+    font-style: italic;
+}
 
 /*Generic*/
 
+body {}
 a {
     color: white;
     text-decoration: underline;
@@ -36,7 +63,7 @@ a {
     width: 23px;
     height: 2px;
     background-color: white;
-    margin: 12px 0;
+    margin: 12px auto;
 }
 
 /*Buttons*/
@@ -45,6 +72,12 @@ a {
     background-color: #444444;
     color: @primary;
     border-radius: 0;
+    font-size: 30px;
+    font-weight: 800;
+    font-style: italic;
+    box-sizing: border-box;
+    line-height: 43px;
+
 }
 
 /*Navbar*/
@@ -61,6 +94,7 @@ nav {
         font-size: 26px;
         line-height: 18px;
         font-style: italic;
+        text-decoration: none;
     }
 }
 
@@ -86,6 +120,7 @@ section {
     align-items: center;
     background: #C7A188 url('../images/hero-image.jpg') center center;
     background-size: cover;
+    border: 8px solid @primary-dark;
     .brand-logo {
         height: 170px;
         width: 170px;
@@ -101,122 +136,130 @@ section {
         background-size: contain;
     }
 }
-.section-01 {
-    .text-box {
-        background: @primary url('../images/paper-texture-wide.jpg') center center;
-        background-size: cover;
-    }
-    .full-image {
-        background: #C7A188 url('../images/image-02.jpg') no-repeat center bottom;
-        background-size: cover;
-        height: 300px;
-    }
-}
-.section-02 {
-    background: @primary url('../images/paper-texture-wide.jpg') center center;
-    background-size: cover;
-    .full-image {
-        height: 400px;
-        background: @primary url('../images/image-03.jpg') center center;
-        background-size: cover;
-    }
-    .image {
-        height: 280px;
-        background: @primary url('../images/image-04.jpg') center center;
-        background-size: cover;
-    }
-}
-.section-03 {
-    padding: 60px 0;
-    background-color: @gray;
-    color: white;
-    .brand-logo {
-        height: 170px;
-        width: 170px;
-        background: transparent url('../images/brand-logo.png') no-repeat center center;
-        background-size: contain;
-        margin: 0 0 60px 0;
-    }
-    h4 {
-        text-align: center;
-        line-height: 30px;
-    }
-    p {
-        text-align: center;
-        line-height: 30px;
-    }
-    .social-wrapper {
-        margin: 60px 0 0 0;
-        .icon {
-            height: 24px;
-            width: 24px;
-            margin: 0 8px;
+#mobile {
+    .section-01 {
+        .text-box {
+            background: @primary url('../images/paper-texture-wide.jpg') center center;
+            background-size: cover;
+        }
+        .full-image {
+            background: #C7A188 url('../images/image-02.jpg') no-repeat center bottom;
+            background-size: cover;
+            height: 300px;
         }
     }
-}
-.google-maps {
-    height: 250px;
-    background: url('../images/google-maps.png') center center no-repeat;
-    background-size: cover;
-}
-.section-04 {
-    background: @primary url('../images/paper-texture-wide.jpg') center center;
-    background-size: cover;
-    padding: 60px 16px;
-    .hr-small {
-        background-color: @gray;
+    .section-02 {
+        background: @primary url('../images/paper-texture-wide.jpg') center center;
+        background-size: cover;
+        .full-image {
+            height: 400px;
+            background: @primary url('../images/image-03.jpg') center center;
+            background-size: cover;
+        }
+        .image {
+            height: 280px;
+            background: @primary url('../images/image-04.jpg') center center;
+            background-size: cover;
+        }
+        .text-box {
+            background: transparent;
+        }
     }
-    h4 {
-        text-align: center;
-        line-height: 30px;
+    .section-03 {
+        background-color: @primary-dark;
+        padding-top: 60px;
+        padding-bottom: 60px;
+        color: white;
+        .brand-logo {
+            height: 125px;
+            width: 125px;
+            background: transparent url('../images/brand-logo.png') no-repeat center center;
+            background-size: contain;
+            margin: 0 0 60px 0;
+        }
+        h4 {
+            text-align: center;
+            line-height: 30px;
+        }
+        p {
+            text-align: center;
+            line-height: 30px;
+        }
+        .social-wrapper {
+            margin: 60px 0 0 0;
+            .icon {
+                height: 24px;
+                width: 24px;
+                margin: 0 8px;
+            }
+        }
     }
-    p {
-        text-align: center;
-        line-height: 30px;
+    .google-maps {
+        height: 250px;
+        background: url('../images/google-maps.png') center center no-repeat;
+        background-size: cover;
     }
-    .logo-wrapper {
-        .logo-item {
-            height: 80px;
-            margin: 20px 0;
-            &.logo-romano {
-                background: url('../images/romano-logo.png') center center no-repeat;
-                background-size: contain;
-            }
-            &.logo-miznon {
-                background: url('../images/miznon-logo.svg') center center no-repeat;
-                background-size: contain;
-            }
-            &.logo-port-said {
-                background: url('../images/port-said-logo.png') center center no-repeat;
-                background-size: contain;
-            }
-            &.logo-salon {
-                background: url('../images/salon') center center no-repeat;
-                background-size: contain;
-            }
-            &.logo-teder {
-                background: url('../images/salon-logo.png') center center no-repeat;
-                background-size: contain;
-            }
-            &.logo-zafon {
-                background: url('../images/zafon-logo.png') center center no-repeat;
-                background-size: contain;
+    .section-04 {
+        background: @primary url('../images/paper-texture-wide.jpg') center center;
+        background-size: cover;
+        padding: 60px 16px;
+        .hr-small {
+            background-color: @primary-dark;
+        }
+        h4 {
+            text-align: center;
+            line-height: 30px;
+        }
+        p {
+            text-align: center;
+            line-height: 30px;
+        }
+        .logo-wrapper {
+            .logo-item {
+                height: 80px;
+                margin: 20px 0;
+                &.logo-romano {
+                    background: url('../images/romano-logo.png') center center no-repeat;
+                    background-size: contain;
+                }
+                &.logo-miznon {
+                    background: url('../images/miznon-logo.svg') center center no-repeat;
+                    background-size: contain;
+                }
+                &.logo-port-said {
+                    background: url('../images/port-said-logo.png') center center no-repeat;
+                    background-size: contain;
+                }
+                &.logo-salon {
+                    background: url('../images/salon-logo.png') center center no-repeat;
+                    background-size: contain;
+                }
+                &.logo-teder {
+                    background: url('../images/teder-logo.png') center center no-repeat;
+                    background-size: contain;
+                }
+                &.logo-zafon {
+                    background: url('../images/zafon-logo.png') center center no-repeat;
+                    background-size: contain;
+                }
             }
         }
     }
 }
 //footer
 footer {
-    padding: 20px 0;
+    padding: 25px 0;
 }
 
 /*media Queries*/
 
-@media screen and (min-height: 768px) {
+@media screen and (min-width: 767px) {
     /*Generic*/
-    .section-padding {
+    section {
+        height: 100vh;
+        padding: 60px 16px;
         .text-box {
-            border: 4px solid @gray;
+            border: 4px solid @primary-dark;
             background: @primary url('../images/paper-texture-wide.jpg') no-repeat center center;
             background-size: cover;
         }
@@ -226,8 +269,12 @@ footer {
         height: 90vh;
         padding: 60px 16px;
     }
+    .section-01 {
+        background: #C7A188 url('../images/image-02.jpg') no-repeat center bottom;
+        background-size: cover;
+    }
     .section-02 {
-        background: url('../images/image-02.jpg') center center no-repeat;
+        background: url('../images/image-03.jpg') center center no-repeat;
         background-size: cover;
     }
     .section-03 {
