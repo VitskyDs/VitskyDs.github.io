@@ -4,6 +4,7 @@
 /*Typography*/
 * {
   font: 700 16px/24px Open Sans;
+  color: #2A2A2A;
 }
 h1 {
   font-weight: 800;
@@ -17,11 +18,13 @@ h2 {
   font: 700 15px/32px Open Sans, sans-serif;
 }
 h4 {
-  font-size: 18px;
+  font-size: 20px;
   font-weight: 800;
+  font-style: italic;
 }
 p {
   margin: 0;
+  line-height: 28px;
 }
 small {
   font-size: 12px;
@@ -33,7 +36,6 @@ small {
 }
 /*Generic*/
 a {
-  color: white;
   text-decoration: underline;
 }
 .hr {
@@ -115,107 +117,107 @@ section .text-box {
   background: transparent url('../images/down-arrow.svg') no-repeat center center;
   background-size: contain;
 }
-#mobile .section-01 .text-box {
+.section-01 .text-box {
   background: #c4a27b url('../images/paper-texture-wide.jpg') center center;
   background-size: cover;
 }
-#mobile .section-01 .full-image {
+.section-01 .full-image {
   background: #c7a188 url('../images/image-02.jpg') no-repeat center bottom;
   background-size: cover;
   height: 300px;
 }
-#mobile .section-02 {
+.section-02 {
   background: #c4a27b url('../images/paper-texture-wide.jpg') center center;
   background-size: cover;
 }
-#mobile .section-02 .full-image {
+.section-02 .full-image {
   height: 400px;
   background: #c4a27b url('../images/image-03.jpg') center center;
   background-size: cover;
 }
-#mobile .section-02 .image {
+.section-02 .image {
   height: 280px;
   background: #c4a27b url('../images/image-04.jpg') center center;
   background-size: cover;
 }
-#mobile .section-02 .text-box {
+.section-02 .text-box {
   background: transparent;
 }
-#mobile .section-03 {
+.section-03 {
   background-color: #4a4a4a;
   padding-top: 60px;
   padding-bottom: 60px;
   color: white;
 }
-#mobile .section-03 .brand-logo {
+.section-03 .brand-logo {
   height: 125px;
   width: 125px;
   background: transparent url('../images/brand-logo.png') no-repeat center center;
   background-size: contain;
   margin: 0 0 60px 0;
 }
-#mobile .section-03 h4 {
+.section-03 h4 {
   text-align: center;
   line-height: 30px;
 }
-#mobile .section-03 p {
+.section-03 p {
   text-align: center;
   line-height: 30px;
 }
-#mobile .section-03 .social-wrapper {
+.section-03 .social-wrapper {
   margin: 60px 0 0 0;
 }
-#mobile .section-03 .social-wrapper .icon {
+.section-03 .social-wrapper .icon {
   height: 24px;
   width: 24px;
   margin: 0 8px;
 }
-#mobile .google-maps {
+.google-maps {
   height: 250px;
   background: url('../images/google-maps.png') center center no-repeat;
   background-size: cover;
 }
-#mobile .section-04 {
+.section-04 {
   background: #c4a27b url('../images/paper-texture-wide.jpg') center center;
   background-size: cover;
   padding: 60px 16px;
 }
-#mobile .section-04 .hr-small {
+.section-04 .hr-small {
   background-color: #4a4a4a;
 }
-#mobile .section-04 h4 {
+.section-04 h4 {
   text-align: center;
   line-height: 30px;
 }
-#mobile .section-04 p {
+.section-04 p {
   text-align: center;
   line-height: 30px;
 }
-#mobile .section-04 .logo-wrapper .logo-item {
+.section-04 .logo-wrapper .logo-item {
   height: 80px;
   margin: 20px 0;
 }
-#mobile .section-04 .logo-wrapper .logo-item.logo-romano {
+.section-04 .logo-wrapper .logo-item.logo-romano {
   background: url('../images/romano-logo.png') center center no-repeat;
   background-size: contain;
 }
-#mobile .section-04 .logo-wrapper .logo-item.logo-miznon {
+.section-04 .logo-wrapper .logo-item.logo-miznon {
   background: url('../images/miznon-logo.svg') center center no-repeat;
   background-size: contain;
 }
-#mobile .section-04 .logo-wrapper .logo-item.logo-port-said {
+.section-04 .logo-wrapper .logo-item.logo-port-said {
   background: url('../images/port-said-logo.png') center center no-repeat;
   background-size: contain;
 }
-#mobile .section-04 .logo-wrapper .logo-item.logo-salon {
-  background: url('../images/salon-logo.png') center center no-repeat;
+.section-04 .logo-wrapper .logo-item.logo-salon {
+  background: url('../images/') center center no-repeat;
   background-size: contain;
 }
-#mobile .section-04 .logo-wrapper .logo-item.logo-teder {
+.section-04 .logo-wrapper .logo-item.logo-teder {
   background: url('../images/teder-logo.png') center center no-repeat;
   background-size: contain;
 }
-#mobile .section-04 .logo-wrapper .logo-item.logo-zafon {
+.section-04 .logo-wrapper .logo-item.logo-zafon {
   background: url('../images/zafon-logo.png') center center no-repeat;
   background-size: contain;
 }
@@ -223,40 +225,116 @@ footer {
   padding: 25px 0;
 }
 /*media Queries*/
-@media screen and (min-width: 767px) {
+@media (min-width: 576px) {
   /*Generic*/
+  /*Section*/
   section {
-    height: 100vh;
+    min-height: 100vh;
     padding: 60px 16px;
   }
   section .text-box {
     border: 4px solid #4a4a4a;
     background: #c4a27b url('../images/paper-texture-wide.jpg') no-repeat center center;
     background-size: cover;
-  }
-  /*Section*/
-  .section-padding {
-    height: 90vh;
-    padding: 60px 16px;
+    padding: 44px 36px;
   }
   .section-01 {
-    background: #c7a188 url('../images/image-02.jpg') no-repeat center bottom;
+    background: url('../images/image-02.jpg') center center no-repeat;
     background-size: cover;
   }
   .section-02 {
     background: url('../images/image-03.jpg') center center no-repeat;
     background-size: cover;
   }
-  .section-03 {
-    background: url('../images/image-03.jpg') center center no-repeat;
+  .section-02 .text-box {
+    background: #c4a27b url('../images/paper-texture-wide.jpg') no-repeat center center;
     background-size: cover;
   }
-  .section-04 {
+  .section-03 {
+    color: black;
     background: url('../images/image-04.jpg') center center no-repeat;
     background-size: cover;
   }
-  .section-05 {
+  .section-04 {
     background: url('../images/paper-texture-wide.jpg') center center no-repeat;
     background-size: cover;
+    height: auto;
+    min-height: 0;
+  }
+  .section-04 .rest-hours h4,
+  .section-04 .rest-hours p {
+    text-align: left;
+  }
+  .section-04 .rest-hours .hr-small {
+    margin-left: 0;
+  }
+  .section-04 .rest-location h4,
+  .section-04 .rest-location p {
+    text-align: right;
+  }
+  .section-04 .rest-location .hr-small {
+    margin-right: 0;
+  }
+  .section-04 .rest-location a {
+    color: #2A2A2A;
+  }
+  .section-04 .social-wrapper {
+    margin-top: 20px;
+    display: flex;
+    justify-content: flex-end;
+  }
+  .section-04 .social-wrapper .icon {
+    margin-left: 20px;
+    height: 24px;
+  }
+  .section-04 .social-wrapper .icon.icon-facebook-dark {
+    background: url('../images/icon-facebook-dark.svg') no-repeat center center;
+    background-size: contain;
+  }
+  .section-04 .social-wrapper .icon.icon-instagram-dark {
+    background: url('../images/icon-instagram-dark.svg') no-repeat center center;
+    background-size: contain;
+  }
+  .section-05 {
+    min-height: 0;
+    height: auto;
+    background-color: #484848;
+  }
+  .section-05 h4 {
+    color: white;
+  }
+  .section-05 .logos-wrapper {
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: flex-start;
+  }
+  .section-05 .logos-wrapper .logo-item {
+    height: 70px;
+    flex-basis: 70px;
+    margin: 20px 70px 20px 0;
+  }
+  .section-05 .logos-wrapper .logo-item.logo-romano {
+    background: url('../images/romano-logo.png') center center no-repeat;
+    background-size: contain;
+  }
+  .section-05 .logos-wrapper .logo-item.logo-miznon {
+    background: url('../images/miznon-logo.svg') center center no-repeat;
+    background-size: contain;
+  }
+  .section-05 .logos-wrapper .logo-item.logo-port-said {
+    background: url('../images/port-said-logo.png') center center no-repeat;
+    background-size: contain;
+  }
+  .section-05 .logos-wrapper .logo-item.logo-salon {
+    background: url('../images/') center center no-repeat;
+    background-size: contain;
+  }
+  .section-05 .logos-wrapper .logo-item.logo-teder {
+    background: url('../images/teder-logo.png') center center no-repeat;
+    background-size: contain;
+  }
+  .section-05 .logos-wrapper .logo-item.logo-zafon {
+    background: url('../images/zafon-logo.png') center center no-repeat;
+    background-size: contain;
   }
 }
