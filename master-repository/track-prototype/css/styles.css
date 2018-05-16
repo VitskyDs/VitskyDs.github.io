@@ -6,12 +6,13 @@ body {
   font-family: sans-serif;
   overflow-x: hidden;
   background-color: #24282B;
+  height: 100vh;
 }
 #gui {
   display: grid;
   width: 100%;
-  grid-template-columns: minmax(150px, 200px) 662px minmax(300px, 1fr);
-  grid-template-rows: 40px 1fr;
+  grid-template-columns: minmax(150px, 200px) minmax(662px, 3fr) minmax(300px, 2fr);
+  grid-template-rows: 40px minmax(550px, 1fr);
 }
 #gui > div {
   padding: 4px;
@@ -30,6 +31,9 @@ body {
 .tactical-view-panel {
   border: none !important;
   padding: 0 !important;
+}
+.tactical-view-panel img {
+  width: 100%;
 }
 .chart-panel img {
   margin: 16px 0 0 0;
