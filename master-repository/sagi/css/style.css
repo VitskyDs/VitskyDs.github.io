@@ -13,6 +13,7 @@ h2 {
   font-size: 32px;
   font-weight: 800;
   margin: 0 0 40px 0;
+  font-style: italic;
 }
 * {
   font: 700 15px/32px Open Sans, sans-serif;
@@ -23,8 +24,11 @@ h4 {
   font-style: italic;
 }
 p {
-  margin: 0;
+  margin: 0 0 24px 0;
   line-height: 28px;
+}
+p:last-of-type {
+  margin: 0;
 }
 small {
   font-size: 12px;
@@ -46,11 +50,11 @@ a {
   height: 18px;
 }
 .icon.icon-facebook {
-  background: url('../images/icon-facebook.svg') no-repeat center center;
+  background: url('../images/icons/icon-facebook.svg') no-repeat center center;
   background-size: contain;
 }
 .icon.icon-instagram {
-  background: url('../images/icon-instagram.svg') no-repeat center center;
+  background: url('../images/icons/icon-instagram.svg') no-repeat center center;
   background-size: contain;
 }
 .hr-small {
@@ -69,6 +73,8 @@ a {
   font-style: italic;
   box-sizing: border-box;
   line-height: 43px;
+  margin: 40px 0 0 0;
+  padding: 0 36px;
 }
 /*Navbar*/
 nav .nav-link {
@@ -90,7 +96,6 @@ section .text-box {
   padding: 40px 16px;
   text-align: center;
   line-height: 30px;
-  font-size: 18px;
   border: none;
 }
 .hero {
@@ -106,7 +111,7 @@ section .text-box {
 .hero .brand-logo {
   height: 170px;
   width: 170px;
-  background: transparent url('../images/brand-logo.png') no-repeat center center;
+  background: transparent url('../images/logos/port-said-white-logo.png') no-repeat center center;
   background-size: contain;
 }
 .hero .down-arrow {
@@ -114,7 +119,7 @@ section .text-box {
   height: 93px;
   position: absolute;
   bottom: 30px;
-  background: transparent url('../images/down-arrow.svg') no-repeat center center;
+  background: transparent url('../images/icons/down-arrow.svg') no-repeat center center;
   background-size: contain;
 }
 .section-01 .text-box {
@@ -194,35 +199,36 @@ section .text-box {
   line-height: 30px;
 }
 .section-04 .logo-wrapper .logo-item {
-  height: 80px;
-  margin: 20px 0;
+  height: 85px !important;
+  margin-bottom: 40px;
 }
 .section-04 .logo-wrapper .logo-item.logo-romano {
-  background: url('../images/romano-logo.png') center center no-repeat;
+  background: url('../images/logos/romano-logo.png') center center no-repeat;
   background-size: contain;
 }
 .section-04 .logo-wrapper .logo-item.logo-miznon {
-  background: url('../images/miznon-logo.svg') center center no-repeat;
+  background: url('../images/logos/miznon-logo.svg') center center no-repeat;
   background-size: contain;
 }
 .section-04 .logo-wrapper .logo-item.logo-port-said {
-  background: url('../images/port-said-logo.png') center center no-repeat;
+  background: url('../images/logos/port-said-logo.png') center center no-repeat;
   background-size: contain;
 }
 .section-04 .logo-wrapper .logo-item.logo-salon {
-  background: url('../images/') center center no-repeat;
+  background: url('../images/logos/salon-logo.png') center center no-repeat;
   background-size: contain;
 }
 .section-04 .logo-wrapper .logo-item.logo-teder {
-  background: url('../images/teder-logo.png') center center no-repeat;
+  background: url('../images/logos/teder-logo.png') center center no-repeat;
   background-size: contain;
 }
 .section-04 .logo-wrapper .logo-item.logo-zafon {
-  background: url('../images/zafon-logo.png') center center no-repeat;
+  background: url('../images/logos/zafon-logo.png') center center no-repeat;
   background-size: contain;
 }
 footer {
   padding: 25px 0;
+  text-align: center;
 }
 /*media Queries*/
 @media (min-width: 576px) {
@@ -237,6 +243,12 @@ footer {
     background: #c4a27b url('../images/paper-texture-wide.jpg') no-repeat center center;
     background-size: cover;
     padding: 44px 36px;
+  }
+  .logo-wrapper {
+    margin-top: 28px;
+    padding: 0;
+    justify-items: start;
+    grid-gap: 8px;
   }
   .section-01 {
     background: url('../images/image-02.jpg') center center no-repeat;
@@ -260,6 +272,7 @@ footer {
     background-size: cover;
     height: auto;
     min-height: 0;
+    padding: 48px 32px;
   }
   .section-04 .rest-hours h4,
   .section-04 .rest-hours p {
@@ -267,6 +280,11 @@ footer {
   }
   .section-04 .rest-hours .hr-small {
     margin-left: 0;
+  }
+  .section-04 .brand-logo {
+    background: url('../images/logos/port-said-logo.png') center center no-repeat;
+    background-size: 80%;
+    height: 80%;
   }
   .section-04 .rest-location h4,
   .section-04 .rest-location p {
@@ -288,53 +306,43 @@ footer {
     height: 24px;
   }
   .section-04 .social-wrapper .icon.icon-facebook-dark {
-    background: url('../images/icon-facebook-dark.svg') no-repeat center center;
+    background: url('../images/icons/icon-facebook-dark.svg') no-repeat center center;
     background-size: contain;
   }
   .section-04 .social-wrapper .icon.icon-instagram-dark {
-    background: url('../images/icon-instagram-dark.svg') no-repeat center center;
+    background: url('../images/icons/icon-instagram-dark.svg') no-repeat center center;
     background-size: contain;
   }
   .section-05 {
     min-height: 0;
     height: auto;
     background-color: #484848;
+    padding: 48px 32px;
   }
   .section-05 h4 {
     color: white;
   }
-  .section-05 .logos-wrapper {
-    display: flex;
-    flex-flow: row wrap;
-    justify-content: flex-start;
-  }
-  .section-05 .logos-wrapper .logo-item {
-    height: 70px;
-    flex-basis: 70px;
-    margin: 20px 70px 20px 0;
-  }
-  .section-05 .logos-wrapper .logo-item.logo-romano {
-    background: url('../images/romano-logo.png') center center no-repeat;
+  .section-05 .logo-wrapper {
+    margin: 0;
+    background: url('../images/logos/logo-six-pack.png') left center no-repeat;
     background-size: contain;
+    height: 100%;
   }
-  .section-05 .logos-wrapper .logo-item.logo-miznon {
-    background: url('../images/miznon-logo.svg') center center no-repeat;
-    background-size: contain;
+  footer {
+    text-align: left;
+    padding: 4px 16px;
   }
-  .section-05 .logos-wrapper .logo-item.logo-port-said {
-    background: url('../images/port-said-logo.png') center center no-repeat;
-    background-size: contain;
+}
+@media (min-width: 992px) {
+  nav .nav-link {
+    padding: 16px 12px;
   }
-  .section-05 .logos-wrapper .logo-item.logo-salon {
-    background: url('../images/') center center no-repeat;
-    background-size: contain;
+  nav .nav-link:last-of-type {
+    padding-right: 24px;
   }
-  .section-05 .logos-wrapper .logo-item.logo-teder {
-    background: url('../images/teder-logo.png') center center no-repeat;
-    background-size: contain;
-  }
-  .section-05 .logos-wrapper .logo-item.logo-zafon {
-    background: url('../images/zafon-logo.png') center center no-repeat;
-    background-size: contain;
+}
+@media (min-width: 1200px) {
+  .section-04 .brand-logo {
+    background-size: 50%;
   }
 }

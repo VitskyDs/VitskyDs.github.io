@@ -11,12 +11,14 @@
     color: #2A2A2A;
 }
 h1 {
-    font-weight: 800
+    font-weight: 800;
 }
 h2 {
     font-size: 32px;
     font-weight: 800;
     margin: 0 0 40px 0;
+        font-style: italic;
+
 }
 * {
     font: 700 15px/32px Open Sans, sans-serif
@@ -26,10 +28,14 @@ h4 {
     font-size: 20px;
     font-weight: 800;
     font-style: italic;
+    //margin-bottom: 16px;
 }
 p {
-    margin: 0;
+    margin: 0 0 24px 0;
     line-height: 28px;
+    &:last-of-type {
+        margin: 0;
+    }
 }
 small {
     font-size: 12px;
@@ -53,11 +59,11 @@ a {
     width: 18px;
     height: 18px;
     &.icon-facebook {
-        background: url('../images/icon-facebook.svg') no-repeat center center;
+        background: url('../images/icons/icon-facebook.svg') no-repeat center center;
         background-size: contain;
     }
     &.icon-instagram {
-        background: url('../images/icon-instagram.svg') no-repeat center center;
+        background: url('../images/icons/icon-instagram.svg') no-repeat center center;
         background-size: contain;
     }
 }
@@ -79,9 +85,12 @@ a {
     font-style: italic;
     box-sizing: border-box;
     line-height: 43px;
+    margin: 40px 0 0 0;
+    padding: 0 36px;
 }
 
 /*Navbar*/
+
 nav {
     .nav-link {
         padding: 16px 8px;
@@ -107,10 +116,10 @@ section {
         padding: 40px 16px;
         text-align: center;
         line-height: 30px;
-        font-size: 18px;
         border: none;
     }
 }
+.logo-wrapper {}
 //specific
 .hero {
     height: 100vh;
@@ -124,7 +133,7 @@ section {
     .brand-logo {
         height: 170px;
         width: 170px;
-        background: transparent url('../images/brand-logo.png') no-repeat center center;
+        background: transparent url('../images/logos/port-said-white-logo.png') no-repeat center center;
         background-size: contain;
     }
     .down-arrow {
@@ -132,7 +141,7 @@ section {
         height: 93px;
         position: absolute;
         bottom: 30px;
-        background: transparent url('../images/down-arrow.svg') no-repeat center center;
+        background: transparent url('../images/icons/down-arrow.svg') no-repeat center center;
         background-size: contain;
     }
 }
@@ -215,30 +224,30 @@ section {
     }
     .logo-wrapper {
         .logo-item {
-            height: 80px;
-            margin: 20px 0;
+            height: 85px !important;
+            margin-bottom: 40px;
             &.logo-romano {
-                background: url('../images/romano-logo.png') center center no-repeat;
+                background: url('../images/logos/romano-logo.png') center center no-repeat;
                 background-size: contain;
             }
             &.logo-miznon {
-                background: url('../images/miznon-logo.svg') center center no-repeat;
+                background: url('../images/logos/miznon-logo.svg') center center no-repeat;
                 background-size: contain;
             }
             &.logo-port-said {
-                background: url('../images/port-said-logo.png') center center no-repeat;
+                background: url('../images/logos/port-said-logo.png') center center no-repeat;
                 background-size: contain;
             }
             &.logo-salon {
-                background: url('../images/') center center no-repeat;
+                background: url('../images/logos/salon-logo.png') center center no-repeat;
                 background-size: contain;
             }
             &.logo-teder {
-                background: url('../images/teder-logo.png') center center no-repeat;
+                background: url('../images/logos/teder-logo.png') center center no-repeat;
                 background-size: contain;
             }
             &.logo-zafon {
-                background: url('../images/zafon-logo.png') center center no-repeat;
+                background: url('../images/logos/zafon-logo.png') center center no-repeat;
                 background-size: contain;
             }
         }
@@ -247,6 +256,7 @@ section {
 //footer
 footer {
     padding: 25px 0;
+    text-align: center;
 }
 
 /*media Queries*/
@@ -263,6 +273,15 @@ footer {
             background: @primary url('../images/paper-texture-wide.jpg') no-repeat center center;
             background-size: cover;
             padding: 44px 36px;
+        }
+    }
+    .logo-wrapper {
+        margin-top: 28px;
+        padding: 0;
+        justify-items: start;
+        grid-gap: 8px;
+        .logo-item {
+            //background-position: left !important;
         }
     }
     .section-01 {
@@ -287,6 +306,7 @@ footer {
         background-size: cover;
         height: auto;
         min-height: 0;
+        padding: 48px 32px;
         .rest-hours {
             h4,
             p {
@@ -295,6 +315,11 @@ footer {
             .hr-small {
                 margin-left: 0;
             }
+        }
+        .brand-logo {
+            background: url('../images/logos/port-said-logo.png') center center no-repeat;
+            background-size: 80%;
+            height: 80%;
         }
         .rest-location {
             h4,
@@ -316,11 +341,11 @@ footer {
                 margin-left: 20px;
                 height: 24px;
                 &.icon-facebook-dark {
-                    background: url('../images/icon-facebook-dark.svg') no-repeat center center;
+                    background: url('../images/icons/icon-facebook-dark.svg') no-repeat center center;
                     background-size: contain;
                 }
                 &.icon-instagram-dark {
-                    background: url('../images/icon-instagram-dark.svg') no-repeat center center;
+                    background: url('../images/icons/icon-instagram-dark.svg') no-repeat center center;
                     background-size: contain;
                 }
             }
@@ -330,50 +355,42 @@ footer {
         min-height: 0;
         height: auto;
         background-color: #484848;
+        padding: 48px 32px;
         h4 {
             color: white;
         }
-        .logos-wrapper {
-            display: flex;
-            flex-flow: row wrap;
-            justify-content: flex-start;
-            .logo-item {
-                height: 70px;
-                flex-basis: 70px;
-
-                margin: 20px 70px 20px 0;
-                &.logo-romano {
-                    background: url('../images/romano-logo.png') center center no-repeat;
-                    background-size: contain;
-                }
-                &.logo-miznon {
-                    background: url('../images/miznon-logo.svg') center center no-repeat;
-                    background-size: contain;
-                }
-                &.logo-port-said {
-                    background: url('../images/port-said-logo.png') center center no-repeat;
-                    background-size: contain;
-
-                }
-                &.logo-salon {
-                    background: url('../images/') center center no-repeat;
-                    background-size: contain;
-                }
-                &.logo-teder {
-                    background: url('../images/teder-logo.png') center center no-repeat;
-                    background-size: contain;
-                }
-                &.logo-zafon {
-                    background: url('../images/zafon-logo.png') center center no-repeat;
-                    background-size: contain;
-                }
-            }
+        .logo-wrapper {
+            margin: 0;
+            background: url('../images/logos/logo-six-pack.png') left center no-repeat;
+            background-size: contain;
+            height: 100%;
         }
+    }
+    footer {
+        text-align: left;
+        padding: 4px 16px;
     }
 }
 // Medium devices (tablets, 768px and up)
-@media screen and (min-width: 768px) {}
+@media screen and (min-width: 768px) {
+
+}
 // Large devices (desktops, 992px and up)
-@media (min-width: 992px) {}
+@media (min-width: 992px) {
+    nav {
+    .nav-link {
+        padding: 16px 12px;
+    }
+    .nav-link:last-of-type {
+        padding-right: 24px;
+    }
+    }
+}
 // Extra large devices (large desktops, 1200px and up)
-@media (min-width: 1200px) {}
+@media (min-width: 1200px) {
+    .section-04 {
+        .brand-logo {
+            background-size: 50%;
+        }
+    }
+}
