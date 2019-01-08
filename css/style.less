@@ -77,6 +77,10 @@ figcaption {
     box-shadow: 0 0 30px 0 rgba(0, 0, 0, 0.2);
 }
 
+.no-margin {
+    margin: 0;
+}
+
 /*Typgraphy*/
 
 * {
@@ -91,10 +95,12 @@ h1 {
     font: 200 55px/55px Roboto, sans-serif;
 }
 h2 {
-    font: 500 15px/21px Roboto, sans-serif;
+    font: 300 22px/28px Roboto, sans-serif;
+    color: @primary;
 }
 h3 {
-    font: 300 15px/21px Roboto, sans-serif;
+    font: 300 15px/24px Roboto, sans-serif;
+    margin: 0;
 }
 p {
     &.intro-paragraph {
@@ -118,6 +124,9 @@ caption {
     color: @gray;
     font: 300 14px/21px Roboto, sans-serif;
     letter-spacing: 0.6px;
+}
+ol {
+    margin: -8px 0 16px 0;
 }
 ul {
     list-style: none;
@@ -211,6 +220,15 @@ footer {
         img {
             width: 100%;
         }
+    }
+    .section-full-width {
+        grid-column: 1 / span 6;
+        img {
+            width: 100%;
+        }
+    }
+    .grid-3 {
+        grid-column: span 3;
     }
     .next-project {
         grid-column: 1 / span 6;
@@ -320,19 +338,23 @@ figure {
 .section-carousel {
     grid-column: 1 / span 6;
     .main-carousel {
-        background-color: white;
         .carousel-cell {
             width: 100vw;
             text-align: center;
             picture {}
             img {
                 width: 320px;
+                margin: auto 0;
             }
         }
         .caption {
             display: none;
         }
     }
+}
+.plus-background {
+    background: #f9f9f9 url('../images/plus-xs-90.svg');
+    background-size: 16px;
 }
 .section-carousel-buttons {
     grid-column: 1 / span 6;
@@ -583,6 +605,70 @@ figure {
     box-shadow: 0 0 15px 0 rgba(0, 0, 0, 0.2);
 }
 
+/*Research*/
+
+
+/*Research*/
+
+.research {
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: flex-start;
+    .research-item {
+        flex-basis: 100%;
+        flex-grow: 1;
+        padding-right: 30px;
+        .headline {
+            display: flex;
+            align-items: center;
+            margin: 0 0 8px 0;
+            .icon {
+                height: 36px;
+                width: 36px;
+                border-radius: 50%;
+                background-color: #ff0052;
+                margin-right: 8px;
+                &.icon-participants {
+                    background: #FF0052 url('../images/Icons/icon-participate.svg') no-repeat center center;
+                    background-size: 16px;
+                }
+                &.icon-responses {
+                    background: #FF0052 url('../images/Icons/icon-responses.svg') no-repeat center center;
+                    background-size: 16px;
+                }
+                &.icon-calls {
+                    background: #FF0052 url('../images/Icons/icon-calls.svg') no-repeat center center;
+                    background-size: 16px;
+                }
+                &.icon-emotional {
+                    background: #FF0052 url('../images/Icons/icon-emotional.svg') no-repeat center center;
+                    background-size: 16px;
+                }
+                &.icon-funnel {
+                    background: #FF0052 url('../images/Icons/icon-funnel.svg') no-repeat center center;
+                    background-size: 16px;
+                }
+                &.icon-1 {
+                    background: #FF0052 url('../images/Icons/icon-1.svg') no-repeat center center;
+                    background-size: 8px;
+                }
+                &.icon-2 {
+                    background: #FF0052 url('../images/Icons/icon-2.svg') no-repeat center center;
+                    background-size: 11px;
+                }
+                &.icon-insight {
+                    background: #FF0052 url('../images/Icons/icon-!.svg') no-repeat center center;
+                    background-size: 4px;
+                }
+            }
+            .item-headline {
+                color: #FF0052;
+                font-weight: 600;
+            }
+        }
+    }
+}
+
 /*404 page*/
 
 #error-page {
@@ -815,6 +901,14 @@ figure {
             }
         }
     }
+    /*Research*/
+    .research {
+        display: flex;
+        flex-flow: row nowrap;
+        .research-item {
+            flex-basis: 30%;
+        }
+    }
 }
 @media screen and (min-width: 1024px) {
     /*General*/
@@ -908,7 +1002,13 @@ figure {
             grid-column: 2 / span 4;
             padding: 0;
         }
+        .project-full-section {
+            grid-column: 2 / span 6;
+        }
         .section-carousel {
+            grid-column: 1 / span 8;
+        }
+        .section-full-width {
             grid-column: 1 / span 8;
         }
         .video-section {

@@ -67,6 +67,9 @@ figcaption {
   padding-top: 50px;
   box-shadow: 0 0 30px 0 rgba(0, 0, 0, 0.2);
 }
+.no-margin {
+  margin: 0;
+}
 /*Typgraphy*/
 * {
   font: 400 15px/26px Roboto, sans-serif;
@@ -80,10 +83,12 @@ h1 {
   font: 200 55px/55px Roboto, sans-serif;
 }
 h2 {
-  font: 500 15px/21px Roboto, sans-serif;
+  font: 300 22px/28px Roboto, sans-serif;
+  color: #ff0052;
 }
 h3 {
-  font: 300 15px/21px Roboto, sans-serif;
+  font: 300 15px/24px Roboto, sans-serif;
+  margin: 0;
 }
 p.intro-paragraph {
   margin: 5px 0;
@@ -104,6 +109,9 @@ caption {
   color: #999999;
   font: 300 14px/21px Roboto, sans-serif;
   letter-spacing: 0.6px;
+}
+ol {
+  margin: -8px 0 16px 0;
 }
 ul {
   list-style: none;
@@ -189,6 +197,15 @@ footer {
 }
 .project-container .image-section img {
   width: 100%;
+}
+.project-container .section-full-width {
+  grid-column: 1 / span 6;
+}
+.project-container .section-full-width img {
+  width: 100%;
+}
+.project-container .grid-3 {
+  grid-column: span 3;
 }
 .project-container .next-project {
   grid-column: 1 / span 6;
@@ -285,18 +302,20 @@ figure figcaption {
 .section-carousel {
   grid-column: 1 / span 6;
 }
-.section-carousel .main-carousel {
-  background-color: white;
-}
 .section-carousel .main-carousel .carousel-cell {
   width: 100vw;
   text-align: center;
 }
 .section-carousel .main-carousel .carousel-cell img {
   width: 320px;
+  margin: auto 0;
 }
 .section-carousel .main-carousel .caption {
   display: none;
+}
+.plus-background {
+  background: #f9f9f9 url('../images/plus-xs-90.svg');
+  background-size: 16px;
 }
 .section-carousel-buttons {
   grid-column: 1 / span 6;
@@ -511,6 +530,66 @@ figure figcaption {
 .video-section {
   box-shadow: 0 0 15px 0 rgba(0, 0, 0, 0.2);
 }
+/*Research*/
+/*Research*/
+.research {
+  display: flex;
+  flex-flow: row wrap;
+  justify-content: flex-start;
+}
+.research .research-item {
+  flex-basis: 100%;
+  flex-grow: 1;
+  padding-right: 30px;
+}
+.research .research-item .headline {
+  display: flex;
+  align-items: center;
+  margin: 0 0 8px 0;
+}
+.research .research-item .headline .icon {
+  height: 36px;
+  width: 36px;
+  border-radius: 50%;
+  background-color: #ff0052;
+  margin-right: 8px;
+}
+.research .research-item .headline .icon.icon-participants {
+  background: #ff0052 url('../images/Icons/icon-participate.svg') no-repeat center center;
+  background-size: 16px;
+}
+.research .research-item .headline .icon.icon-responses {
+  background: #ff0052 url('../images/Icons/icon-responses.svg') no-repeat center center;
+  background-size: 16px;
+}
+.research .research-item .headline .icon.icon-calls {
+  background: #ff0052 url('../images/Icons/icon-calls.svg') no-repeat center center;
+  background-size: 16px;
+}
+.research .research-item .headline .icon.icon-emotional {
+  background: #ff0052 url('../images/Icons/icon-emotional.svg') no-repeat center center;
+  background-size: 16px;
+}
+.research .research-item .headline .icon.icon-funnel {
+  background: #ff0052 url('../images/Icons/icon-funnel.svg') no-repeat center center;
+  background-size: 16px;
+}
+.research .research-item .headline .icon.icon-1 {
+  background: #ff0052 url('../images/Icons/icon-1.svg') no-repeat center center;
+  background-size: 8px;
+}
+.research .research-item .headline .icon.icon-2 {
+  background: #ff0052 url('../images/Icons/icon-2.svg') no-repeat center center;
+  background-size: 11px;
+}
+.research .research-item .headline .icon.icon-insight {
+  background: #ff0052 url('../images/Icons/icon-!.svg') no-repeat center center;
+  background-size: 4px;
+}
+.research .research-item .headline .item-headline {
+  color: #FF0052;
+  font-weight: 600;
+}
 /*404 page*/
 #error-page {
   height: 100vh;
@@ -697,6 +776,14 @@ figure figcaption {
   .project-container .project-section .project-section {
     grid-column: 2 / span 5;
   }
+  /*Research*/
+  .research {
+    display: flex;
+    flex-flow: row nowrap;
+  }
+  .research .research-item {
+    flex-basis: 30%;
+  }
 }
 @media screen and (min-width: 1024px) {
   /*General*/
@@ -787,7 +874,13 @@ figure figcaption {
     grid-column: 2 / span 4;
     padding: 0;
   }
+  .project-container .project-full-section {
+    grid-column: 2 / span 6;
+  }
   .project-container .section-carousel {
+    grid-column: 1 / span 8;
+  }
+  .project-container .section-full-width {
     grid-column: 1 / span 8;
   }
   .project-container .video-section {
