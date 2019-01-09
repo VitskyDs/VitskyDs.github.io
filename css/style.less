@@ -339,7 +339,7 @@ figure {
     grid-column: 1 / span 6;
     .main-carousel {
         .carousel-cell {
-            width: 100vw;
+            width: 100%;
             text-align: center;
             picture {}
             img {
@@ -630,23 +630,23 @@ figure {
                 margin-right: 8px;
                 &.icon-participants {
                     background: #FF0052 url('../images/Icons/icon-participate.svg') no-repeat center center;
-                    background-size: 16px;
+                    background-size: 18px;
                 }
                 &.icon-responses {
                     background: #FF0052 url('../images/Icons/icon-responses.svg') no-repeat center center;
-                    background-size: 16px;
+                    background-size: 18px;
                 }
                 &.icon-calls {
                     background: #FF0052 url('../images/Icons/icon-calls.svg') no-repeat center center;
-                    background-size: 16px;
+                    background-size: 18px;
                 }
                 &.icon-emotional {
                     background: #FF0052 url('../images/Icons/icon-emotional.svg') no-repeat center center;
-                    background-size: 16px;
+                    background-size: 18px;
                 }
                 &.icon-funnel {
                     background: #FF0052 url('../images/Icons/icon-funnel.svg') no-repeat center center;
-                    background-size: 16px;
+                    background-size: 18px;
                 }
                 &.icon-1 {
                     background: #FF0052 url('../images/Icons/icon-1.svg') no-repeat center center;
@@ -1007,6 +1007,15 @@ figure {
         }
         .section-carousel {
             grid-column: 1 / span 8;
+        }
+        .grid-2 {
+            grid-column: span 2;
+        }
+        .grid-4 {
+            grid-column: 2 / span 4;
+            img {
+                width: 100%;
+            }
         }
         .section-full-width {
             grid-column: 1 / span 8;

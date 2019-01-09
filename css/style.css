@@ -303,7 +303,7 @@ figure figcaption {
   grid-column: 1 / span 6;
 }
 .section-carousel .main-carousel .carousel-cell {
-  width: 100vw;
+  width: 100%;
   text-align: center;
 }
 .section-carousel .main-carousel .carousel-cell img {
@@ -556,23 +556,23 @@ figure figcaption {
 }
 .research .research-item .headline .icon.icon-participants {
   background: #ff0052 url('../images/Icons/icon-participate.svg') no-repeat center center;
-  background-size: 16px;
+  background-size: 18px;
 }
 .research .research-item .headline .icon.icon-responses {
   background: #ff0052 url('../images/Icons/icon-responses.svg') no-repeat center center;
-  background-size: 16px;
+  background-size: 18px;
 }
 .research .research-item .headline .icon.icon-calls {
   background: #ff0052 url('../images/Icons/icon-calls.svg') no-repeat center center;
-  background-size: 16px;
+  background-size: 18px;
 }
 .research .research-item .headline .icon.icon-emotional {
   background: #ff0052 url('../images/Icons/icon-emotional.svg') no-repeat center center;
-  background-size: 16px;
+  background-size: 18px;
 }
 .research .research-item .headline .icon.icon-funnel {
   background: #ff0052 url('../images/Icons/icon-funnel.svg') no-repeat center center;
-  background-size: 16px;
+  background-size: 18px;
 }
 .research .research-item .headline .icon.icon-1 {
   background: #ff0052 url('../images/Icons/icon-1.svg') no-repeat center center;
@@ -879,6 +879,15 @@ figure figcaption {
   }
   .project-container .section-carousel {
     grid-column: 1 / span 8;
+  }
+  .project-container .grid-2 {
+    grid-column: span 2;
+  }
+  .project-container .grid-4 {
+    grid-column: 2 / span 4;
+  }
+  .project-container .grid-4 img {
+    width: 100%;
   }
   .project-container .section-full-width {
     grid-column: 1 / span 8;
