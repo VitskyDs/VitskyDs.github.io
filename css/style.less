@@ -206,7 +206,7 @@ span.primary {
     background: url('../images/project-watoobi/Watoobi-Hero-V02.jpg') center center no-repeat;
     background-size: cover;
     height: 500px;
-    margin-left: 0;
+    margin-left: -15px;
 }
 
 /*Grid*/
@@ -657,6 +657,13 @@ figure {
             width: 8px;
             background-color: @primary;
         }
+    }
+}
+
+#watoobi {
+    .item-content {
+        background: url('../images/thumbnail-watoobi.jpg') center center no-repeat;
+        background-size: cover;
     }
 }
 
@@ -1124,6 +1131,10 @@ figure {
     .mobile-hidden {
         display: block !important;
     }
+
+    .hero-image {
+    margin-left: 0;
+}
 
     /*welcome container*/
     .welcome-container,
