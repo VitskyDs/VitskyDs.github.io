@@ -29,6 +29,7 @@
 
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/7.0.0/normalize.min.css">
     <link rel="stylesheet" href="https://unpkg.com/flickity@2/dist/flickity.min.css">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/css/bootstrap.min.css" integrity="sha384-GJzZqFGwb1QTTN6wy59ffF1BuGJpLSa9DkKMp0DgiMDm4iYMj70gZWKYbI706tWS" crossorigin="anonymous">
     <link rel="stylesheet" href="../css/style.css">
 </head>
 
@@ -71,64 +72,93 @@
         </ul>
     </div>
     <!--Main Content-->
-    <main role="main" id="watoobi" class="container project-container">
+    <main role="main" id="watoobi" class="">
         <!--Section: Intro-->
-        <div class="project-header">
-            <h1 class="project-name">Watoobi</h1>
-            <p class="intro-paragraph">Watoobi is a mentor marketplace that connects you with mentors picked out specifically for you. If you want a peek into your future role, Watoobi allows you to meet mentors and shadow them for a day, observing their work first hand.</p>
+        <div class="container">
+            <div class="row">
+                <h1 class="col project-name">Watoobi</h1>
+            </div>
+            <div class="row">
+                <p class="col-12 col-md-6 intro-paragraph">Watoobi is a mentor marketplace that connects you with mentors picked out specifically for you. If you want a peek into your future role, Watoobi allows you to meet mentors and shadow them for a day, observing their work first hand.</p>
+            </div>
             <!--<p class="light-p">UX course project</p>-->
         </div>
-        <section class="section-full-width">
-            <div class="hero-image"></div>
+        <section class="container-fluid">
+            <div class="row">
+                <div class="hero-image"></div>
+            </div>
         </section>
 
         <!--Section: Business Goals-->
-        <div class="project-section">
-            <h2>The Business Side of Things</h2>
-            <h3>Business goals</h3>
-            <p class="section-description">After consulting with the founder of Watoobi, we've distilled the 3 main business goals:</p>
-            <ol>
-                <li>Redefine Career consultancy</li>
-                <li>Streamline the onboarding process</li>
-                <li>Incentivise users and increase conversion</li>
-            </ol>
-
-            <h3>Business Model</h3>
-            <p>
-                Watoobi is a community-based online platform for Shadowing meetings between users and mentors. It connects mentors and users and facilitates the process of Shadowing meetings.</p>
+        <div class="container">
+            <div class="row">
+                <div class="col col-md-6">
+                    <h2>The Business Side of Things</h2>
+                    <h3>Business goals</h3>
+                    <p class="section-description">After consulting with the founder of Watoobi, we've distilled the 3 main business goals:</p>
+                    <ol>
+                        <li>Redefine Career consultancy</li>
+                        <li>Streamline the onboarding process</li>
+                        <li>Incentivise users and increase conversion</li>
+                    </ol>
+                    <h3>Business Model</h3>
+                    <p>
+                        Watoobi is a community-based online platform for Shadowing meetings between users and mentors. It connects mentors and users and facilitates the process of Shadowing meetings.</p>
+                </div>
+            </div>
         </div>
 
         <!--Section: Research-->
-        <div class="project-section">
-            <h2>Research</h2>
-            <p class="section-description no-margin">Watoobi has been around for several months when we started working the project, and so had the privilige of aggregated data over existing users. However, we decided to engage potential and unexposed users as well.</p>
-        </div>
-        <div class="project-section project-full-section research">
-            <div class="research-item">
-                <div class="headline">
-                    <div class="icon icon-participants"></div>
-                    <div class="item-headline">100+ Participants</div>
+        <div class="container">
+            <div class="row">
+                <div class="col col-md-6">
+                    <h2>Research</h2>
+                    <p class="section-description">Watoobi has been around for several months when we started working the project, and so had the privilige of aggregated data over existing users. However, we decided to engage potential and unexposed users as well.</p>
                 </div>
-                <p>Watoobi already had quan/qual data from it’s current user base, which provided interesting insights.</p>
-            </div>
-            <div class="research-item">
-                <div class="headline">
-                    <div class="icon icon-responses"></div>
-                    <div class="item-headline">60+ Responses</div>
-                </div>
-                <p>We created and posted a survey in specific facebook groups, inquiring over questions that arose during the research.</p>
-            </div>
-            <div class="research-item">
-                <div class="headline">
-                    <div class="icon icon-calls"></div>
-                    <div class="item-headline">5 Calls</div>
-                </div>
-                <p>We talked with existing and subscribed users over blockers/motivation, and corroborated some of our theories.</p>
             </div>
         </div>
-        <div class="project-section">
-            <h3>Competitors analysis</h3>
-            <p class="section-description no-margin">We've identified several direct and indirect competitors, and arrived at 2 significant insights:</p>
+
+        <div class="container research">
+            <div class="row">
+                <div class="col-12 col-md-4">
+                    <div class="research-item">
+                        <div class="headline">
+                            <div class="icon icon-participants"></div>
+                            <div class="item-headline">100+ Participants</div>
+                        </div>
+                        <p>Watoobi already had quan/qual data from it’s current user base, which provided interesting insights.</p>
+                    </div>
+                </div>
+                <div class="col-12 col-md-4">
+                    <div class="research-item">
+                        <div class="headline">
+                            <div class="icon icon-responses"></div>
+                            <div class="item-headline">60+ Responses</div>
+                        </div>
+                        <p>We created and posted a survey in specific facebook groups, inquiring over questions that arose during the research.</p>
+                    </div>
+                </div>
+                <div class="col-12 col-md-4">
+                    <div class="research-item">
+                        <div class="headline">
+                            <div class="icon icon-calls"></div>
+                            <div class="item-headline">5 Calls</div>
+                        </div>
+                        <p>We talked with existing and subscribed users over blockers/motivation, and corroborated some of our theories.</p>
+                    </div>
+                </div>
+            </div>
+
+
+
+        </div>
+        <div class="container">
+            <div class="row">
+                <div class="col col-md-6">
+                    <h3>Competitors analysis</h3>
+                    <p class="section-description no-margin">We've identified several direct and indirect competitors, and arrived at 2 significant insights:</p>
+                </div>
+            </div>
         </div>
         <div class="project-section project-full-section research">
 
