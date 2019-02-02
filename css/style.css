@@ -158,15 +158,6 @@ span.primary {
   margin-left: -15px;
 }
 /*Grid*/
-.container {
-  position: relative;
-  display: grid;
-  grid-template-columns: repeat(6, 1fr);
-  grid-auto-rows: minmax(50px, auto);
-  grid-gap: 30px;
-  padding: 0 15px;
-  background-color: white;
-}
 header {
   grid-column: 1 / span 6;
 }
@@ -555,16 +546,6 @@ figure figcaption {
 }
 /*Research*/
 /*Research*/
-.research {
-  display: flex;
-  flex-flow: row wrap;
-  justify-content: flex-start;
-}
-.research .research-item {
-  flex-basis: 100%;
-  flex-grow: 1;
-  padding-right: 30px;
-}
 .research .research-item .headline {
   display: flex;
   align-items: center;
