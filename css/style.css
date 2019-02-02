@@ -122,16 +122,6 @@ a {
   color: #ff0052;
   text-decoration: none;
 }
-.desktop-menu ul li {
-  transition: all 150ms ease;
-}
-.desktop-menu ul li:hover {
-  transform: translateY(-4px);
-}
-.desktop-menu ul li a {
-  font: 18px/21px Vollkorn;
-  font-style: italic;
-}
 ul.regular-list li {
   font: 400 15px/26px Roboto, sans-serif;
   color: black;
@@ -142,77 +132,6 @@ span.primary {
 /*Components*/
 section {
   margin-bottom: 120px;
-}
-header {
-  margin: 35px 0;
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  z-index: 15;
-  position: relative;
-}
-header .menu-button {
-  align-self: center;
-  height: 18px;
-  padding: 10px 0;
-}
-header .menu-button #hamburger-icon {
-  fill: #000;
-}
-header .menu-button #ham-top {
-  transform: translateY(0);
-  transition: all 250ms ease;
-}
-header .menu-button #ham-bottom {
-  transform: translateY(0);
-  transition: all 250ms ease;
-}
-header .menu-button.menu-button-close #hamburger-icon {
-  fill: #fff;
-}
-header .menu-button.menu-button-close #ham-top {
-  transform: translateY(-7px);
-}
-header .menu-button.menu-button-close #ham-bottom {
-  transform: translateY(7px);
-}
-.mobile-menu {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  position: fixed;
-  top: 0;
-  left: 0;
-  width: 100vw;
-  height: 85vh;
-  transition: all 750ms cubic-bezier(0.25, 0.46, 0.035, 1);
-  padding: 15vh 0 0 0;
-  z-index: 10;
-  background-color: #ff0052;
-}
-.mobile-menu.menu-closed {
-  top: -100vh;
-}
-.mobile-menu.menu-closed ul li a {
-  color: #ff0052;
-  transition: color 250ms ease;
-  animation-delay: 0.5;
-}
-.mobile-menu ul {
-  list-style: none;
-  padding: 0;
-  text-align: center;
-  z-index: 10;
-}
-.mobile-menu ul li a {
-  font-size: 36px;
-  font-family: 'Vollkorn', serif;
-  color: #FFFFFF;
-  font-style: italic;
-  letter-spacing: 0;
-  line-height: 100px;
-  cursor: pointer;
-  transition: all 250ms ease;
 }
 footer {
   margin: 30px 0 15px 0;
@@ -227,47 +146,6 @@ figure {
 }
 figure figcaption {
   margin: 5px 0 0 0;
-}
-.section-carousel {
-  grid-column: 1 / span 6;
-}
-.section-carousel .main-carousel .carousel-cell {
-  width: 100%;
-  text-align: center;
-}
-.section-carousel .main-carousel .carousel-cell img {
-  width: 320px;
-  margin: auto 0;
-}
-.section-carousel .main-carousel .caption {
-  display: none;
-}
-.plus-background {
-  background: #f9f9f9 url('../images/plus-xs-90.svg');
-  background-size: 16px;
-}
-.section-carousel-buttons {
-  grid-column: 1 / span 6;
-  display: flex;
-  justify-content: space-around;
-}
-.section-carousel-buttons .carousel-button-prev {
-  transform: scaleX(-1);
-  margin: 0 5px 0 0;
-  padding: 0 15px;
-}
-.section-carousel-buttons .cell-button-group {
-  display: flex;
-}
-.section-carousel-buttons .cell-button-group .button {
-  margin: -6px 2px 0 2px;
-}
-.section-carousel-buttons .cell-button-group .button.is-selected g {
-  fill: #FF95D2;
-}
-.section-carousel-buttons .carousel-button-next {
-  margin: 0 0 0 5px;
-  padding: 0 15px;
 }
 .section-name {
   width: fit-content;
@@ -372,48 +250,6 @@ figure figcaption {
   background-size: contain;
   margin: 0 auto;
 }
-#urbanika .item-content {
-  background: #fffaf3 url('../images/thumbnail-urbanika.png') center center no-repeat;
-  background-size: 70%;
-}
-#chefbot .item-content {
-  background: #f5fbfb url('../images/thumbnail-chefbot.svg') center center no-repeat;
-  background-size: 70%;
-}
-#showreel .item-content {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  font-family: 'Vollkorn', serif;
-  font-style: italic;
-  color: black;
-  font-size: 30px;
-  overflow: hidden;
-}
-#showreel .item-content .particle {
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  height: 8px;
-  width: 8px;
-  background-color: #ff0052;
-}
-#watoobi .item-content {
-  background: url('../images/thumbnail-watoobi.jpg') center center no-repeat;
-  background-size: cover;
-}
-#showbox .item-content {
-  background: url('../images/thumbnail-showbox.svg') center center no-repeat;
-  background-size: 40%;
-}
-#voop .item-content {
-  background: #95dac9 url('../images/thumbnail-voop.svg') center center no-repeat;
-  background-size: 50%;
-}
-#embark .item-content {
-  background: #f6c669 url('../images/thumbnail-embark.svg') center center no-repeat;
-  background-size: 60%;
-}
 .cv {
   cursor: pointer;
 }
@@ -457,66 +293,6 @@ figure figcaption {
 /*Video*/
 .video-section {
   box-shadow: 0 0 15px 0 rgba(0, 0, 0, 0.2);
-}
-/*Research*/
-/*Research*/
-.research {
-  display: flex;
-  flex-flow: row wrap;
-  justify-content: flex-start;
-}
-.research .research-item {
-  flex-basis: 100%;
-  flex-grow: 1;
-  padding-right: 30px;
-}
-.research .research-item .headline {
-  display: flex;
-  align-items: center;
-  margin: 0 0 8px 0;
-}
-.research .research-item .headline .icon {
-  height: 36px;
-  width: 36px;
-  border-radius: 50%;
-  background-color: #ff0052;
-  margin-right: 8px;
-}
-.research .research-item .headline .icon.icon-participants {
-  background: #ff0052 url('../images/Icons/icon-participate.svg') no-repeat center center;
-  background-size: 18px;
-}
-.research .research-item .headline .icon.icon-responses {
-  background: #ff0052 url('../images/Icons/icon-responses.svg') no-repeat center center;
-  background-size: 18px;
-}
-.research .research-item .headline .icon.icon-calls {
-  background: #ff0052 url('../images/Icons/icon-calls.svg') no-repeat center center;
-  background-size: 18px;
-}
-.research .research-item .headline .icon.icon-emotional {
-  background: #ff0052 url('../images/Icons/icon-emotional.svg') no-repeat center center;
-  background-size: 18px;
-}
-.research .research-item .headline .icon.icon-funnel {
-  background: #ff0052 url('../images/Icons/icon-funnel.svg') no-repeat center center;
-  background-size: 18px;
-}
-.research .research-item .headline .icon.icon-1 {
-  background: #ff0052 url('../images/Icons/icon-1.svg') no-repeat center center;
-  background-size: 8px;
-}
-.research .research-item .headline .icon.icon-2 {
-  background: #ff0052 url('../images/Icons/icon-2.svg') no-repeat center center;
-  background-size: 11px;
-}
-.research .research-item .headline .icon.icon-insight {
-  background: #ff0052 url('../images/Icons/icon-!.svg') no-repeat center center;
-  background-size: 4px;
-}
-.research .research-item .headline .item-headline {
-  color: #FF0052;
-  font-weight: 600;
 }
 /*404 page*/
 #error-page {
