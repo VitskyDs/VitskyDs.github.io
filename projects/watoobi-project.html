@@ -2,6 +2,7 @@
 <html lang="en" dir="ltr">
 
 <head>
+
     <!-- Global site tag (gtag.js) - Google Analytics -->
     <script async src="https://www.googletagmanager.com/gtag/js?id=UA-111514633-1"></script>
     <script>
@@ -11,9 +12,7 @@
             dataLayer.push(arguments);
         }
         gtag('js', new Date());
-
         gtag('config', 'UA-111514633-1');
-
     </script>
 
     <meta charset="utf-8">
@@ -22,61 +21,42 @@
 
     <title>Vitsky: Product Designer</title>
 
-    <meta name="description" content="I’m Issac Sheptovitsky, but you can call me Vitsky. I’m a Product Designer.">
+    <meta name="description" content="I’m Issac Sheptovitsky, but you can call me Vitsky. I’m a UI/UX Designer.">
 
     <link rel="icon" type="image/png" href="../favicon.png">
-    <link rel="canonical" href="index.html">
+    <link rel="canonical" href="../index.html">
 
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/7.0.0/normalize.min.css">
-    <link rel="stylesheet" href="https://unpkg.com/flickity@2/dist/flickity.min.css">
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/css/bootstrap.min.css" integrity="sha384-GJzZqFGwb1QTTN6wy59ffF1BuGJpLSa9DkKMp0DgiMDm4iYMj70gZWKYbI706tWS" crossorigin="anonymous">
     <link rel="stylesheet" href="../css/style.css">
+
 </head>
 
 <body>
-    <!--Header-->
-    <div class="container">
-        <header>
-            <a href="../index.html">
-                <div class="logo" id="bodymovin"></div>
-            </a>
-            <!--Desktop Menu-->
-            <nav role="navigation" class="desktop-menu mobile-hidden">
-                <ul>
-                    <li><a href="../index.html#work">Work</a></li>
-                    <li><a href="../index.html#about">About</a></li>
-                    <li><a href="../index.html#contact">Contact</a></li>
-                </ul>
-            </nav>
-            <div class="menu-button desktop-hidden">
-                <svg width="30px" height="18px" viewBox="0 0 30 18" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
-                    <g id="Symbols" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
-                        <g id="Mobile/Components/Navbar/Navbar-(Default)" transform="translate(-260.000000, -17.000000)" fill="#000000">
-                            <g id="hamburger-icon" transform="translate(260.000000, 17.000000)">
-                                <rect id="ham-bottom" x="0" y="0" width="30" height="4"></rect>
-                                <rect id="ham-middle" x="0" y="7" width="30" height="4"></rect>
-                                <rect id="ham-top" x="0" y="14" width="30" height="4"></rect>
-                            </g>
-                        </g>
-                    </g>
-                </svg>
+
+    <!--navigation-->
+
+    <nav class="navbar navbar-expand-lg">
+        <a class="navbar-brand" href="../index.html">
+            <div class="logo" id="bodymovin"></div>
+        </a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse justify-content-end" id="navbarNavAltMarkup">
+            <div class="navbar-nav">
+                <a class="nav-item nav-link active" href="#">Work<span class="sr-only">(current)</span></a>
+                <a class="nav-item nav-link" href="#">About</a>
+                <a class="nav-item nav-link" href="#">Contact</a>
             </div>
-        </header>
-    </div>
-    <!--Mobile Menu-->
-    <div class="mobile-menu desktop-hidden menu-closed">
-        <ul>
-            <li><a href="../index.html#work">Work</a></li>
-            <li><a href="../index.html#about">About</a></li>
-            <li><a href="../index.html#contact">Contact</a></li>
-        </ul>
-    </div>
+        </div>
+    </nav>
+
     <!--Main Content-->
-    <main role="main" id="watoobi" class="">
-        <!--Section: Intro-->
+    <main role="main" id="watoobi" class="project-container">
+
         <div class="container">
             <div class="row">
-                <h1 class="col project-name">Watoobi</h1>
+                <h1 class="col offset-lg-2 col-lg-8">Watoobi</h1>
             </div>
             <div class="row">
                 <p class="col-12 col-md-6 intro-paragraph">Watoobi is a mentor marketplace that connects you with mentors picked out specifically for you. If you want a peek into your future role, Watoobi allows you to meet mentors and shadow them for a day, observing their work first hand.</p>
@@ -94,7 +74,6 @@
             <div class="row">
                 <div class="col col-md-6">
                     <h2>The Business Side of Things</h2>
-                    <h3>Business goals</h3>
                     <p class="section-description">After consulting with the founder of Watoobi, we've distilled the 3 main business goals:</p>
                     <ol>
                         <li>Redefine Career consultancy</li>
@@ -470,8 +449,9 @@
         </footer>
     </main>
     <!--scripts-->
-    <script src="https://code.jquery.com/jquery-3.2.1.min.js" integrity="sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4=" crossorigin="anonymous"></script>
-    <script src="https://unpkg.com/flickity@2/dist/flickity.pkgd.min.js"></script>
+    <script src="https://code.jquery.com/jquery-3.3.1.min.js" integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8=" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.6/umd/popper.min.js" integrity="sha384-wHAiFfRlMFy6i5SRaxvfOCifBUQy1xHdJ/yoi7FRNXMRBu5WHdZYu1hA6ZOblgut" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/js/bootstrap.min.js" integrity="sha384-B0UglyR+jN6CkvvICOB2joaf5I4l3gm9GU6Hc1og6Ls7i6U/mkkaduKaBhlAXv9k" crossorigin="anonymous"></script>
     <script src="../js/bodymovin.js" type="text/javascript"></script>
     <script type="application/javascript">
         bodymovin.loadAnimation({
