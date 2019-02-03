@@ -34,43 +34,6 @@ $(window).scroll(function (e) {
     scrollLinesTl.progress(scrollPercent).pause();
 });
 
-/*showreel animation*/
-
-const showreelTl = new TimelineMax({
-    repeat: -1,
-    repeatDelay: 2
-});
-
-showreelTl.add("middle", 0.75).add("end", 2.5).fromTo('.particle', 0.30, {
-    y: -50,
-    x: 250,
-    ease: Expo.easeIn
-}, {
-    y: -50,
-    x: -250,
-}).fromTo('.particle', 0.30, {
-    y: 50,
-    x: -250,
-    ease: Expo.easeIn
-}, {
-    y: 50,
-    x: 250
-}).fromTo('.particle', 0.20, {
-    y: 0,
-    x: 200
-}, {
-    y: 0,
-    x: 95,
-    ease: Expo.easeOut
-}, "middle").fromTo('.particle', 0.75, {
-    y: 0,
-    rotation: 0
-}, {
-    y: 150,
-    rotation: 220,
-    ease: Power4.easeIn
-}, "end");
-
 /*
 Smooth Scrolling*/
 // Select all links with hashes

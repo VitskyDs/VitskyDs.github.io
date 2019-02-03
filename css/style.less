@@ -74,6 +74,14 @@ h1 {
     font: 400 52px/72px 'Playfair Display', serif;
     letter-spacing: 2px;
     margin-bottom: 22px;
+    color: black;
+}
+
+a {
+    h1:hover {
+        color: @primary;
+        text-decoration: none;
+    }
 }
 
 h2 {
@@ -127,22 +135,73 @@ a {
     text-decoration: none;
 }
 
-
-ul.regular-list {
-    li {
-        font: 400 15px/26px Roboto, sans-serif;
-        color: black;
-    }
-}
-
 span.primary {
     color: @primary;
 }
 
 /*Components*/
 
-//section
+//Carousel
+.carousel {
+    .carousel-indicators {
+        bottom: -40px;
 
+        li {
+            width: 4px;
+            height: 4px;
+            border: 1px solid @primary;
+            border-radius: 50%;
+            box-sizing: border-box;
+
+            &.active {
+                background-color: @primary;
+            }
+        }
+    }
+
+    .carousel-control-prev,
+    .carousel-control-next {
+        top: auto;
+        bottom: -37px;
+        display: block;
+        width: 20px;
+
+        .carousel-control-prev-icon {
+            background-image: url(../images/icons/prev-button.svg);
+        }
+
+        .carousel-control-next-icon {
+            background-image: url(../images/icons/next-button.svg);
+        }
+    }
+}
+
+//images in carousels or thumnails
+
+.carousel,
+.project-thumbnail {
+    height: 360px;
+
+    img {
+        width: 100%;
+    }
+}
+
+//Video
+.video-section {
+    box-shadow: 0 0 15px 0 rgba(0, 0, 0, 0.2);
+}
+
+//figure
+figure {
+    margin: 0;
+
+    figcaption {
+        margin: 5px 0 0 0;
+    }
+}
+
+//section
 section {
     margin-bottom: 120px;
 }
@@ -158,109 +217,8 @@ footer {
     }
 }
 
-//figure
-figure {
-    margin: 0;
 
-    figcaption {
-        margin: 5px 0 0 0;
-    }
-}
-
-
-//section
-.section-name {
-    width: fit-content;
-    margin-bottom: 40px;
-
-    .underline {
-        position: relative;
-        bottom: 0;
-        height: 7px;
-        width: 100%;
-        background-color: @secondary;
-    }
-}
-
-//item
-.item {
-    display: flex;
-    flex-flow: column nowrap;
-    margin: 0 0 15px 0;
-
-    .item-content {
-        position: relative;
-        width: 100%;
-        height: 200px;
-        background: white;
-        border-radius: 2px;
-        box-shadow: 0 0 7px 0 rgba(0, 0, 0, 0.15);
-        transition: all 300ms ease;
-    }
-}
-
-//embark-video
-.embark-video {
-    width: 250px;
-    height: 300px;
-}
-
-//logo
-#bodymovin {
-    position: relative;
-    opacity: 1;
-    width: 150px;
-    height: 45px;
-    animation-timing-function: cubic-bezier(0.090, 0.455, 0.150, 0.860);
-    z-index: 35;
-}
-
-/*Animation*/
-
-//fade in welcome line
-.welcome-line {
-    color: @primary;
-    animation: 1500ms fade-in-welcome-line cubic-bezier(0.445, 0.050, 0.550, 0.950) forwards;
-}
-
-.welcome-line:nth-child(2) {
-    animation-delay: 150ms;
-}
-
-.welcome-line:nth-child(3) {
-    animation-delay: 300ms;
-}
-
-.welcome-line:nth-child(4) {
-    animation-delay: 450ms;
-}
-
-@keyframes fade-in-welcome-line {
-    0% {
-        color: @primary;
-    }
-
-    100% {
-        color: white;
-    }
-}
-
-//arrow down
-.down-arrow {
-    animation: 1500ms down-arrow cubic-bezier(0.445, 0.050, 0.550, 0.950) 400ms forwards;
-}
-
-@keyframes down-arrow {
-    0% {
-        transform: translateY(-100px);
-    }
-
-    100% {
-        transform: translateY(0);
-    }
-}
-
-/*Landing Page Style*/
+/* homepage */
 
 .welcome-container {
     display: flex;
@@ -296,16 +254,123 @@ figure {
             margin: 0 auto;
         }
     }
-}
 
-.cv {
-    cursor: pointer;
+    //fade in welcome line
+    .welcome-line {
+        color: @primary;
+        animation: 1500ms fade-in-welcome-line cubic-bezier(0.445, 0.050, 0.550, 0.950) forwards;
+    }
 
-    a {
-        svg {
-            vertical-align: text-top;
+    .welcome-line:nth-child(2) {
+        animation-delay: 150ms;
+    }
+
+    .welcome-line:nth-child(3) {
+        animation-delay: 300ms;
+    }
+
+    .welcome-line:nth-child(4) {
+        animation-delay: 450ms;
+    }
+
+    @keyframes fade-in-welcome-line {
+        0% {
+            color: @primary;
+        }
+
+        100% {
+            color: white;
         }
     }
+
+    //arrow down
+    .down-arrow {
+        animation: 1500ms down-arrow cubic-bezier(0.445, 0.050, 0.550, 0.950) 400ms forwards;
+    }
+
+    @keyframes down-arrow {
+        0% {
+            transform: translateY(-100px);
+        }
+
+        100% {
+            transform: translateY(0);
+        }
+    }
+}
+
+//homepage container
+
+#hp-container {
+    background: white !important;
+    margin-top: 110vh !important;
+    padding-top: 50px;
+    box-shadow: 0 0 30px 0 rgba(0, 0, 0, 0.2);
+
+
+    //section
+    .section-name {
+        width: fit-content;
+        margin-bottom: 40px;
+        font-weight: 800;
+        text-transform: uppercase;
+
+        .underline {
+            position: relative;
+            bottom: 0;
+            height: 7px;
+            width: 100%;
+            background-color: @secondary;
+        }
+    }
+
+    .cv {
+        cursor: pointer;
+    }
+
+    //project thumnbails
+
+    #track {
+        .background {
+            background: #ECECEC;
+        }
+    }
+
+    #watoobi {
+        .background {
+            background: #F0F2F7;
+        }
+    }
+
+    #showbox {
+        .background {
+            background: #F2E9E0;
+        }
+    }
+
+    #urbanika {
+        .background {
+            background: #FCF8F2;
+        }
+    }
+
+    #chefbot {
+        .background {
+            background: #E9F2EE;
+        }
+    }
+}
+
+/*projects*/
+
+//logo
+#bodymovin {
+    position: relative;
+    opacity: 1;
+    width: 150px;
+    height: 45px;
+    animation-timing-function: cubic-bezier(0.090, 0.455, 0.150, 0.860);
+    z-index: 35;
 }
 
 /*project page style*/
@@ -356,11 +421,6 @@ figure {
     }
 }
 
-/*Video*/
-
-.video-section {
-    box-shadow: 0 0 15px 0 rgba(0, 0, 0, 0.2);
-}
 
 /*404 page*/
 
@@ -376,7 +436,7 @@ figure {
         text-align: center;
 
         h1 {
-            font: 900 38px/50px Roboto;
+            font: 900 38px/50px Open Sans;
             color: @primary;
             text-transform: uppercase;
             margin: 0 0 10px 0;
@@ -411,6 +471,16 @@ figure {
         }
     }
 
+    //carousel or project thumbnails
+    .carousel,
+    .project-thumbnail {
+        height: 360px;
+
+        img {
+            width: 400px;
+        }
+    }
+
     //Welcome message
     .welcome-container {
         padding: 0 30px;
@@ -420,84 +490,15 @@ figure {
         }
     }
 
-    /*Components*/
-    //embark-video
-    .embark-video {
-        width: 400px;
-        height: 400px;
-    }
-
-    //Header
-    header {
-        margin: 30px 0;
-        align-items: baseline;
-
-        .desktop-menu {
-            ul {
-                display: block;
-
-                li {
-                    margin: 0 20px 0 0;
-                    display: inline-block;
-
-                    &:last-of-type {
-                        margin: 0;
-                    }
-
-                    a {
-                        font-family: Vollkorn;
-                        font-size: 18px;
-                        color: #000000;
-                        letter-spacing: 0;
-                        line-height: 21px;
-
-                        &:hover {
-                            color: @primary;
-                        }
-                    }
-                }
-            }
-        }
-    }
-
-    //Carousel
-    .section-carousel {
-        .main-carousel {
-            .caption {
-                bottom: -55px;
-            }
-
-            .carousel-cell {
-                img {
-                    width: 600px;
-                }
-            }
-        }
-    }
-
-    .section-carousel-buttons {
-        display: flex;
-        justify-content: flex-end;
-    }
-
-    //items
-    .item .item-content {
-        height: 200px;
-    }
-
     //video button
     .video-play-button {
         height: 70px;
         width: 70px;
     }
 
-    .about-section {
+    #about {
         ul {
-            margin: 20px 0;
-        }
-
-        .cv {
-            margin: 20px 0;
+            margin: 20px 0 12px 0;
         }
     }
 
@@ -524,29 +525,13 @@ figure {
         font-size: 10vw;
     }
 
-    .project-container {
-        .project-name {
-            margin: 45px 0 5px 0;
-        }
-    }
+    //carousel or project thumbnails
+    .carousel,
+    .project-thumbnail {
+        height: 360px;
 
-    /*Components*/
-    //embark-video
-    .embark-video {
-        width: 600px;
-    }
-
-    .item .item-content {
-        height: 220px;
-    }
-
-    /*Research*/
-    .research {
-        display: flex;
-        flex-flow: row nowrap;
-
-        .research-item {
-            flex-basis: 30%;
+        img {
+            width: 435px;
         }
     }
 }
@@ -567,26 +552,12 @@ figure {
     .down-arrow {
         display: none;
     }
-
-    /*caption*/
-    caption {
-        display: block;
-    }
-
-    .about-section {
-        ul {
-            margin: 20px 0;
-        }
-
-        .cv {
-            margin: 20px 0;
-        }
-    }
 }
 
 /*Large*/
 
 @media screen and (min-width: 1200px) {
+
     /*Typography*/
     .welcome-line {
         font-size: 8.5vw;
@@ -598,91 +569,5 @@ figure {
 @media screen and (min-width: 1920px) {
     .welcome-line {
         font-size: 10vw;
-    }
-}
-
-
-/*New*/
-
-#lp-container {
-    background: white !important;
-    margin-top: 110vh !important;
-    padding-top: 50px;
-    box-shadow: 0 0 30px 0 rgba(0, 0, 0, 0.2);
-
-    .carousel,
-    .project-thumbnail {
-        height: 400px;
-        img {
-            height: 400px;
-            width: 485px;
-        }
-    }
-}
-
-/*Carousel*/
-.carousel {
-    .carousel-indicators {
-        bottom: -40px;
-
-        li {
-            width: 4px;
-            height: 4px;
-            border: 1px solid @primary;
-            border-radius: 50%;
-            box-sizing: border-box;
-
-            &.active {
-                background-color: @primary;
-            }
-        }
-    }
-
-    .carousel-control-prev,
-    .carousel-control-next {
-        top: auto;
-        bottom: -37px;
-        display: block;
-        width: 20px;
-
-        .carousel-control-prev-icon {
-            background-image: url(../images/icons/prev-button.svg);
-        }
-
-        .carousel-control-next-icon {
-            background-image: url(../images/icons/next-button.svg);
-        }
-    }
-}
-
-/*projects on homepage*/
-
-#track {
-    .background {
-        background: #ECECEC;
-    }
-}
-
-#watoobi {
-    .background {
-        background: #F0F2F7;
-    }
-}
-
-#showbox {
-    .background {
-        background: #F2E9E0;
-    }
-}
-
-#urbanika {
-    .background {
-        background: #FCF8F2;
-    }
-}
-
-#chefbot {
-    .background {
-        background: #E9F2EE;
     }
 }
