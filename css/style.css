@@ -244,6 +244,7 @@ footer p {
   margin-bottom: 40px;
   font-weight: 800;
   text-transform: uppercase;
+  letter-spacing: 0.5px;
 }
 #hp-container .section-name .underline {
   position: relative;
@@ -252,22 +253,29 @@ footer p {
   width: 100%;
   background-color: #44bea4;
 }
-#hp-container .cv {
+#hp-container section {
+  margin-bottom: 100px;
+}
+#hp-container section .carousel,
+#hp-container section .project-thumnail {
+  height: 320px;
+}
+#hp-container section .cv {
   cursor: pointer;
 }
-#hp-container #track .background {
+#hp-container section #track .background {
   background: #ECECEC;
 }
-#hp-container #watoobi .background {
+#hp-container section #watoobi .background {
   background: #F0F2F7;
 }
-#hp-container #showbox .background {
+#hp-container section #showbox .background {
   background: #F2E9E0;
 }
-#hp-container #urbanika .background {
+#hp-container section #urbanika .background {
   background: #FCF8F2;
 }
-#hp-container #chefbot .background {
+#hp-container section #chefbot .background {
   background: #E9F2EE;
 }
 /*projects*/
@@ -313,6 +321,9 @@ footer p {
 }
 .project-container figure.sketch img {
   background: #f1f1f1 url('../images/rect-bg.png');
+}
+.project-container figure.design img {
+  box-shadow: 0 0 8px 0 rgba(0, 0, 0, 0.15);
 }
 .project-container figure figcaption {
   text-align: center;
@@ -464,6 +475,16 @@ footer p {
   }
 }
 @media screen and (min-width: 992px) {
+  /*navigation*/
+  nav.navbar .navbar-nav a.nav-item {
+    margin-left: 24px;
+    padding: 12px 0;
+    transition: all 150ms ease-in-out;
+  }
+  nav.navbar .navbar-nav a.nav-item:hover {
+    color: #ff0052;
+    transform: translateY(-10px);
+  }
   .hero-image {
     margin-left: 0;
   }
