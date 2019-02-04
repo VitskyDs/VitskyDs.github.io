@@ -53,7 +53,7 @@ img {
 h1 {
   font: 400 52px/72px 'Playfair Display', serif;
   letter-spacing: 2px;
-  margin-bottom: 22px;
+  margin-bottom: 20px;
   color: black;
 }
 a h1:hover {
@@ -65,11 +65,12 @@ h2 {
   letter-spacing: 2px;
 }
 h3 {
-  font: 300 18px/28px Open Sans, sans-serif;
+  font: 300 36px/52px Open Sans, sans-serif;
   margin: 0;
+  color: #ff0052;
 }
 h4 {
-  font: 700 24px/36px Open Sans, sans-serif;
+  font: 700 21px/36px Open Sans, sans-serif;
 }
 p {
   margin-bottom: 12px;
@@ -126,11 +127,11 @@ span.primary {
 }
 .carousel .carousel-control-prev .carousel-control-prev-icon,
 .carousel .carousel-control-next .carousel-control-prev-icon {
-  background-image: url(../images/icons/prev-button.svg);
+  background-image: url('../images/icons/prev-button.svg');
 }
 .carousel .carousel-control-prev .carousel-control-next-icon,
 .carousel .carousel-control-next .carousel-control-next-icon {
-  background-image: url(../images/icons/next-button.svg);
+  background-image: url('../images/icons/next-button.svg');
 }
 .carousel,
 .project-thumbnail {
@@ -272,38 +273,66 @@ footer p {
   z-index: 35;
 }
 /*project page style*/
-.project-container .project-name {
-  margin: 25px 0 5px 0;
+.project-container p {
+  font: 21px/32px Georgia, serif;
 }
-.project-container .project-section h2 {
-  margin-bottom: 5px;
+.project-container .hero-image {
+  margin-bottom: 20px;
 }
-.project-container .project-section p {
-  margin-top: 0;
+.project-container .process .process-line {
+  height: 100%;
+  width: 2px;
+  background-color: #ff0052;
+  position: absolute;
+  z-index: -1;
 }
-.project-container .next-project {
-  margin: 30px 0 0 0;
+.project-container .process .process-item {
+  position: relative;
+  height: 120px;
+  width: 120px;
+  margin: 0 0 32px 0;
 }
-.project-container .next-project .underline {
-  height: 7px;
-  width: 100%;
-  background-color: #44bea4;
+.project-container .process .process-item:last-of-type {
+  margin: 0;
 }
-.project-container .next-project a {
-  cursor: pointer;
+.project-container .process .process-item.process-strategy {
+  background: url('../images/Icons/strategy.svg') center no-repeat;
+  background-size: contain;
 }
-.project-container .next-project a:hover {
-  color: #44bea4;
+.project-container .process .process-item.process-research {
+  background: url('../images/Icons/research.svg') center no-repeat;
+  background-size: contain;
 }
-.project-container .next-project a p {
-  cursor: pointer;
+.project-container .process .process-item.process-ideation {
+  background: url('../images/Icons/ideation.svg') center no-repeat;
+  background-size: contain;
 }
-.project-container .next-project a h2 {
-  cursor: pointer;
-  font-size: 35px;
-  font-weight: 300;
-  margin: 0 0 30px 0;
-  color: black;
+.project-container .process .process-item.process-usability {
+  background: url('../images/Icons/usability.svg') center no-repeat;
+  background-size: contain;
+}
+.project-container .process .process-item.process-design {
+  background: url('../images/Icons/design.svg') center no-repeat;
+  background-size: contain;
+}
+.project-container .process .process-item span {
+  position: absolute;
+  top: 45px;
+  left: 136px;
+  line-height: 24px;
+  width: 120px;
+}
+.project-container .process .process-item:nth-of-type(even) {
+  text-align: right;
+}
+.project-container .process .process-item:nth-of-type(even) span {
+  left: -136px;
+}
+/*Watoobi*/
+#watoobi .hero-image {
+  background: url('../images/project-watoobi/Watoobi-Hero-V02.jpg') center no-repeat;
+  background-size: cover;
+  height: 400px;
 }
 /*404 page*/
 #error-page {
@@ -382,7 +411,7 @@ footer p {
     width: 435px;
   }
 }
-@media screen and (min-width: 1024px) {
+@media screen and (min-width: 992px) {
   .hero-image {
     margin-left: 0;
   }
@@ -394,6 +423,32 @@ footer p {
   }
   .down-arrow {
     display: none;
+  }
+  /*project*/
+  .project-container .process .process-line {
+    width: 90%;
+    height: 2px;
+    background-color: #ff0052;
+    position: absolute;
+    z-index: -1;
+  }
+  .project-container .process .process-item {
+    margin: 0;
+  }
+  .project-container .process .process-item span {
+    position: absolute;
+    top: -32px;
+    left: 0;
+    line-height: 24px;
+    width: 120px;
+    text-align: center;
+  }
+  .project-container .process .process-item:nth-of-type(even) {
+    text-align: center;
+  }
+  .project-container .process .process-item:nth-of-type(even) span {
+    left: 0;
+    top: 132px;
   }
 }
 /*Large*/
