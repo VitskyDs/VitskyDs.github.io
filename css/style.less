@@ -15,7 +15,7 @@
 /*imports and variables*/
 
 //imports
-@import url('https://fonts.googleapis.com/css?family=Open+Sans:400,800');
+@import url('https://fonts.googleapis.com/css?family=Open+Sans:300,400,600,800');
 
 @import url('https://fonts.googleapis.com/css?family=Playfair+Display:400,400i');
 
@@ -91,7 +91,7 @@ h2 {
 
 h3 {
     font: 300 36px/52px Open Sans, sans-serif;
-    margin: 0;
+    margin: 4px 0 12px 0;
     color: @primary;
 }
 
@@ -117,10 +117,6 @@ caption {
     letter-spacing: 0.6px;
 }
 
-ol {
-    margin: -8px 0 16px 0;
-}
-
 ul {
     list-style: none;
     padding: 0;
@@ -141,6 +137,33 @@ span.primary {
 }
 
 /*Components*/
+
+//navigation
+
+nav.navbar {
+        .navbar-toggler {
+            .navbar-toggler-icon {
+                background: url('../images/Icons/hamburger-icon.svg') no-repeat center;
+            }
+        }
+
+        .navbar-nav {
+            a {
+                &.nav-link {
+                    font: italic 16px/20px Georgia, serif;
+                    color: black;
+                    margin: 12px 0 24px;
+                    padding: 12px 0;
+                    text-align: right;
+                    &:hover {
+                        color: @primary;
+
+                    }
+                }
+            }
+        }
+    }
+
 
 //Carousel
 .carousel {
@@ -200,11 +223,6 @@ figure {
     figcaption {
         margin: 5px 0 0 0;
     }
-}
-
-//section
-section {
-    margin-bottom: 120px;
 }
 
 //footer
@@ -379,14 +397,58 @@ footer {
 .project-container {
     p {
         font: 21px/32px Georgia, serif;
+
+        &.italic {
+            margin: 16px 0 0 0;
+            font-style: italic;
+            letter-spacing: 1px;
+
+            span {
+                color: @primary;
+                position: absolute;
+                transform: rotate(90deg) translate(4px, 20px);
+            }
+        }
+    }
+
+    ol {
+
+        //padding: 0;
+        li {
+            font: 21px/44px Georgia, serif;
+        }
     }
 
     .hero-image {
         margin-bottom: 20px;
     }
 
-    .process {
+    section {
+        margin: 24px 0;
+    }
 
+    .break {
+        background: url('../images/Icons/break.svg') center no-repeat;
+        background-size: contain;
+        height: 4px;
+        margin: 32px 0;
+    }
+
+    figure {
+        margin: 0 0 36px 0;
+
+        &.sketch {
+            img {
+                background: #f1f1f1 url('../images/rect-bg.png');
+            }
+        }
+
+        figcaption {
+            text-align: center;
+        }
+    }
+
+    .process {
         .process-line {
             height: 100%;
             width: 2px;
@@ -445,6 +507,23 @@ footer {
                     left: -136px;
                 }
 
+            }
+        }
+    }
+
+    .next-project {
+        margin: 40px 0 0 0;
+
+        .underline {
+            background-color: @secondary;
+            height: 8px;
+            margin: 4px 0 32px 0;
+            width: fit-content;
+
+            small {
+                text-transform: uppercase;
+                letter-spacing: 1.5px;
+                line-height: 44px;
             }
         }
     }

@@ -13,7 +13,7 @@
 10. Media Queries
 */
 /*imports and variables*/
-@import url('https://fonts.googleapis.com/css?family=Open+Sans:400,800');
+@import url('https://fonts.googleapis.com/css?family=Open+Sans:300,400,600,800');
 @import url('https://fonts.googleapis.com/css?family=Playfair+Display:400,400i');
 /*General*/
 * {
@@ -66,7 +66,7 @@ h2 {
 }
 h3 {
   font: 300 36px/52px Open Sans, sans-serif;
-  margin: 0;
+  margin: 4px 0 12px 0;
   color: #ff0052;
 }
 h4 {
@@ -86,9 +86,6 @@ caption {
   font: 300 14px/21px Open Sans, sans-serif;
   letter-spacing: 0.6px;
 }
-ol {
-  margin: -8px 0 16px 0;
-}
 ul {
   list-style: none;
   padding: 0;
@@ -105,6 +102,19 @@ span.primary {
   color: #ff0052;
 }
 /*Components*/
+nav.navbar .navbar-toggler .navbar-toggler-icon {
+  background: url('../images/Icons/hamburger-icon.svg') no-repeat center;
+}
+nav.navbar .navbar-nav a.nav-link {
+  font: italic 16px/20px Georgia, serif;
+  color: black;
+  margin: 12px 0 24px;
+  padding: 12px 0;
+  text-align: right;
+}
+nav.navbar .navbar-nav a.nav-link:hover {
+  color: #ff0052;
+}
 .carousel .carousel-indicators {
   bottom: -40px;
 }
@@ -149,9 +159,6 @@ figure {
 }
 figure figcaption {
   margin: 5px 0 0 0;
-}
-section {
-  margin-bottom: 120px;
 }
 footer {
   margin: 30px 0 15px 0;
@@ -276,8 +283,39 @@ footer p {
 .project-container p {
   font: 21px/32px Georgia, serif;
 }
+.project-container p.italic {
+  margin: 16px 0 0 0;
+  font-style: italic;
+  letter-spacing: 1px;
+}
+.project-container p.italic span {
+  color: #ff0052;
+  position: absolute;
+  transform: rotate(90deg) translate(4px, 20px);
+}
+.project-container ol li {
+  font: 21px/44px Georgia, serif;
+}
 .project-container .hero-image {
   margin-bottom: 20px;
+}
+.project-container section {
+  margin: 24px 0;
+}
+.project-container .break {
+  background: url('../images/Icons/break.svg') center no-repeat;
+  background-size: contain;
+  height: 4px;
+  margin: 32px 0;
+}
+.project-container figure {
+  margin: 0 0 36px 0;
+}
+.project-container figure.sketch img {
+  background: #f1f1f1 url('../images/rect-bg.png');
+}
+.project-container figure figcaption {
+  text-align: center;
 }
 .project-container .process .process-line {
   height: 100%;
@@ -327,6 +365,20 @@ footer p {
 }
 .project-container .process .process-item:nth-of-type(even) span {
   left: -136px;
+}
+.project-container .next-project {
+  margin: 40px 0 0 0;
+}
+.project-container .next-project .underline {
+  background-color: #44bea4;
+  height: 8px;
+  margin: 4px 0 32px 0;
+  width: fit-content;
+}
+.project-container .next-project .underline small {
+  text-transform: uppercase;
+  letter-spacing: 1.5px;
+  line-height: 44px;
 }
 /*Watoobi*/
 #watoobi .hero-image {
