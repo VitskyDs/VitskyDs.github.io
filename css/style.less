@@ -14,18 +14,14 @@
 
 /*imports and variables*/
 
-//imports
 @import url('https://fonts.googleapis.com/css?family=Open+Sans:300,400,600,800');
-
 @import url('https://fonts.googleapis.com/css?family=Playfair+Display:400,400i');
 
-//variables
 @primary: #FF0052;
 @secondary: #44BEA4;
 @gray: #999999;
 
 /*General*/
-
 * {
     cursor: default;
 }
@@ -59,7 +55,6 @@ img {
 }
 
 /*Typgraphy*/
-
 * {
     font: 400 15px/26px Open Sans, sans-serif;
 }
@@ -139,7 +134,6 @@ span.primary {
 /*Components*/
 
 //navigation
-
 nav.navbar {
     .navbar-toggler {
         .navbar-toggler-icon {
@@ -201,17 +195,6 @@ nav.navbar {
     }
 }
 
-//images in carousels or thumnails
-
-.carousel,
-.project-thumbnail {
-    height: 360px;
-
-    img {
-        width: 100%;
-    }
-}
-
 //Video
 .video-section {
     box-shadow: 0 0 15px 0 rgba(0, 0, 0, 0.2);
@@ -239,7 +222,6 @@ footer {
 
 
 /* homepage */
-
 .welcome-container {
     display: flex;
     justify-content: center;
@@ -320,13 +302,17 @@ footer {
 }
 
 //homepage container
-
 #hp-container {
     background: white !important;
     margin-top: 110vh !important;
     padding-top: 50px;
     box-shadow: 0 0 30px 0 rgba(0, 0, 0, 0.2);
 
+    h1 {
+        &:hover {
+            cursor: pointer;
+        }
+    }
 
     .section-name {
         width: fit-content;
@@ -347,50 +333,44 @@ footer {
     //section
     section {
         margin-bottom: 100px;
+    }
 
+    .cv {
+        cursor: pointer;
+    }
 
-        .carousel,
-        .project-thumnail {
-            height: 320px;
-        }
+    //project thumnbails
 
-
-        .cv {
-            cursor: pointer;
-        }
-
-        //project thumnbails
-
-        #track {
-            .background {
-                background: #ECECEC;
-            }
-        }
-
-        #watoobi {
-            .background {
-                background: #F0F2F7;
-            }
-        }
-
-        #showbox {
-            .background {
-                background: #F2E9E0;
-            }
-        }
-
-        #urbanika {
-            .background {
-                background: #FCF8F2;
-            }
-        }
-
-        #chefbot {
-            .background {
-                background: #E9F2EE;
-            }
+    #track {
+        .background {
+            background: #ECECEC;
         }
     }
+
+    #watoobi {
+        .background {
+            background: #F0F2F7;
+        }
+    }
+
+    #showbox {
+        .background {
+            background: #F2E9E0;
+        }
+    }
+
+    #urbanika {
+        .background {
+            background: #FCF8F2;
+        }
+    }
+
+    #chefbot {
+        .background {
+            background: #E9F2EE;
+        }
+    }
+
 }
 
 /*projects*/
@@ -406,7 +386,6 @@ footer {
 }
 
 /*project page style*/
-
 .project-container {
     p {
         font: 21px/32px Georgia, serif;
@@ -530,6 +509,15 @@ footer {
         }
     }
 
+    .carousel {
+        margin-bottom: 80px;
+
+        img {
+            display: block;
+            margin: auto;
+        }
+    }
+
     .next-project {
         margin: 40px 0 0 0;
 
@@ -557,6 +545,15 @@ footer {
     }
 }
 
+/*Track160*/
+#track {
+    .hero-image {
+        background: url('../images/project-track/Track-Hero-V01.png') center no-repeat;
+        background-size: cover;
+        height: 400px;
+    }
+}
+
 /*404 page*/
 
 #error-page {
@@ -576,8 +573,6 @@ footer {
             text-transform: uppercase;
             margin: 0 0 10px 0;
         }
-
-        p {}
     }
 }
 
@@ -598,21 +593,12 @@ footer {
     /*Typography*/
     a {
         &:hover {
-            color: @secondary;
+            color: @primary;
+            text-decoration: none;
 
             #cv-svg {
-                fill: @secondary;
+                fill: @primary;
             }
-        }
-    }
-
-    //carousel or project thumbnails
-    .carousel,
-    .project-thumbnail {
-        height: 360px;
-
-        img {
-            width: 400px;
         }
     }
 
@@ -646,35 +632,9 @@ footer {
 }
 
 /*Medium-Large*/
-
-@media screen and (min-width: 900px) {
-
-    /*Welcom-container*/
-    .welcome-container {
-        .welcome-message {
-            margin-top: 0;
-        }
-    }
-
-    .welcome-line {
-        font-size: 10vw;
-    }
-
-    //carousel or project thumbnails
-    .carousel,
-    .project-thumbnail {
-        height: 360px;
-
-        img {
-            width: 435px;
-        }
-    }
-}
-
 @media screen and (min-width: 992px) {
 
     /*navigation*/
-
     nav.navbar {
         .navbar-nav {
             a.nav-item {
@@ -741,11 +701,29 @@ footer {
             }
         }
 
+        .carousel {
+            margin-bottom: 80px;
+        }
+
+    }
+
+    /*Welcom-container*/
+    .welcome-container {
+        .welcome-message {
+            margin-top: 0;
+        }
+    }
+
+    .welcome-line {
+        font-size: 10vw;
+    }
+
+    .project-thumbnail {
+        height: 320px;
     }
 }
 
 /*Large*/
-
 @media screen and (min-width: 1200px) {
 
     /*Typography*/
@@ -755,7 +733,6 @@ footer {
 }
 
 /*Extra Large*/
-
 @media screen and (min-width: 1920px) {
     .welcome-line {
         font-size: 10vw;
