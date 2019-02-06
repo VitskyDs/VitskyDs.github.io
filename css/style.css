@@ -119,6 +119,14 @@ nav.navbar .navbar-nav a.nav-link {
 nav.navbar .navbar-nav a.nav-link:hover {
   color: #ff0052;
 }
+.carousel {
+  margin-bottom: 80px;
+}
+.carousel img {
+  display: block;
+  margin: auto;
+  width: 320px;
+}
 .carousel .carousel-indicators {
   bottom: -40px;
 }
@@ -142,11 +150,13 @@ nav.navbar .navbar-nav a.nav-link:hover {
 }
 .carousel .carousel-control-prev .carousel-control-prev-icon,
 .carousel .carousel-control-next .carousel-control-prev-icon {
-  background-image: url('../images/icons/prev-button.svg');
+  background-image: url('../images/Icons/prev-button.svg') center center no-repeat;
+  background-size: contain;
 }
 .carousel .carousel-control-prev .carousel-control-next-icon,
 .carousel .carousel-control-next .carousel-control-next-icon {
-  background-image: url('../images/icons/next-button.svg');
+  background-image: url('../images/Icons/next-button.svg') center center no-repeat;
+  background-size: contain;
 }
 .video-section {
   -webkit-box-shadow: 0 0 15px 0 rgba(0, 0, 0, 0.2);
@@ -414,14 +424,6 @@ footer p {
 .project-container .process .process-item:nth-of-type(even) span {
   left: -136px;
 }
-.project-container .carousel {
-  margin-bottom: 80px;
-}
-.project-container .carousel img {
-  display: block;
-  margin: auto;
-  width: 400px;
-}
 .project-container .next-project {
   margin: 40px 0 0 0;
 }
@@ -563,15 +565,18 @@ footer p {
   .project-container .carousel {
     margin-bottom: 80px;
   }
+  .project-container .carousel .carousel-inner .carousel-item img {
+    width: 400px;
+  }
+  .project-thumbnail img {
+    width: 400px;
+  }
   /*Welcom-container*/
   .welcome-container .welcome-message {
     margin-top: 0;
   }
   .welcome-line {
     font-size: 10vw;
-  }
-  .project-thumbnail {
-    height: 320px;
   }
 }
 /*Large*/
