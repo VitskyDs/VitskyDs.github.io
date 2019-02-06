@@ -99,6 +99,71 @@ a {
 span.primary {
   color: #FF0052;
 }
+/* homepage */
+.welcome-container {
+  display: flex;
+  justify-content: center;
+  flex-flow: row wrap;
+  height: 100vh;
+  background-color: #FF0052;
+  color: white;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  z-index: -1;
+}
+.welcome-container .welcome-message {
+  align-self: center;
+  width: 90%;
+  margin-top: -30px;
+}
+.welcome-container .down-arrow-wrapper {
+  position: absolute;
+  overflow: hidden;
+  padding: 0 0 60px;
+  bottom: 0;
+  left: 50%;
+  transform: translateX(-50%);
+}
+.welcome-container .down-arrow-wrapper .down-arrow {
+  height: 75px;
+  width: 35px;
+  background: url("../images/cursor-arrow.svg") center no-repeat;
+  background-size: contain;
+  margin: 0 auto;
+}
+.welcome-container .welcome-line {
+  color: #FF0052;
+  animation: 1500ms fade-in-welcome-line cubic-bezier(0.445, 0.05, 0.55, 0.95) forwards;
+}
+.welcome-container .welcome-line:nth-child(2) {
+  animation-delay: 150ms;
+}
+.welcome-container .welcome-line:nth-child(3) {
+  animation-delay: 300ms;
+}
+.welcome-container .welcome-line:nth-child(4) {
+  animation-delay: 450ms;
+}
+@keyframes fade-in-welcome-line {
+  0% {
+    color: #FF0052;
+  }
+  100% {
+    color: white;
+  }
+}
+.welcome-container .down-arrow {
+  animation: 1500ms down-arrow cubic-bezier(0.445, 0.05, 0.55, 0.95) 400ms forwards;
+}
+@keyframes down-arrow {
+  0% {
+    transform: translateY(-100px);
+  }
+  100% {
+    transform: translateY(0);
+  }
+}
 /*Components*/
 nav.navbar .navbar-toggler .navbar-toggler-icon {
   background: url("../images/Icons/hamburger-icon.svg") no-repeat center;
@@ -173,71 +238,6 @@ footer p {
   margin-top: 110vh !important;
   padding-top: 50px;
   box-shadow: 0 0 30px 0 rgba(0, 0, 0, 0.2);
-  /* homepage */
-}
-#hp-container .welcome-container {
-  display: flex;
-  justify-content: center;
-  flex-flow: row wrap;
-  height: 100vh;
-  background-color: #FF0052;
-  color: white;
-  top: 0;
-  left: 0;
-  width: 100vw;
-  z-index: -1;
-}
-#hp-container .welcome-container .welcome-message {
-  align-self: center;
-  width: 90%;
-  margin-top: -30px;
-}
-#hp-container .welcome-container .down-arrow-wrapper {
-  position: absolute;
-  overflow: hidden;
-  padding: 0 0 60px;
-  bottom: 0;
-  left: 50%;
-  transform: translateX(-50%);
-}
-#hp-container .welcome-container .down-arrow-wrapper .down-arrow {
-  height: 75px;
-  width: 35px;
-  background: url("../images/cursor-arrow.svg") center no-repeat;
-  background-size: contain;
-  margin: 0 auto;
-}
-#hp-container .welcome-container .welcome-line {
-  color: #FF0052;
-  animation: 1500ms fade-in-welcome-line cubic-bezier(0.445, 0.05, 0.55, 0.95) forwards;
-}
-#hp-container .welcome-container .welcome-line:nth-child(2) {
-  animation-delay: 150ms;
-}
-#hp-container .welcome-container .welcome-line:nth-child(3) {
-  animation-delay: 300ms;
-}
-#hp-container .welcome-container .welcome-line:nth-child(4) {
-  animation-delay: 450ms;
-}
-@keyframes fade-in-welcome-line {
-  0% {
-    color: #FF0052;
-  }
-  100% {
-    color: white;
-  }
-}
-#hp-container .welcome-container .down-arrow {
-  animation: 1500ms down-arrow cubic-bezier(0.445, 0.05, 0.55, 0.95) 400ms forwards;
-}
-@keyframes down-arrow {
-  0% {
-    transform: translateY(-100px);
-  }
-  100% {
-    transform: translateY(0);
-  }
 }
 #hp-container h1:hover {
   cursor: pointer;

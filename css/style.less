@@ -125,6 +125,83 @@ a {
 span.primary {
   color: @primary;
 }
+
+/* homepage */
+.welcome-container {
+  display: flex;
+  justify-content: center;
+  flex-flow: row wrap;
+  height: 100vh;
+  background-color: @primary;
+  color: white;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  z-index: -1;
+
+  .welcome-message {
+    align-self: center;
+    width: 90%;
+    margin-top: -30px;
+  }
+
+  .down-arrow-wrapper {
+    position: absolute;
+    overflow: hidden;
+    padding: 0 0 60px;
+    bottom: 0;
+    left: 50%;
+    transform: translateX(-50%);
+
+    .down-arrow {
+      height: 75px;
+      width: 35px;
+      background: url("../images/cursor-arrow.svg") center no-repeat;
+      background-size: contain;
+      margin: 0 auto;
+    }
+  }
+  //fade in welcome line
+  .welcome-line {
+    color: @primary;
+    animation: 1500ms fade-in-welcome-line cubic-bezier(0.445, 0.050, 0.550, 0.950) forwards;
+  }
+
+  .welcome-line:nth-child(2) {
+    animation-delay: 150ms;
+  }
+
+  .welcome-line:nth-child(3) {
+    animation-delay: 300ms;
+  }
+
+  .welcome-line:nth-child(4) {
+    animation-delay: 450ms;
+  }
+  @keyframes fade-in-welcome-line {
+    0% {
+      color: @primary;
+    }
+
+    100% {
+      color: white;
+    }
+  }
+  //arrow down
+  .down-arrow {
+    animation: 1500ms down-arrow cubic-bezier(0.445, 0.050, 0.550, 0.950) 400ms forwards;
+  }
+  @keyframes down-arrow {
+    0% {
+      transform: translateY(-100px);
+    }
+
+    100% {
+      transform: translateY(0);
+    }
+  }
+}
+
 /*Components*/
 //navigation
 
@@ -163,7 +240,7 @@ nav.navbar {
   }
 
   .carousel-indicators {
-    bottom: -40px;
+    bottom: -48px;
 
     li {
       width: 4px;
@@ -228,81 +305,7 @@ footer {
   margin-top: 110vh !important;
   padding-top: 50px;
   box-shadow: 0 0 30px 0 rgba(0, 0, 0, 0.2);
-  /* homepage */
-  .welcome-container {
-    display: flex;
-    justify-content: center;
-    flex-flow: row wrap;
-    height: 100vh;
-    background-color: @primary;
-    color: white;
-    top: 0;
-    left: 0;
-    width: 100vw;
-    z-index: -1;
 
-    .welcome-message {
-      align-self: center;
-      width: 90%;
-      margin-top: -30px;
-    }
-
-    .down-arrow-wrapper {
-      position: absolute;
-      overflow: hidden;
-      padding: 0 0 60px;
-      bottom: 0;
-      left: 50%;
-      transform: translateX(-50%);
-
-      .down-arrow {
-        height: 75px;
-        width: 35px;
-        background: url("../images/cursor-arrow.svg") center no-repeat;
-        background-size: contain;
-        margin: 0 auto;
-      }
-    }
-    //fade in welcome line
-    .welcome-line {
-      color: @primary;
-      animation: 1500ms fade-in-welcome-line cubic-bezier(0.445, 0.050, 0.550, 0.950) forwards;
-    }
-
-    .welcome-line:nth-child(2) {
-      animation-delay: 150ms;
-    }
-
-    .welcome-line:nth-child(3) {
-      animation-delay: 300ms;
-    }
-
-    .welcome-line:nth-child(4) {
-      animation-delay: 450ms;
-    }
-    @keyframes fade-in-welcome-line {
-      0% {
-        color: @primary;
-      }
-
-      100% {
-        color: white;
-      }
-    }
-    //arrow down
-    .down-arrow {
-      animation: 1500ms down-arrow cubic-bezier(0.445, 0.050, 0.550, 0.950) 400ms forwards;
-    }
-    @keyframes down-arrow {
-      0% {
-        transform: translateY(-100px);
-      }
-
-      100% {
-        transform: translateY(0);
-      }
-    }
-  }
 
   h1 {
     &:hover {
