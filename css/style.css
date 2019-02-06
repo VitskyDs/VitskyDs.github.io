@@ -420,6 +420,7 @@ footer p {
 .project-container .carousel img {
   display: block;
   margin: auto;
+  width: 400px;
 }
 .project-container .next-project {
   margin: 40px 0 0 0;
