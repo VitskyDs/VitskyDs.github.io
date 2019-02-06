@@ -196,11 +196,13 @@ nav.navbar {
         width: 20px;
 
         .carousel-control-prev-icon {
-            background-image: url('../images/Icons/prev-button.svg');
+            background-image: url('../images/Icons/prev-button.svg') center center no-repeat;
+            background-size: contain;
         }
 
         .carousel-control-next-icon {
-            background-image: url('../images/Icons/next-button.svg');
+            background-image: url('../images/Icons/next-button.svg') center center no-repeat;
+            background-size: contain;
         }
     }
 
@@ -709,8 +711,22 @@ footer {
 
         .carousel {
             margin-bottom: 80px;
+
+            .carousel-inner {
+                .carousel-item {
+                    img {
+                        width: 400px;
+                    }
+                }
+            }
         }
 
+    }
+
+    .project-thumbnail {
+        img {
+            width: 400px;
+        }
     }
 
     /*Welcom-container*/
@@ -722,10 +738,6 @@ footer {
 
     .welcome-line {
         font-size: 10vw;
-    }
-
-    .project-thumbnail {
-        height: 320px;
     }
 }
 
