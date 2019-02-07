@@ -333,7 +333,7 @@ footer p {
   background: #f1f1f1 url("../images/rect-bg.png");
 }
 .project-container figure.design img {
-  box-shadow: 0 0 4px 0 rgba(0, 0, 0, 0.1);
+  box-shadow: 0 0 8px 0 rgba(0, 0, 0, 0.1);
 }
 .project-container figure figcaption {
   text-align: center;
