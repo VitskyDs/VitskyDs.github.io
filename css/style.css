@@ -301,6 +301,10 @@ footer p {
 .project-container p {
   font: 21px/32px Georgia, serif;
 }
+.project-container p em {
+  font: italic 21px/32px Georgia, serif;
+  letter-spacing: 1px;
+}
 .project-container p.italic {
   margin: 16px 0 0;
   font-style: italic;
@@ -415,7 +419,7 @@ footer p {
 }
 /*Track160*/
 #track .hero-image {
-  background: gray url("../images/project-track/Track-Hero-V01.png") center no-repeat;
+  background: gray url("../images/project-track/Track-Hero-V01.jpg") center no-repeat;
   background-size: cover;
   height: 400px;
 }
