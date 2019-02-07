@@ -316,6 +316,7 @@ footer p {
 }
 .project-container .hero-image {
   margin-bottom: 20px;
+  height: 200px;
 }
 .project-container section {
   margin: 24px 0;
@@ -386,6 +387,9 @@ footer p {
 }
 .project-container .process .process-item:nth-of-type(even) span {
   left: -136px;
+}
+.project-container .carousel img {
+  width: 100%;
 }
 .project-container .next-project {
   margin: 40px 0 0;
