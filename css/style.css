@@ -92,6 +92,9 @@ ul li {
   font: 400 16px/24px Open Sans, sans-serif;
   color: #999999;
 }
+ol {
+  padding: 0;
+}
 a {
   color: #FF0052;
   text-decoration: none;
@@ -202,7 +205,7 @@ nav.navbar .navbar-nav a.nav-link:hover {
 .carousel .carousel-control-next,
 .carousel .carousel-control-prev {
   top: auto;
-  bottom: -37px;
+  bottom: -44px;
   display: block;
   width: 20px;
 }
@@ -289,6 +292,12 @@ footer p {
   z-index: 35;
 }
 /*project page style*/
+.project-container blockquote {
+  font: italic 24px/40px Georgia, serif;
+}
+.project-container cite {
+  font: 14px/24px Georgia, serif;
+}
 .project-container p {
   font: 21px/32px Georgia, serif;
 }
@@ -324,7 +333,7 @@ footer p {
   background: #f1f1f1 url("../images/rect-bg.png");
 }
 .project-container figure.design img {
-  box-shadow: 0 0 8px 0 rgba(0, 0, 0, 0.15);
+  box-shadow: 0 0 4px 0 rgba(0, 0, 0, 0.1);
 }
 .project-container figure figcaption {
   text-align: center;
@@ -346,23 +355,23 @@ footer p {
   margin: 0;
 }
 .project-container .process .process-item.process-strategy {
-  background: url("../images/Icons/strategy.svg") center no-repeat;
+  background: url("../images/icons/strategy.svg") center no-repeat;
   background-size: contain;
 }
 .project-container .process .process-item.process-research {
-  background: url("../images/Icons/research.svg") center no-repeat;
+  background: url("../images/icons/research.svg") center no-repeat;
   background-size: contain;
 }
 .project-container .process .process-item.process-ideation {
-  background: url("../images/Icons/ideation.svg") center no-repeat;
+  background: url("../images/icons/ideation.svg") center no-repeat;
   background-size: contain;
 }
 .project-container .process .process-item.process-usability {
-  background: url("../images/Icons/usability.svg") center no-repeat;
+  background: url("../images/icons/usability.svg") center no-repeat;
   background-size: contain;
 }
 .project-container .process .process-item.process-design {
-  background: url("../images/Icons/design.svg") center no-repeat;
+  background: url("../images/icons/design.svg") center no-repeat;
   background-size: contain;
 }
 .project-container .process .process-item span {

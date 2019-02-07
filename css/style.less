@@ -1,5 +1,4 @@
 // out: style.css
-
 /*TOC of Porfolio Styles
 1. imports and variables
 2. General
@@ -117,6 +116,10 @@ ul {
   }
 }
 
+ol {
+  padding: 0;
+}
+
 a {
   color: @primary;
   text-decoration: none;
@@ -125,7 +128,6 @@ a {
 span.primary {
   color: @primary;
 }
-
 /* homepage */
 .welcome-container {
   display: flex;
@@ -201,7 +203,6 @@ span.primary {
     }
   }
 }
-
 /*Components*/
 //navigation
 
@@ -258,7 +259,7 @@ nav.navbar {
   .carousel-control-next,
   .carousel-control-prev {
     top: auto;
-    bottom: -37px;
+    bottom: -44px;
     display: block;
     width: 20px;
 
@@ -305,7 +306,6 @@ footer {
   margin-top: 110vh !important;
   padding-top: 50px;
   box-shadow: 0 0 30px 0 rgba(0, 0, 0, 0.2);
-
 
   h1 {
     &:hover {
@@ -382,6 +382,14 @@ footer {
 }
 /*project page style*/
 .project-container {
+  blockquote {
+    font: italic 24px/40px Georgia, serif;
+  }
+
+  cite {
+    font: 14px/24px Georgia, serif;
+  }
+
   p {
     font: 21px/32px Georgia, serif;
 
@@ -399,7 +407,6 @@ footer {
   }
 
   ol {
-    //padding: 0;
     li {
       font: 21px/44px Georgia, serif;
     }
@@ -431,7 +438,7 @@ footer {
 
     &.design {
       img {
-        box-shadow: 0 0 8px 0 rgba(0, 0, 0, 0.15);
+        box-shadow: 0 0 8px 0 rgba(0, 0, 0, 0.1);
       }
     }
 
@@ -460,27 +467,27 @@ footer {
       }
 
       &.process-strategy {
-        background: url("../images/Icons/strategy.svg") center no-repeat;
+        background: url("../images/icons/strategy.svg") center no-repeat;
         background-size: contain;
       }
 
       &.process-research {
-        background: url("../images/Icons/research.svg") center no-repeat;
+        background: url("../images/icons/research.svg") center no-repeat;
         background-size: contain;
       }
 
       &.process-ideation {
-        background: url("../images/Icons/ideation.svg") center no-repeat;
+        background: url("../images/icons/ideation.svg") center no-repeat;
         background-size: contain;
       }
 
       &.process-usability {
-        background: url("../images/Icons/usability.svg") center no-repeat;
+        background: url("../images/icons/usability.svg") center no-repeat;
         background-size: contain;
       }
 
       &.process-design {
-        background: url("../images/Icons/design.svg") center no-repeat;
+        background: url("../images/icons/design.svg") center no-repeat;
         background-size: contain;
       }
 
@@ -637,6 +644,7 @@ footer {
   #hp-container {
     .carousel {
       margin-bottom: 0;
+
       .carousel-item {
         img {
           width: 500px;
