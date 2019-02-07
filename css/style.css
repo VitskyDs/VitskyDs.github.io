@@ -389,7 +389,7 @@ footer p {
   left: -136px;
 }
 .project-container .carousel img {
-  width: 100%;
+  width: 100% !important;
 }
 .project-container .next-project {
   margin: 40px 0 0;
@@ -398,6 +398,8 @@ footer p {
   background-color: #44BEA4;
   height: 8px;
   margin: 4px 0 32px;
+  width: -webkit-fit-content;
+  width: -moz-fit-content;
   width: fit-content;
 }
 .project-container .next-project .underline small {
