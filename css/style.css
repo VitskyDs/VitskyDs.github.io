@@ -29,10 +29,6 @@ body {
   width: 100%;
   overflow-x: hidden;
 }
-a {
-  cursor: pointer;
-  color: #FF0052;
-}
 figcaption {
   cursor: pointer;
 }
@@ -48,15 +44,21 @@ img {
   text-transform: uppercase;
   letter-spacing: 2px;
 }
+a {
+  cursor: pointer;
+  color: #FF0052;
+  text-decoration: none;
+  font-family: 'Georgia';
+}
+a h1:hover {
+  color: #FF0052;
+  text-decoration: none;
+}
 h1 {
   font: 400 52px/72px 'Playfair Display', serif;
   letter-spacing: 2px;
   margin-bottom: 20px;
   color: black;
-}
-a h1:hover {
-  color: #FF0052;
-  text-decoration: none;
 }
 h2 {
   font: 400 52px/72px Open Sans, sans-serif;
@@ -74,15 +76,12 @@ p {
   margin-bottom: 12px;
 }
 small {
-  font: 400 12px/16px Open Sans, sans-serif;
-  color: #999999;
-  letter-spacing: 0.2px;
+  font: 400 14px/20px Open Sans, sans-serif;
+  color: #929292;
+  letter-spacing: 0.4px;
 }
 caption {
   display: none;
-  color: #999999;
-  font: 300 14px/21px Open Sans, sans-serif;
-  letter-spacing: 0.6px;
 }
 ul {
   list-style: none;
@@ -94,10 +93,6 @@ ul li {
 }
 ol {
   padding: 0;
-}
-a {
-  color: #FF0052;
-  text-decoration: none;
 }
 span.primary {
   color: #FF0052;
@@ -169,7 +164,7 @@ span.primary {
 }
 /*Components*/
 nav.navbar .navbar-toggler .navbar-toggler-icon {
-  background: url("../images/Icons/hamburger-icon.svg") no-repeat center;
+  background: url("../images/icons/hamburger-icon.svg") no-repeat center;
 }
 nav.navbar .navbar-nav a.nav-link {
   font: italic 16px/20px Georgia, serif;
@@ -225,9 +220,6 @@ nav.navbar .navbar-nav a.nav-link:hover {
 figure {
   margin: 0;
 }
-figure figcaption {
-  margin: 5px 0 0;
-}
 footer {
   margin: 30px 0 15px;
 }
@@ -261,14 +253,11 @@ footer p {
   width: 100%;
   background-color: #44BEA4;
 }
-#hp-container section {
-  margin-bottom: 100px;
-}
 #hp-container .cv {
   cursor: pointer;
 }
 #hp-container #track .background {
-  background: #ECECEC;
+  background: #f9f9fe;
 }
 #hp-container #watoobi .background {
   background: #F0F2F7;
@@ -293,10 +282,21 @@ footer p {
 }
 /*project page style*/
 .project-container blockquote {
-  font: italic 24px/40px Georgia, serif;
+  font: italic 28px/48px Georgia, serif;
+  background: #FF0052;
+  color: white;
+  text-align: center;
+}
+.project-container .bullet {
+  color: #FF0052;
+  position: absolute;
+  transform: rotate(90deg) translate(4px, 20px);
 }
 .project-container cite {
   font: 14px/24px Georgia, serif;
+}
+.project-container ul li {
+  color: black;
 }
 .project-container p {
   font: 21px/32px Georgia, serif;
@@ -310,11 +310,6 @@ footer p {
   font-style: italic;
   letter-spacing: 1px;
 }
-.project-container p.italic span {
-  color: #FF0052;
-  position: absolute;
-  transform: rotate(90deg) translate(4px, 20px);
-}
 .project-container ol li {
   font: 21px/44px Georgia, serif;
 }
@@ -323,7 +318,8 @@ footer p {
   height: 200px;
 }
 .project-container section {
-  margin: 24px 0;
+  margin-top: 24px;
+  margin-bottom: 24px;
 }
 .project-container .break {
   background: url("../images/Icons/break.svg") center no-repeat;
@@ -332,16 +328,14 @@ footer p {
   margin: 32px 0;
 }
 .project-container figure {
-  margin: 0 0 36px;
-}
-.project-container figure.sketch img {
-  background: #f1f1f1 url("../images/rect-bg.png");
+  margin: 0 0 40px;
 }
 .project-container figure.design img {
   box-shadow: 0 0 8px 0 rgba(0, 0, 0, 0.1);
 }
 .project-container figure figcaption {
   text-align: center;
+  margin: 4px 0 0;
 }
 .project-container .process .process-line {
   height: 100%;

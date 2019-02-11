@@ -37,11 +37,6 @@ body {
   overflow-x: hidden;
 }
 
-a {
-  cursor: pointer;
-  color: @primary;
-}
-
 figcaption {
   cursor: pointer;
 }
@@ -60,18 +55,23 @@ img {
   letter-spacing: 2px;
 }
 
+a {
+  cursor: pointer;
+  color: @primary;
+  text-decoration: none;
+  font-family: 'Georgia';
+
+  h1:hover {
+    color: @primary;
+    text-decoration: none;
+  }
+}
+
 h1 {
   font: 400 52px/72px 'Playfair Display', serif;
   letter-spacing: 2px;
   margin-bottom: 20px;
   color: black;
-}
-
-a {
-  h1:hover {
-    color: @primary;
-    text-decoration: none;
-  }
 }
 
 h2 {
@@ -94,16 +94,13 @@ p {
 }
 
 small {
-  font: 400 12px/16px Open Sans, sans-serif;
-  color: @gray;
-  letter-spacing: 0.2px;
+  font: 400 14px/20px Open Sans, sans-serif;
+  color: #929292;
+  letter-spacing: 0.4px;
 }
 
 caption {
   display: none;
-  color: @gray;
-  font: 300 14px/21px Open Sans, sans-serif;
-  letter-spacing: 0.6px;
 }
 
 ul {
@@ -118,11 +115,6 @@ ul {
 
 ol {
   padding: 0;
-}
-
-a {
-  color: @primary;
-  text-decoration: none;
 }
 
 span.primary {
@@ -204,6 +196,7 @@ span.primary {
   }
 }
 /*Components*/
+//buttons
 //navigation
 
 nav.navbar {
@@ -285,7 +278,7 @@ figure {
   margin: 0;
 
   figcaption {
-    margin: 5px 0 0;
+    //margin: 0 0 16px 0;
   }
 }
 //footer
@@ -332,7 +325,7 @@ footer {
   }
   //section
   section {
-    margin-bottom: 100px;
+    //margin-bottom: 100px;
   }
 
   .cv {
@@ -341,7 +334,7 @@ footer {
   //project thumnbails
   #track {
     .background {
-      background: #ECECEC;
+      background: #f9f9fe;
     }
   }
 
@@ -384,28 +377,39 @@ footer {
 .project-container {
   blockquote {
     font: italic 24px/40px Georgia, serif;
+    background: @primary;
+    color: white;
+    text-align: center;
+  }
+
+  .bullet {
+    color: @primary;
+    position: absolute;
+    transform: rotate(90deg) translate(4px, 20px);
   }
 
   cite {
     font: 14px/24px Georgia, serif;
   }
 
+  ul {
+    li {
+      color: black;
+    }
+  }
+
   p {
     font: 21px/32px Georgia, serif;
+
     em {
       font: italic 21px/32px Georgia, serif;
       letter-spacing: 1px;
     }
+
     &.italic {
       margin: 16px 0 0;
       font-style: italic;
       letter-spacing: 1px;
-
-      span {
-        color: @primary;
-        position: absolute;
-        transform: rotate(90deg) translate(4px, 20px);
-      }
     }
   }
 
@@ -421,7 +425,8 @@ footer {
   }
 
   section {
-    margin: 24px 0;
+    margin-top: 24px;
+    margin-bottom: 24px;
   }
 
   .break {
@@ -432,11 +437,11 @@ footer {
   }
 
   figure {
-    margin: 0 0 36px;
+    margin: 0 0 40px;
 
     &.sketch {
       img {
-        background: #f1f1f1 url("../images/rect-bg.png");
+        //background-color: #fff4f7;;
       }
     }
 
@@ -448,6 +453,7 @@ footer {
 
     figcaption {
       text-align: center;
+      margin: 4px 0 0;
     }
   }
 
