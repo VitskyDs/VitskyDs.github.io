@@ -56,14 +56,44 @@ img {
 }
 
 a {
+  position: relative;
   cursor: pointer;
   color: @primary;
   text-decoration: none;
   font-family: 'Georgia';
+  transition: all 0.3s ease-in-out 0s;
+
+  &:hover {
+    text-decoration: none;
+    color: @primary;
+  }
 
   h1:hover {
     color: @primary;
     text-decoration: none;
+  }
+
+  &.underline {
+    &::before {
+      content: "";
+      position: absolute;
+      width: 100%;
+      height: 2px;
+      bottom: -4px;
+      left: 0;
+      background-color: @primary;
+      visibility: hidden;
+      -webkit-transform: scaleX(0);
+      transform: scaleX(0);
+      -webkit-transition: all 0.3s ease-in-out 0s;
+      transition: all 0.3s ease-in-out 0s;
+    }
+
+    &:hover::before {
+      visibility: visible;
+      -webkit-transform: scaleX(1);
+      transform: scaleX(1);
+    }
   }
 }
 
@@ -196,7 +226,6 @@ span.primary {
   }
 }
 /*Components*/
-//buttons
 //navigation
 
 nav.navbar {
@@ -276,10 +305,6 @@ nav.navbar {
 
 figure {
   margin: 0;
-
-  figcaption {
-    //margin: 0 0 16px 0;
-  }
 }
 //footer
 
@@ -306,6 +331,10 @@ footer {
     }
   }
 
+  section {
+    margin-bottom: 120px;
+  }
+
   .section-name {
     width: -webkit-fit-content;
     width: -moz-fit-content;
@@ -322,10 +351,6 @@ footer {
       width: 100%;
       background-color: @secondary;
     }
-  }
-  //section
-  section {
-    //margin-bottom: 100px;
   }
 
   .cv {
@@ -592,13 +617,8 @@ footer {
 @media screen and (min-width: 600px) {
   /*Typography*/
   a {
-    &:hover {
-      color: @primary;
-      text-decoration: none;
-
-      #cv-svg {
-        fill: @primary;
-      }
+    #cv-svg {
+      fill: @primary;
     }
   }
   //Welcome message
