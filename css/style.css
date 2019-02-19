@@ -49,7 +49,8 @@ a {
   cursor: pointer;
   color: #FF0052;
   text-decoration: none;
-  font-family: 'Georgia';
+  font-family: 'Open Sans';
+  transition: all 0.3s ease-in-out 0s;
 }
 a:hover {
   text-decoration: none;
