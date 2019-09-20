@@ -18,10 +18,6 @@
 * {
   cursor: default;
 }
-::-moz-selection {
-  background: #FFC5FF;
-  /* WebKit/Blink Browsers */
-}
 ::selection {
   background: #FFC5FF;
   /* WebKit/Blink Browsers */
@@ -55,7 +51,6 @@ a {
   color: #ff0052;
   text-decoration: none;
   font: 400 15px/26px Open Sans, sans-serif;
-  -webkit-transition: all 0.3s ease-in-out 0s;
   transition: all 0.3s ease-in-out 0s;
 }
 a:hover {
@@ -103,6 +98,9 @@ h3 {
 h4 {
   font: 700 21px/36px Open Sans, sans-serif;
 }
+h5 {
+  color: #ff0052;
+}
 p {
   margin-bottom: 12px;
 }
@@ -129,15 +127,8 @@ span.primary {
 }
 /* homepage */
 .welcome-container {
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
-  -webkit-box-pack: center;
-  -ms-flex-pack: center;
   justify-content: center;
-  -webkit-box-orient: horizontal;
-  -webkit-box-direction: normal;
-  -ms-flex-flow: row wrap;
   flex-flow: row wrap;
   height: 100vh;
   background-color: #ff0052;
@@ -148,7 +139,6 @@ span.primary {
   z-index: -1;
 }
 .welcome-container .welcome-message {
-  -ms-flex-item-align: center;
   align-self: center;
   width: 90%;
   margin-top: -30px;
@@ -159,7 +149,6 @@ span.primary {
   padding: 0 0 60px;
   bottom: 0;
   left: 50%;
-  -webkit-transform: translateX(-50%);
   transform: translateX(-50%);
 }
 .welcome-container .down-arrow-wrapper .down-arrow {
@@ -171,28 +160,16 @@ span.primary {
 }
 .welcome-container .welcome-line {
   color: #ff0052;
-  -webkit-animation: 1500ms fade-in-welcome-line cubic-bezier(0.445, 0.05, 0.55, 0.95) forwards;
   animation: 1500ms fade-in-welcome-line cubic-bezier(0.445, 0.05, 0.55, 0.95) forwards;
 }
 .welcome-container .welcome-line:nth-child(2) {
-  -webkit-animation-delay: 150ms;
   animation-delay: 150ms;
 }
 .welcome-container .welcome-line:nth-child(3) {
-  -webkit-animation-delay: 300ms;
   animation-delay: 300ms;
 }
 .welcome-container .welcome-line:nth-child(4) {
-  -webkit-animation-delay: 450ms;
   animation-delay: 450ms;
-}
-@-webkit-keyframes fade-in-welcome-line {
-  0% {
-    color: #ff0052;
-  }
-  100% {
-    color: white;
-  }
 }
 @keyframes fade-in-welcome-line {
   0% {
@@ -203,26 +180,13 @@ span.primary {
   }
 }
 .welcome-container .down-arrow {
-  -webkit-animation: 1500ms down-arrow cubic-bezier(0.445, 0.05, 0.55, 0.95) 400ms forwards;
   animation: 1500ms down-arrow cubic-bezier(0.445, 0.05, 0.55, 0.95) 400ms forwards;
-}
-@-webkit-keyframes down-arrow {
-  0% {
-    -webkit-transform: translateY(-100px);
-    transform: translateY(-100px);
-  }
-  100% {
-    -webkit-transform: translateY(0);
-    transform: translateY(0);
-  }
 }
 @keyframes down-arrow {
   0% {
-    -webkit-transform: translateY(-100px);
     transform: translateY(-100px);
   }
   100% {
-    -webkit-transform: translateY(0);
     transform: translateY(0);
   }
 }
@@ -256,7 +220,6 @@ nav.navbar .navbar-nav a.nav-link:hover {
   height: 4px;
   border: 1px solid #ff0052;
   border-radius: 50%;
-  -webkit-box-sizing: border-box;
   box-sizing: border-box;
 }
 .carousel .carousel-indicators li.active {
@@ -280,7 +243,6 @@ nav.navbar .navbar-nav a.nav-link:hover {
   background-size: 100% 100$;
 }
 .video-section {
-  -webkit-box-shadow: 0 0 15px 0 rgba(0, 0, 0, 0.2);
   box-shadow: 0 0 15px 0 rgba(0, 0, 0, 0.2);
 }
 figure {
@@ -298,7 +260,6 @@ footer p {
   background: white !important;
   margin-top: 110vh !important;
   padding-top: 50px;
-  -webkit-box-shadow: 0 0 30px 0 rgba(0, 0, 0, 0.2);
   box-shadow: 0 0 30px 0 rgba(0, 0, 0, 0.2);
 }
 #hp-container h1:hover {
@@ -347,7 +308,6 @@ footer p {
   opacity: 1;
   width: 150px;
   height: 45px;
-  -webkit-animation-timing-function: cubic-bezier(0.09, 0.455, 0.15, 0.86);
   animation-timing-function: cubic-bezier(0.09, 0.455, 0.15, 0.86);
   z-index: 35;
 }
@@ -361,7 +321,6 @@ footer p {
 .project-container .bullet {
   color: #ff0052;
   position: absolute;
-  -webkit-transform: rotate(90deg) translate(4px, 20px);
   transform: rotate(90deg) translate(4px, 20px);
 }
 .project-container cite {
@@ -403,7 +362,6 @@ footer p {
   margin: 0 0 40px;
 }
 .project-container figure.design img {
-  -webkit-box-shadow: 0 0 8px 0 rgba(0, 0, 0, 0.1);
   box-shadow: 0 0 8px 0 rgba(0, 0, 0, 0.1);
 }
 .project-container figure figcaption {
@@ -490,18 +448,18 @@ footer p {
   background-size: cover;
   height: 400px;
 }
+/*Kids Palace*/
+#kids-palace .hero-image {
+  background: white url("../images/project-kids-palace/kids-palace-hero.png") center bottom no-repeat;
+  background-size: cover;
+  height: 450px;
+}
 /*404 page*/
 #error-page {
   height: 100vh;
   width: 100vw;
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
-  -webkit-box-pack: center;
-  -ms-flex-pack: center;
   justify-content: center;
-  -webkit-box-align: center;
-  -ms-flex-align: center;
   align-items: center;
 }
 #error-page .error-wrapper {
@@ -550,12 +508,10 @@ footer p {
   nav.navbar .navbar-nav a.nav-item {
     margin-left: 24px;
     padding: 12px 0;
-    -webkit-transition: all 150ms ease-in-out;
     transition: all 150ms ease-in-out;
   }
   nav.navbar .navbar-nav a.nav-item:hover {
     color: #ff0052;
-    -webkit-transform: translateY(-10px);
     transform: translateY(-10px);
   }
   .hero-image {
