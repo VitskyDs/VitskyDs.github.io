@@ -56,6 +56,7 @@ a {
 a:hover {
   text-decoration: none;
   color: #ff0052;
+  cursor: pointer;
 }
 a h1:hover {
   color: #ff0052;
@@ -191,6 +192,52 @@ span.primary {
   }
 }
 /*Components*/
+.announcement {
+  background-color: white;
+  border-radius: 12px;
+  box-shadow: 0 0 16px 0 rgba(255, 0, 82, 0.2);
+  display: flex;
+  flex-flow: row nowrap;
+}
+.announcement .medium-logo {
+  flex-basis: 80px;
+  margin: 16px 0 16px 16px;
+}
+.announcement .announcment-content {
+  flex-grow: 1;
+}
+.announcement .announcment-content h5 {
+  font-size: 16px;
+  line-height: 28px;
+  font-weight: 600;
+  margin: 0;
+}
+.announcement .announcment-content p {
+  color: black;
+  margin: 0;
+  line-height: 20x;
+}
+.announcement a.read-more {
+  display: flex;
+  flex-flow: row nowrap;
+  justify-content: center;
+  align-items: center;
+  flex-basis: 175px;
+  border-left: 1px solid #ff0052;
+  border-top-right-radius: 12px;
+  border-bottom-right-radius: 12px;
+  text-align: center;
+}
+.announcement a.read-more:hover {
+  background-color: #ff0052;
+  color: white;
+}
+.medium-logo {
+  width: 80px;
+  padding: 40px;
+  background: url('/images/Medium-Monogram.svg') no-repeat center top;
+  background-size: contain;
+}
 nav.navbar .navbar-toggler .navbar-toggler-icon {
   background: url("../images/icons/hamburger-icon.svg") no-repeat center;
 }
