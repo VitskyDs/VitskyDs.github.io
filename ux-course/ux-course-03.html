@@ -1,0 +1,203 @@
+<!doctype html>
+<html lang="en" dir="ltr">
+
+<head>
+    <!-- Global site tag (gtag.js) - Google Analytics -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=UA-111514633-1"></script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
+
+        function gtag() {
+            dataLayer.push(arguments);
+        }
+        gtag('js', new Date());
+        gtag('config', 'UA-111514633-1');
+    </script>
+    <!-- Hotjar Tracking Code for www.vitsky.studio -->
+    <script>
+        (function(h, o, t, j, a, r) {
+            h.hj = h.hj || function() {
+                (h.hj.q = h.hj.q || []).push(arguments)
+            };
+            h._hjSettings = {
+                hjid: 1558035,
+                hjsv: 6
+            };
+            a = o.getElementsByTagName('head')[0];
+            r = o.createElement('script');
+            r.async = 1;
+            r.src = t + h._hjSettings.hjid + j + h._hjSettings.hjsv;
+            a.appendChild(r);
+        })(window, document, 'https://static.hotjar.com/c/hotjar-', '.js?sv=');
+    </script>
+
+    <meta charset="utf-8">
+    <meta http-equiv="x-ua-compatible" content="ie=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
+
+    <title>Vitsky: Product Designer</title>
+
+    <meta name="description" content="I’m Isaac Sheptovitsky, but you can call me Vitsky. I’m a UI/UX Designer.">
+
+    <link rel="icon" type="image/png" href="../favicon.png">
+    <link rel="canonical" href="../course-01.html">
+
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/css/bootstrap.min.css" integrity="sha384-GJzZqFGwb1QTTN6wy59ffF1BuGJpLSa9DkKMp0DgiMDm4iYMj70gZWKYbI706tWS" crossorigin="anonymous">
+    <link rel="stylesheet" href="../css/style.css">
+    <style>
+        body {
+            height: 100vh;
+            max-height: 100vh;
+            overflow-y: hidden;
+        }
+
+        main {
+            display: flex;
+            flex-flow: column;
+            height: calc(100% - 50px);
+        }
+
+        .course-container .container,
+        .course-container .container-fluid {
+            flex-grow: 0;
+        }
+
+        .course-container .row {
+            min-height: 100px;
+        }
+
+
+        .content {
+            background-color: beige;
+            text-align: center;
+            padding: 20px 0;
+        }
+
+        .course-container .col .bg {
+            height: 100%;
+            background-color: #ff005255;
+        }
+
+        footer {
+            height: 50px;
+            position: fixed;
+            bottom: 0;
+            margin: 0;
+            background: white;
+            box-shadow: 0 0 8px 0 rgba(0, 0, 0, 0.2);
+
+        }
+
+        .next {
+            margin-left: 30px;
+        }
+
+        h4 {
+            text-align: center;
+        }
+    </style>
+
+</head>
+
+<body>
+
+    <!--navigation-->
+    <nav class="navbar navbar-expand-lg">
+        <a class="navbar-brand p-0" href="../ux-course-01.html">
+            <div class="logo" id="bodymovin"></div>
+        </a>
+    </nav>
+
+    <!--Main Content-->
+    <main role="main" id="" class="course-container">
+
+        <br>
+        <h4>Nesting containers</h4>
+
+        <div class="container">
+            <div class="row">
+                <div class="col">
+                    <div class="bg"></div>
+                </div>
+                <div class="col">
+                    <div class="bg"></div>
+                </div>
+                <div class="col">
+                    <div class="bg"></div>
+                </div>
+                <div class="col">
+                    <div class="bg"></div>
+                </div>
+                <div class="col">
+                    <div class="bg"></div>
+                </div>
+                <div class="col">
+                    <div class="bg"></div>
+                </div>
+                <div class="col">
+                    <div class="bg"></div>
+                </div>
+                <div class="col">
+                    <div class="bg"></div>
+                </div>
+                <div class="col">
+                    <div class="bg"></div>
+                </div>
+                <div class="col">
+                    <div class="bg"></div>
+                </div>
+                <div class="col">
+                    <div class="bg"></div>
+                </div>
+                <div class="col">
+                    <div class="bg"></div>
+                </div>
+            </div>
+        </div>
+        <br>
+        <div class="container">
+            <div class="row">
+                <div class="col-4">
+                    <div class="content" style="height: 300px">sidebar</div>
+                </div>
+                <div class="col-8">
+                    <div class="content" style="height: 300px">
+
+                        <p>main content</p>
+
+                    </div>
+                </div>
+            </div>
+        </div>
+    </main>
+    <!--footer-->
+    <footer class="container-fluid p-3" style="flex-grow: 0">
+        <div class="row justify-content-between">
+            <small class="col">©2018 Issac Sheptovitsky. Last update on 4/1/2019. <a class="ml-2" href="../index.html">Back to portfolio</a></small>
+            <div class="col-2" style="text-align: right;"><a href="ux-course-02.html" class="prev">Previous</a><a href="ux-course-04.html" class="next">Next</a></div>
+        </div>
+    </footer>
+    <!--scripts-->
+    <script src="https://code.jquery.com/jquery-3.3.1.min.js" integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8=" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.6/umd/popper.min.js" integrity="sha384-wHAiFfRlMFy6i5SRaxvfOCifBUQy1xHdJ/yoi7FRNXMRBu5WHdZYu1hA6ZOblgut" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/js/bootstrap.min.js" integrity="sha384-B0UglyR+jN6CkvvICOB2joaf5I4l3gm9GU6Hc1og6Ls7i6U/mkkaduKaBhlAXv9k" crossorigin="anonymous"></script>
+    <script src="../js/bodymovin.js" type="text/javascript"></script>
+    <script type="application/javascript">
+        bodymovin.loadAnimation({
+            container: document.getElementById("bodymovin"),
+            animType: 'html',
+            renderer: 'svg',
+            loop: false,
+            autoplay: true,
+            path: '../js/data.json' // the path to the animation json
+        });
+    </script>
+    <script src="https://cdn.plyr.io/3.4.8/plyr.js"></script>
+    <script>
+        const player = new Plyr('#urbanika-video');
+        Plyr.setup({
+            //controls: ['play-large', 'play']
+        });
+    </script>
+    <script src="../js/script.js"></script>
+</body></html>
