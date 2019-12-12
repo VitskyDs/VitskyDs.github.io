@@ -332,6 +332,10 @@ footer p {
   color: #999999;
   font-size: 14px;
 }
+.footer-brand {
+  height: 20px;
+  background-color: #ff0052;
+}
 #hp-container {
   background: white !important;
   margin-top: 110vh !important;
