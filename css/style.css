@@ -88,7 +88,7 @@ h1 {
   color: black;
 }
 h2 {
-  font: 400 52px/72px Open Sans, sans-serif;
+  font: 400 44px/60px Open Sans, sans-serif;
   letter-spacing: 2px;
 }
 h3 {
@@ -192,6 +192,29 @@ span.primary {
   }
 }
 /*Components*/
+.social div:hover {
+  cursor: pointer;
+}
+.social .social-icon:hover {
+  cursor: pointer;
+}
+.social .social-icon:hover .glyph {
+  fill: #ff0052;
+}
+.cta {
+  border-bottom: 1.5px solid #ff0052;
+  transition: transform 300ms ease-in-out;
+  cursor: pointer;
+}
+.cta .cta-arrow {
+  transition: transform 300ms cubic-bezier(0.445, 0.05, 0.55, 0.95);
+}
+.cta:hover {
+  cursor: pointer;
+}
+.cta:hover .cta-arrow {
+  transform: translateX(12px);
+}
 .announcement {
   background-color: white;
   border-radius: 12px;
@@ -294,6 +317,12 @@ nav.navbar .navbar-nav a.nav-link:hover {
 }
 figure {
   margin: 0;
+}
+/* About */
+#my-image {
+  height: 200px;
+  width: 200px;
+  border-radius: 50%;
 }
 footer {
   margin: 30px 0 15px;
@@ -584,6 +613,11 @@ footer p {
   #hp-container .project-thumbnail img {
     width: 500px;
     height: 410px;
+  }
+  #hp-container #about #my-image {
+    border-radius: 0;
+    width: 100%;
+    height: auto;
   }
   /*project*/
   .project-container {

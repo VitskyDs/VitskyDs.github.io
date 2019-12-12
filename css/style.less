@@ -109,7 +109,7 @@ h1 {
 }
 
 h2 {
-    font: 400 52px/72px Open Sans, sans-serif;
+    font: 400 44px/60px Open Sans, sans-serif;
     letter-spacing: 2px;
 }
 
@@ -239,6 +239,41 @@ span.primary {
 }
 
 /*Components*/
+
+// social
+.social {
+    div:hover {
+        cursor: pointer;
+    }
+
+    .social-icon:hover {
+            cursor: pointer;
+        .glyph {
+            fill: #ff0052;
+        }
+    }
+}
+
+// CTA
+
+.cta {
+    border-bottom: 1.5px solid #ff0052;
+    transition: transform 300ms ease-in-out;
+    cursor: pointer;
+
+    .cta-arrow {
+        transition: transform 300ms cubic-bezier(0.445, 0.050, 0.550, 0.950);
+    }
+
+    &:hover {
+        cursor: pointer;
+
+        .cta-arrow {
+            transform: translateX(12px);
+        }
+    }
+}
+
 // Announcement
 
 .announcement {
@@ -282,6 +317,7 @@ span.primary {
         border-top-right-radius: 12px;
         border-bottom-right-radius: 12px;
         text-align: center;
+
         &:hover {
             background-color: #ff0052;
             color: white;
@@ -383,6 +419,14 @@ figure {
     margin: 0;
 }
 
+/* About */
+
+#my-image {
+    height: 200px;
+    width: 200px;
+    border-radius: 50%;
+}
+
 //footer
 
 footer {
@@ -421,7 +465,6 @@ footer {
         font-weight: 800;
         text-transform: uppercase;
         letter-spacing: 0.5px;
-
         .underline {
             position: relative;
             bottom: 0;
@@ -793,6 +836,13 @@ footer {
             img {
                 width: 500px;
                 height: 410px;
+            }
+        }
+        #about {
+            #my-image {
+                border-radius: 0;
+                width: 100%;
+                height: auto;
             }
         }
     }
