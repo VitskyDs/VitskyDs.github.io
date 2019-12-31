@@ -46,6 +46,10 @@ img {
     width: 100%;
 }
 
+.cursor-pointer {
+    cursor: pointer !important;
+
+}
 
 /*Typgraphy*/
 * {
@@ -58,9 +62,10 @@ img {
     letter-spacing: 2px;
 }
 
+
 a {
     position: relative;
-    cursor: pointer;
+    cursor: pointer !important;
     color: @primary;
     text-decoration: none;
     font: 400 15px/26px Open Sans, sans-serif;
@@ -405,6 +410,23 @@ nav.navbar {
             background: url("../images/icons/next-button.svg") center no-repeat !important;
             background-size: 100% 100$;
         }
+    }
+}
+
+// Icons
+.icon {
+    margin-top: 2px;
+    width: 16px;
+    height: 16px;
+
+    &.icon-chevron-left {
+        background: url('../images/icons/chevron-left.svg') center center no-repeat;
+        background-size: contain;
+    }
+
+    &.icon-chevron-right {
+        background: url('../images/icons/chevron-right.svg') center center no-repeat;
+        background-size: contain;
     }
 }
 

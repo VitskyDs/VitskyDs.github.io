@@ -36,6 +36,9 @@ figcaption {
 img {
   width: 100%;
 }
+.cursor-pointer {
+  cursor: pointer !important;
+}
 /*Typgraphy*/
 * {
   font: 400 15px/26px Open Sans, sans-serif;
@@ -47,7 +50,7 @@ img {
 }
 a {
   position: relative;
-  cursor: pointer;
+  cursor: pointer !important;
   color: #ff0052;
   text-decoration: none;
   font: 400 15px/26px Open Sans, sans-serif;
@@ -311,6 +314,19 @@ nav.navbar .navbar-nav a.nav-link:hover {
 .carousel .carousel-control-prev .carousel-control-next-icon {
   background: url("../images/icons/next-button.svg") center no-repeat !important;
   background-size: 100% 100$;
+}
+.icon {
+  margin-top: 2px;
+  width: 16px;
+  height: 16px;
+}
+.icon.icon-chevron-left {
+  background: url('../images/icons/chevron-left.svg') center center no-repeat;
+  background-size: contain;
+}
+.icon.icon-chevron-right {
+  background: url('../images/icons/chevron-right.svg') center center no-repeat;
+  background-size: contain;
 }
 .video-section {
   box-shadow: 0 0 15px 0 rgba(0, 0, 0, 0.2);
