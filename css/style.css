@@ -386,7 +386,8 @@ nav.navbar .navbar-nav a.nav-link:hover {
   line-height: 32px;
 }
 #testimonial-carousel .main-carousel .carousel-cell .author {
-  font-family: OpenSans-SemiBold;
+  font-family: Open Sans, sans-serif;
+  font-weight: 600;
   font-size: 14px;
   color: #000000;
   letter-spacing: 0;
@@ -394,7 +395,7 @@ nav.navbar .navbar-nav a.nav-link:hover {
   margin: 0;
 }
 #testimonial-carousel .main-carousel .carousel-cell .author-title {
-  font-family: OpenSans-Light;
+  font-family: Open Sans, sans-serif;
   font-size: 14px;
   color: #000000;
   letter-spacing: 0;
