@@ -346,6 +346,7 @@ span.primary {
 
 nav.navbar {
     padding: 8px 24px;
+
     .navbar-toggler {
         .navbar-toggler-icon {
             background: url("../images/icons/hamburger-icon.svg") no-repeat center;
@@ -413,6 +414,75 @@ nav.navbar {
             background-size: 100%;
         }
     }
+}
+
+// Testimonial Carousel
+#testimonial-carousel {
+    .main-carousel {
+        overflow-x: visible;
+
+        .carousel-cell {
+            position: relative;
+            height: 250px;
+            padding: 32px 16px 32px 64px;
+            width: 85%;
+            max-width: 578px;
+            margin-right: 56px;
+            background-color: white;
+            opacity: 20%;
+            transition: opacity ease-in-out 750ms;
+
+            &.is-selected {
+                opacity: 100%;
+                transition: opacity ease-in-out 750ms;
+            }
+
+            .quotation-mark {
+                position: absolute;
+                height: 32px;
+                width: 32px;
+                top: 32px;
+                left: 0;
+                background: url('../images/icons/quotation-mark.svg') no-repeat center center;
+                background-size: contain;
+            }
+
+            .testimonial {
+                font-family: Georgia-Italic;
+                font-size: 20px;
+                line-height: 32px;
+            }
+
+            .author {
+                font-family: OpenSans-SemiBold;
+                font-size: 14px;
+                color: #000000;
+                letter-spacing: 0;
+                line-height: 24px;
+                margin: 0;
+            }
+
+            .author-title {
+                font-family: OpenSans-Light;
+                font-size: 14px;
+                color: #000000;
+                letter-spacing: 0;
+                line-height: 24px;
+            }
+        }
+    }
+}
+
+.flickity-viewport {
+    overflow: visible;
+}
+
+.flickity-button {
+    display: none;
+}
+
+.flickity-page-dots {
+    display: none;
 }
 
 // Icons
@@ -528,9 +598,9 @@ footer {
         }
     }
 
-    #urbanika {
+    #acetech {
         .background {
-            background: #FCF8F2;
+            background: #EFF6F8;
         }
     }
 
@@ -879,6 +949,22 @@ footer {
             }
         }
 
+            // Testimonial Carousel
+    #testimonial-carousel {
+        .main-carousel {
+
+            .carousel-cell {
+                padding: 32px 64px 32px 0;
+                margin-right: 176px;
+                width: 50%;
+                
+                .quotation-mark {
+                    left: -64px;
+                }
+            }
+        }
+    }
+        
         #about {
             #my-image {
                 border-radius: 0;

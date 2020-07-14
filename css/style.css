@@ -353,6 +353,62 @@ nav.navbar .navbar-nav a.nav-link:hover {
   background: url("../images/icons/next-button.svg") center no-repeat !important;
   background-size: 100%;
 }
+#testimonial-carousel .main-carousel {
+  overflow-x: visible;
+}
+#testimonial-carousel .main-carousel .carousel-cell {
+  position: relative;
+  height: 250px;
+  padding: 32px 16px 32px 64px;
+  width: 85%;
+  max-width: 578px;
+  margin-right: 56px;
+  background-color: white;
+  opacity: 20%;
+  transition: opacity ease-in-out 750ms;
+}
+#testimonial-carousel .main-carousel .carousel-cell.is-selected {
+  opacity: 100%;
+  transition: opacity ease-in-out 750ms;
+}
+#testimonial-carousel .main-carousel .carousel-cell .quotation-mark {
+  position: absolute;
+  height: 32px;
+  width: 32px;
+  top: 32px;
+  left: 0;
+  background: url('../images/icons/quotation-mark.svg') no-repeat center center;
+  background-size: contain;
+}
+#testimonial-carousel .main-carousel .carousel-cell .testimonial {
+  font-family: Georgia-Italic;
+  font-size: 20px;
+  line-height: 32px;
+}
+#testimonial-carousel .main-carousel .carousel-cell .author {
+  font-family: OpenSans-SemiBold;
+  font-size: 14px;
+  color: #000000;
+  letter-spacing: 0;
+  line-height: 24px;
+  margin: 0;
+}
+#testimonial-carousel .main-carousel .carousel-cell .author-title {
+  font-family: OpenSans-Light;
+  font-size: 14px;
+  color: #000000;
+  letter-spacing: 0;
+  line-height: 24px;
+}
+.flickity-viewport {
+  overflow: visible;
+}
+.flickity-button {
+  display: none;
+}
+.flickity-page-dots {
+  display: none;
+}
 .icon {
   margin-top: 2px;
   width: 16px;
@@ -430,8 +486,8 @@ footer p {
 #hp-container #showbox .background {
   background: #F2E9E0;
 }
-#hp-container #urbanika .background {
-  background: #FCF8F2;
+#hp-container #acetech .background {
+  background: #EFF6F8;
 }
 #hp-container #chefbot .background {
   background: #E9F2EE;
@@ -677,6 +733,14 @@ footer p {
   #hp-container .project-thumbnail img {
     width: 500px;
     height: 410px;
+  }
+  #hp-container #testimonial-carousel .main-carousel .carousel-cell {
+    padding: 32px 64px 32px 0;
+    margin-right: 176px;
+    width: 50%;
+  }
+  #hp-container #testimonial-carousel .main-carousel .carousel-cell .quotation-mark {
+    left: -64px;
   }
   #hp-container #about #my-image {
     border-radius: 0;

@@ -40,3 +40,15 @@ $('a[href*="#"]')
 $('.carousel').carousel({
     interval: 3000
 })
+
+/* testimonial-carousel */
+$('.main-carousel').flickity({
+    // options
+    contain: true,
+    autoPlay: 3000,
+    freeScroll: true,
+    wrapAround: true,
+    selectedAttraction: 0.0125,
+    friction: 0.15,
+    cellAlign: 'left'
+});
